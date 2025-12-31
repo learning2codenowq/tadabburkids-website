@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | TadabburKids - Islamic Parenting & Tadabbur Tips</title>
+  <meta name="description" content="Read our latest articles on Islamic parenting, teaching Tadabbur to children, and raising kids with Quran and Sunnah.">
+  <meta name="keywords" content="Islamic parenting blog, Tadabbur tips, Muslim homeschooling, Quran for kids">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Remix Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2FAA6F',
+            secondary: '#FF8C42',
+            accent: '#52B8E8',
+            yellow: '#FFC72C',
+            teal: '#26C6DA',
+            darkBrown: '#3A2A1F',
+          },
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Nunito', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body { 
+      font-family: 'Nunito', sans-serif;
+      font-size: 18px;
+      color: #3A2A1F;
+    }
+    
+    h1, h2, h3, h4, h5, h6 { 
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* WhatsApp button pulse animation */
+    @keyframes whatsappPulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      50% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+    }
+    
+    .whatsapp-float {
+      animation: whatsappPulse 2s infinite;
+    }
+    
+    .whatsapp-float:hover {
+      animation: none;
+    }
+    
+    /* Decorative Elements */
+    .doodle {
+      position: absolute;
+      opacity: 0.08;
+      animation: float 6s ease-in-out infinite;
+      z-index: 0;
+    }
+    
+    .doodle-star {
+      font-size: 3rem;
+      color: #FFC72C;
+      animation: float 6s ease-in-out infinite, rotate 20s linear infinite;
+    }
+    
+    .doodle-moon {
+      font-size: 3.5rem;
+      color: #2FAA6F;
+      animation: float 8s ease-in-out infinite;
+    }
+    
+    .doodle-book {
+      font-size: 3rem;
+      color: #FF8C42;
+      animation: float 7s ease-in-out infinite;
+    }
+    
+    .doodle-sparkle {
+      font-size: 2.5rem;
+      color: #52B8E8;
+      animation: float 5s ease-in-out infinite, pulse 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 0.08; }
+      50% { opacity: 0.15; }
+    }
+    
+    .text-emphasis {
+      color: #2FAA6F;
+      font-weight: 800;
+    }
+    
+    .playful-shadow {
+      box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
+    }
+    
+    .icon-card {
+      transition: all 0.3s ease;
+    }
+    
+    .icon-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center">
+          <span class="text-2xl font-bold text-primary">TadabburKids</span>
+        </a>
+        
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition">Home</a>
+          <a href="our-story.html" class="text-gray-700 hover:text-primary font-medium transition">Our Story</a>
+          <a href="books.html" class="text-gray-700 hover:text-primary font-medium transition">Books</a>
+          <a href="quran-lessons.html" class="text-gray-700 hover:text-primary font-medium transition">Quran Lessons</a>
+          <a href="blog.html" class="text-gray-700 hover:text-primary font-medium transition">Blog</a>
+          <a href="contact.html" class="text-gray-700 hover:text-primary font-medium transition">Contact</a>
+        </div>
+        
+        <button id="mobile-menu-toggle" class="md:hidden text-3xl text-primary focus:outline-none">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+      
+      <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 bg-white shadow-lg rounded-b-xl px-6 py-4">
+        <a href="index.html" class="block text-gray-700 hover:text-primary font-medium">Home</a>
+        <a href="our-story.html" class="block text-gray-700 hover:text-primary font-medium">Our Story</a>
+        <a href="books.html" class="block text-gray-700 hover:text-primary font-medium">Books</a>
+        <a href="quran-lessons.html" class="block text-gray-700 hover:text-primary font-medium">Quran Lessons</a>
+        <a href="blog.html" class="block text-gray-700 hover:text-primary font-medium">Blog</a>
+        <a href="contact.html" class="block text-gray-700 hover:text-primary font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-20">
+    
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50 py-20 md:py-32 overflow-hidden">
+      <!-- Decorative Doodles -->
+      <i class="ri-quill-pen-line doodle doodle-sparkle" style="top: 15%; left: 8%;"></i>
+      <i class="ri-star-fill doodle doodle-star" style="top: 25%; right: 10%;"></i>
+      <i class="ri-book-open-fill doodle doodle-book" style="bottom: 20%; left: 12%;"></i>
+      <i class="ri-heart-3-line doodle doodle-sparkle" style="bottom: 30%; right: 15%;"></i>
+      
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="inline-flex items-center gap-3 bg-primary/10 rounded-full px-6 py-3 mb-6">
+          <i class="ri-article-line text-2xl text-primary"></i>
+          <span class="text-lg font-bold text-darkBrown">Blog</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-darkBrown mb-6 leading-tight">
+          <span class="text-emphasis">Tadabbur Tips</span> & Islamic<br>
+          Parenting Insights
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-gray-700 leading-relaxed">
+          Practical advice for raising children who know, love, and remember Allah in their daily lives
+        </p>
+      </div>
+    </section>
+
+    <!-- COMING SOON MESSAGE -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl p-12 md:p-16 playful-shadow">
+          
+          <div class="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-8">
+            <i class="ri-edit-line text-5xl text-primary"></i>
+          </div>
+          
+          <h2 class="text-3xl md:text-4xl font-bold text-darkBrown mb-6">
+            Blog Posts Coming Soon!
+          </h2>
+          
+          <p class="text-xl text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
+            We're working on creating valuable content to help you on your Islamic parenting journey. Check back soon for articles on Tadabbur, homeschooling, and raising children with Quran and Sunnah.
+          </p>
+          
+          <div class="bg-white rounded-2xl p-8 max-w-xl mx-auto mb-8">
+            <h3 class="text-2xl font-bold text-darkBrown mb-4">Upcoming Topics:</h3>
+            <ul class="text-left space-y-3">
+              <li class="flex items-start gap-3">
+                <i class="ri-check-line text-2xl text-primary flex-shrink-0 mt-1"></i>
+                <span class="text-gray-700">How to Teach Tadabbur to Young Children</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="ri-check-line text-2xl text-primary flex-shrink-0 mt-1"></i>
+                <span class="text-gray-700">5 Daily Habits That Help Kids Remember Allah</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="ri-check-line text-2xl text-primary flex-shrink-0 mt-1"></i>
+                <span class="text-gray-700">Balancing Screen Time with Islamic Education</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="ri-check-line text-2xl text-primary flex-shrink-0 mt-1"></i>
+                <span class="text-gray-700">Teaching Allah's Names Through Nature</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="ri-check-line text-2xl text-primary flex-shrink-0 mt-1"></i>
+                <span class="text-gray-700">Making Dhikr Natural for Your Family</span>
+              </li>
+            </ul>
+          </div>
+          
+          <p class="text-lg text-gray-600 mb-8">
+            Want to be notified when we publish new articles?
+          </p>
+          
+          <a href="index.html#email-capture" class="inline-flex items-center justify-center bg-gradient-to-r from-primary to-teal text-white font-bold py-4 px-8 rounded-full text-lg hover:from-teal hover:to-primary transition playful-shadow">
+            Subscribe to Our Newsletter
+            <i class="ri-mail-line ml-2"></i>
+          </a>
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- EXPLORE OTHER RESOURCES -->
+    <section class="py-20 bg-gradient-to-br from-orange-50 via-yellow-50 to-green-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-darkBrown mb-4">
+            While You Wait, Explore Our Resources
+          </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          
+          <!-- Books Card -->
+          <div class="icon-card bg-white rounded-3xl p-8 playful-shadow text-center">
+            <div class="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="ri-book-2-line text-4xl text-primary"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-darkBrown mb-4">Interactive Books</h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Explore our beautifully illustrated Tadabbur books that teach children to reflect on Allah's creation
+            </p>
+            <a href="books.html" class="inline-flex items-center justify-center bg-gradient-to-r from-primary to-teal text-white font-bold py-3 px-6 rounded-full hover:from-teal hover:to-primary transition">
+              View Books
+              <i class="ri-arrow-right-line ml-2"></i>
+            </a>
+          </div>
+          
+          <!-- Lessons Card -->
+          <div class="icon-card bg-white rounded-3xl p-8 playful-shadow text-center">
+            <div class="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="ri-vidicon-line text-4xl text-secondary"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-darkBrown mb-4">Live Quran Lessons</h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Personalized 1-on-1 or sibling group classes teaching Quranic recitation and Tadabbur
+            </p>
+            <a href="quran-lessons.html" class="inline-flex items-center justify-center bg-gradient-to-r from-secondary to-yellow text-white font-bold py-3 px-6 rounded-full hover:from-yellow hover:to-secondary transition">
+              Book Free Trial
+              <i class="ri-arrow-right-line ml-2"></i>
+            </a>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-primary">TadabburKids</h3>
+          <p class="text-gray-400 text-sm">
+            Connecting young hearts to the Quran through Tadabbur. Authentic Islamic education for children worldwide.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="our-story.html" class="text-gray-400 hover:text-primary transition">Our Story</a></li>
+            <li><a href="books.html" class="text-gray-400 hover:text-primary transition">Books</a></li>
+            <li><a href="quran-lessons.html" class="text-gray-400 hover:text-primary transition">Quran Lessons</a></li>
+            <li><a href="blog.html" class="text-gray-400 hover:text-primary transition">Blog</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-primary transition">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li class="flex items-center gap-2">
+              <i class="ri-mail-line"></i>
+              <a href="mailto:contact@tadabburkids.com" class="hover:text-primary transition">contact@tadabburkids.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="ri-whatsapp-line"></i>
+              <span>WhatsApp: +92 316 525 2296</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+        <p>&copy; 2025 TadabburKids. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a 
+    href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I'm%20interested%20in%20learning%20more%20about%20TadabburKids." 
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float fixed bottom-8 right-8 z-50 bg-[#25D366] text-white rounded-full shadow-2xl w-16 h-16 flex items-center justify-center text-3xl transition-all duration-300 hover:bg-[#128C7E] hover:scale-110"
+    aria-label="Contact us on WhatsApp"
+  >
+    <i class="ri-whatsapp-line"></i>
+  </a>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.getElementById('mobile-menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      
+      toggle.addEventListener('click', function() {
+        menu.classList.toggle('hidden');
+      });
+      
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => menu.classList.add('hidden'));
+      });
+    });
+  </script>
+
+</body>
+</html>

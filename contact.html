@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | TadabburKids - Get in Touch</title>
+  <meta name="description" content="Contact TadabburKids for questions about our books, Quran lessons, or Islamic education resources. We'd love to hear from you!">
+  <meta name="keywords" content="contact TadabburKids, Islamic education inquiry, Quran lessons contact">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Remix Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2FAA6F',
+            secondary: '#FF8C42',
+            accent: '#52B8E8',
+            yellow: '#FFC72C',
+            teal: '#26C6DA',
+            darkBrown: '#3A2A1F',
+          },
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Nunito', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body { 
+      font-family: 'Nunito', sans-serif;
+      font-size: 18px;
+      color: #3A2A1F;
+    }
+    
+    h1, h2, h3, h4, h5, h6 { 
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* WhatsApp button pulse animation */
+    @keyframes whatsappPulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      50% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+    }
+    
+    .whatsapp-float {
+      animation: whatsappPulse 2s infinite;
+    }
+    
+    .whatsapp-float:hover {
+      animation: none;
+    }
+    
+    /* Decorative Elements */
+    .doodle {
+      position: absolute;
+      opacity: 0.08;
+      animation: float 6s ease-in-out infinite;
+      z-index: 0;
+    }
+    
+    .doodle-star {
+      font-size: 3rem;
+      color: #FFC72C;
+      animation: float 6s ease-in-out infinite, rotate 20s linear infinite;
+    }
+    
+    .doodle-moon {
+      font-size: 3.5rem;
+      color: #2FAA6F;
+      animation: float 8s ease-in-out infinite;
+    }
+    
+    .doodle-sparkle {
+      font-size: 2.5rem;
+      color: #52B8E8;
+      animation: float 5s ease-in-out infinite, pulse 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 0.08; }
+      50% { opacity: 0.15; }
+    }
+    
+    .text-emphasis {
+      color: #2FAA6F;
+      font-weight: 800;
+    }
+    
+    .playful-shadow {
+      box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
+    }
+    
+    .icon-card {
+      transition: all 0.3s ease;
+    }
+    
+    .icon-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center">
+          <span class="text-2xl font-bold text-primary">TadabburKids</span>
+        </a>
+        
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition">Home</a>
+          <a href="our-story.html" class="text-gray-700 hover:text-primary font-medium transition">Our Story</a>
+          <a href="books.html" class="text-gray-700 hover:text-primary font-medium transition">Books</a>
+          <a href="quran-lessons.html" class="text-gray-700 hover:text-primary font-medium transition">Quran Lessons</a>
+          <a href="blog.html" class="text-gray-700 hover:text-primary font-medium transition">Blog</a>
+          <a href="contact.html" class="text-gray-700 hover:text-primary font-medium transition">Contact</a>
+        </div>
+        
+        <button id="mobile-menu-toggle" class="md:hidden text-3xl text-primary focus:outline-none">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+      
+      <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 bg-white shadow-lg rounded-b-xl px-6 py-4">
+        <a href="index.html" class="block text-gray-700 hover:text-primary font-medium">Home</a>
+        <a href="our-story.html" class="block text-gray-700 hover:text-primary font-medium">Our Story</a>
+        <a href="books.html" class="block text-gray-700 hover:text-primary font-medium">Books</a>
+        <a href="quran-lessons.html" class="block text-gray-700 hover:text-primary font-medium">Quran Lessons</a>
+        <a href="blog.html" class="block text-gray-700 hover:text-primary font-medium">Blog</a>
+        <a href="contact.html" class="block text-gray-700 hover:text-primary font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-20">
+    
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 py-20 md:py-32 overflow-hidden">
+      <!-- Decorative Doodles -->
+      <i class="ri-mail-line doodle doodle-sparkle" style="top: 15%; left: 8%;"></i>
+      <i class="ri-star-fill doodle doodle-star" style="top: 25%; right: 10%;"></i>
+      <i class="ri-chat-3-line doodle doodle-sparkle" style="bottom: 20%; left: 12%;"></i>
+      <i class="ri-heart-3-line doodle doodle-sparkle" style="bottom: 30%; right: 15%;"></i>
+      
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="inline-flex items-center gap-3 bg-primary/10 rounded-full px-6 py-3 mb-6">
+          <i class="ri-message-3-line text-2xl text-primary"></i>
+          <span class="text-lg font-bold text-darkBrown">Get in Touch</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-darkBrown mb-6 leading-tight">
+          We'd <span class="text-emphasis">Love</span> to<br>
+          Hear From You!
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-gray-700 leading-relaxed">
+          Have questions about our books or lessons? Want to share feedback? Reach out—we respond to every message.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT OPTIONS & FORM -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          
+          <!-- LEFT: Contact Options -->
+          <div>
+            
+            <h2 class="text-3xl font-bold text-darkBrown mb-8">
+              Ways to <span class="text-emphasis">Connect</span>
+            </h2>
+            
+            <div class="space-y-6">
+              
+              <!-- WhatsApp (Primary) -->
+              <div class="icon-card bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 playful-shadow">
+                <div class="flex items-start gap-4">
+                  <div class="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="ri-whatsapp-line text-3xl text-white"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-darkBrown mb-2">WhatsApp (Fastest)</h3>
+                    <p class="text-gray-700 mb-4">Get a response within 24 hours</p>
+                    <a href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I%20have%20a%20question%20about%20TadabburKids." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 px-6 rounded-full transition">
+                      Chat on WhatsApp
+                      <i class="ri-arrow-right-line ml-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Email -->
+              <div class="icon-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 playful-shadow">
+                <div class="flex items-start gap-4">
+                  <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="ri-mail-line text-3xl text-white"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-darkBrown mb-2">Email</h3>
+                    <p class="text-gray-700 mb-2">For detailed inquiries</p>
+                    <a href="mailto:contact@tadabburkids.com" class="text-accent hover:text-primary font-semibold transition">
+                      contact@tadabburkids.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Response Time -->
+              <div class="bg-yellow-50 border-2 border-yellow-200 rounded-2xl p-6">
+                <div class="flex items-start gap-3">
+                  <i class="ri-time-line text-2xl text-yellow-600 mt-1"></i>
+                  <div>
+                    <h4 class="font-bold text-darkBrown mb-2">Response Time</h4>
+                    <p class="text-gray-700 text-sm">
+                      We typically respond within <strong>24 hours</strong>. If you need urgent assistance, WhatsApp is the fastest way to reach us.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+          
+          <!-- RIGHT: Contact Form -->
+          <div>
+            
+            <h2 class="text-3xl font-bold text-darkBrown mb-8">
+              Send Us a <span class="text-emphasis">Message</span>
+            </h2>
+            
+            <form id="contact-form" class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 playful-shadow" onsubmit="handleContact(event)">
+              
+              <div class="space-y-6">
+                
+                <!-- Name -->
+                <div>
+                  <label for="name" class="block text-lg font-bold text-darkBrown mb-2">Your Name *</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required
+                    class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none text-darkBrown text-lg transition"
+                    placeholder="Enter your name"
+                  >
+                </div>
+                
+                <!-- Email -->
+                <div>
+                  <label for="email" class="block text-lg font-bold text-darkBrown mb-2">Your Email *</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required
+                    class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none text-darkBrown text-lg transition"
+                    placeholder="your@email.com"
+                  >
+                </div>
+                
+                <!-- Subject -->
+                <div>
+                  <label for="subject" class="block text-lg font-bold text-darkBrown mb-2">Subject *</label>
+                  <select 
+                    id="subject" 
+                    name="subject" 
+                    required
+                    class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none text-darkBrown text-lg transition appearance-none bg-white"
+                  >
+                    <option value="">Select a topic</option>
+                    <option value="Books Inquiry">Question about Books</option>
+                    <option value="Lessons Inquiry">Question about Quran Lessons</option>
+                    <option value="General Question">General Question</option>
+                    <option value="Feedback">Feedback or Suggestion</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                
+                <!-- Message -->
+                <div>
+                  <label for="message" class="block text-lg font-bold text-darkBrown mb-2">Your Message *</label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="5"
+                    required
+                    class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none text-darkBrown text-lg transition resize-none"
+                    placeholder="Tell us how we can help..."
+                  ></textarea>
+                </div>
+                
+                <!-- Submit Button -->
+                <button 
+                  type="submit" 
+                  class="w-full bg-gradient-to-r from-primary to-teal text-white font-bold py-5 px-8 rounded-full text-xl hover:from-teal hover:to-primary transition playful-shadow"
+                >
+                  Send Message
+                  <i class="ri-send-plane-fill ml-2"></i>
+                </button>
+                
+              </div>
+              
+            </form>
+            
+            <!-- Success Message (Hidden by default) -->
+            <div id="contact-success" class="hidden mt-8 bg-green-50 border-4 border-primary rounded-3xl p-8 text-center playful-shadow">
+              <i class="ri-checkbox-circle-line text-6xl text-primary mb-4"></i>
+              <h3 class="text-2xl font-bold text-darkBrown mb-3">Message Sent! 🎉</h3>
+              <p class="text-lg text-gray-700 mb-6">
+                Thank you for reaching out! We'll get back to you within 24 hours.
+              </p>
+              <a href="https://wa.me/923165252296" target="_blank" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 px-6 rounded-full transition">
+                <i class="ri-whatsapp-line text-xl mr-2"></i>
+                Chat on WhatsApp Now
+              </a>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- FAQ LINK -->
+    <section class="py-20 bg-gradient-to-br from-orange-50 via-yellow-50 to-green-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="bg-white rounded-3xl p-10 playful-shadow">
+          
+          <div class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="ri-question-line text-4xl text-primary"></i>
+          </div>
+          
+          <h2 class="text-3xl font-bold text-darkBrown mb-4">
+            Looking for Quick Answers?
+          </h2>
+          
+          <p class="text-xl text-gray-700 mb-8">
+            Check out our FAQ page—your question might already be answered!
+          </p>
+          
+          <a href="index.html#faq" class="inline-flex items-center justify-center bg-gradient-to-r from-secondary to-yellow text-white font-bold py-4 px-8 rounded-full text-lg hover:from-yellow hover:to-secondary transition playful-shadow">
+            View FAQs
+            <i class="ri-arrow-right-line ml-2"></i>
+          </a>
+          
+        </div>
+        
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-primary">TadabburKids</h3>
+          <p class="text-gray-400 text-sm">
+            Connecting young hearts to the Quran through Tadabbur. Authentic Islamic education for children worldwide.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="our-story.html" class="text-gray-400 hover:text-primary transition">Our Story</a></li>
+            <li><a href="books.html" class="text-gray-400 hover:text-primary transition">Books</a></li>
+            <li><a href="quran-lessons.html" class="text-gray-400 hover:text-primary transition">Quran Lessons</a></li>
+            <li><a href="blog.html" class="text-gray-400 hover:text-primary transition">Blog</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-primary transition">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li class="flex items-center gap-2">
+              <i class="ri-mail-line"></i>
+              <a href="mailto:contact@tadabburkids.com" class="hover:text-primary transition">contact@tadabburkids.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="ri-whatsapp-line"></i>
+              <span>WhatsApp: +92 316 525 2296</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+        <p>&copy; 2025 TadabburKids. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a 
+    href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I'm%20interested%20in%20learning%20more%20about%20TadabburKids." 
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float fixed bottom-8 right-8 z-50 bg-[#25D366] text-white rounded-full shadow-2xl w-16 h-16 flex items-center justify-center text-3xl transition-all duration-300 hover:bg-[#128C7E] hover:scale-110"
+    aria-label="Contact us on WhatsApp"
+  >
+    <i class="ri-whatsapp-line"></i>
+  </a>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.getElementById('mobile-menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      
+      toggle.addEventListener('click', function() {
+        menu.classList.toggle('hidden');
+      });
+      
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => menu.classList.add('hidden'));
+      });
+    });
+    
+    // Contact form handler
+    function handleContact(event) {
+      event.preventDefault();
+      
+      const form = event.target;
+      const formData = new FormData(form);
+      
+      // Get form values
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const subject = formData.get('subject');
+      const message = formData.get('message');
+      
+      // Construct WhatsApp message
+      const whatsappMessage = `*New Contact Form Message*
+
+*Name:* ${name}
+*Email:* ${email}
+*Subject:* ${subject}
+
+*Message:*
+${message}`;
+      
+      // Redirect to WhatsApp
+      const whatsappUrl = `https://wa.me/923165252296?text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(whatsappUrl, '_blank');
+      
+      // Show success message
+      form.classList.add('hidden');
+      document.getElementById('contact-success').classList.remove('hidden');
+      
+      // Scroll to success message
+      document.getElementById('contact-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+
+</body>
+</html>
