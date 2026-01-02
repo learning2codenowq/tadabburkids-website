@@ -293,7 +293,7 @@
 <div class="relative">
   <div class="bg-gradient-to-br from-green-100 to-blue-100 rounded-3xl p-8 playful-shadow transform hover:scale-105 transition">
     <img 
-      src="images/books/who-made-all-this/cover.jpg" 
+      src="images/books/who-made-all-this/cover.png" 
       alt="Who Made All This? - Interactive Tadabbur Book Cover" 
       class="w-full h-auto rounded-2xl shadow-lg"
       onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 600%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22400%22 height=%22600%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2224%22%3EBook Cover%3C/text%3E%3C/svg%3E';"
@@ -460,77 +460,103 @@
     </section>
 
     <!-- SAMPLE PAGES GALLERY -->
-    <section id="sample-pages" class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold text-darkBrown mb-6">
-            Peek Inside the <span class="text-emphasis">Book</span>
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Click any page to view it full-screen
-          </p>
-        </div>
-        
-        <!-- Sample Pages Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          
-          <!-- Sample Page 1 -->
-          <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-4 playful-shadow cursor-pointer transform hover:scale-105 transition" onclick="openLightbox('sample1')">
-            <div class="aspect-square bg-white rounded-xl flex items-center justify-center">
-              <div class="text-center text-gray-400">
-                <i class="ri-image-line text-4xl mb-2"></i>
-                <p class="text-sm">Sample Page 1</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Sample Page 2 -->
-          <div class="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl p-4 playful-shadow cursor-pointer transform hover:scale-105 transition" onclick="openLightbox('sample2')">
-            <div class="aspect-square bg-white rounded-xl flex items-center justify-center">
-              <div class="text-center text-gray-400">
-                <i class="ri-image-line text-4xl mb-2"></i>
-                <p class="text-sm">Sample Page 2</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Sample Page 3 -->
-          <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-4 playful-shadow cursor-pointer transform hover:scale-105 transition" onclick="openLightbox('sample3')">
-            <div class="aspect-square bg-white rounded-xl flex items-center justify-center">
-              <div class="text-center text-gray-400">
-                <i class="ri-image-line text-4xl mb-2"></i>
-                <p class="text-sm">Sample Page 3</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Sample Page 4 -->
-          <div class="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-4 playful-shadow cursor-pointer transform hover:scale-105 transition" onclick="openLightbox('sample4')">
-            <div class="aspect-square bg-white rounded-xl flex items-center justify-center">
-              <div class="text-center text-gray-400">
-                <i class="ri-image-line text-4xl mb-2"></i>
-                <p class="text-sm">Sample Page 4</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Add more sample page placeholders as needed -->
-          
-        </div>
-        
-        <p class="text-center text-gray-600 mt-10 text-lg">
-          <strong>Note:</strong> Physical book includes interactive flaps not shown in samples. E-book adapted for digital reading.
-        </p>
-        
-      </div>
-    </section>
-
-    <!-- Lightbox for Sample Pages -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-      <button class="absolute top-8 right-8 text-white text-5xl hover:text-gray-300 transition" onclick="closeLightbox()">&times;</button>
-      <img id="lightbox-img" src="" alt="Sample page">
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-darkBrown mb-4">
+        Peek Inside the <span class="text-primary">Book</span>
+      </h2>
+      <p class="text-xl text-gray-600">
+        Click any page to view it full-screen
+      </p>
     </div>
+    
+    <!-- Sample Pages Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      
+      <!-- Sample Page 1 -->
+      <div class="group cursor-pointer" onclick="openLightbox(0)">
+        <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl p-4 playful-shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+          <img 
+            src="images/books/who-made-all-this/sample1.png" 
+            alt="Sample Page 1 - Who Made All This?" 
+            class="w-full rounded-2xl shadow-lg"
+            onerror="this.parentElement.innerHTML='<div class=\'w-full h-64 bg-gray-200 rounded-2xl flex items-center justify-center\'><i class=\'ri-image-line text-6xl text-gray-400\'></i></div>'"
+          >
+          <p class="text-center text-gray-600 font-semibold mt-4">Sample Page 1</p>
+        </div>
+      </div>
+      
+      <!-- Sample Page 2 -->
+      <div class="group cursor-pointer" onclick="openLightbox(1)">
+        <div class="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-3xl p-4 playful-shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+          <img 
+            src="images/books/who-made-all-this/sample2.png" 
+            alt="Sample Page 2 - Who Made All This?" 
+            class="w-full rounded-2xl shadow-lg"
+            onerror="this.parentElement.innerHTML='<div class=\'w-full h-64 bg-gray-200 rounded-2xl flex items-center justify-center\'><i class=\'ri-image-line text-6xl text-gray-400\'></i></div>'"
+          >
+          <p class="text-center text-gray-600 font-semibold mt-4">Sample Page 2</p>
+        </div>
+      </div>
+      
+      <!-- Sample Page 3 -->
+      <div class="group cursor-pointer" onclick="openLightbox(2)">
+        <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-4 playful-shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+          <img 
+            src="images/books/who-made-all-this/sample3.png" 
+            alt="Sample Page 3 - Who Made All This?" 
+            class="w-full rounded-2xl shadow-lg"
+            onerror="this.parentElement.innerHTML='<div class=\'w-full h-64 bg-gray-200 rounded-2xl flex items-center justify-center\'><i class=\'ri-image-line text-6xl text-gray-400\'></i></div>'"
+          >
+          <p class="text-center text-gray-600 font-semibold mt-4">Sample Page 3</p>
+        </div>
+      </div>
+      
+      <!-- Sample Page 4 -->
+      <div class="group cursor-pointer" onclick="openLightbox(3)">
+        <div class="bg-gradient-to-br from-blue-50 to-teal-50 rounded-3xl p-4 playful-shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+          <img 
+            src="images/books/who-made-all-this/sample4.png" 
+            alt="Sample Page 4 - Who Made All This?" 
+            class="w-full rounded-2xl shadow-lg"
+            onerror="this.parentElement.innerHTML='<div class=\'w-full h-64 bg-gray-200 rounded-2xl flex items-center justify-center\'><i class=\'ri-image-line text-6xl text-gray-400\'></i></div>'"
+          >
+          <p class="text-center text-gray-600 font-semibold mt-4">Sample Page 4</p>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Note about Physical Book -->
+    <div class="text-center">
+      <p class="text-gray-600 text-lg">
+        <strong>Note:</strong> Physical book includes interactive flaps not shown in samples. E-book adapted for digital reading.
+      </p>
+    </div>
+    
+  </div>
+</section>
+
+<!-- LIGHTBOX MODAL (Full-Screen Image Viewer) -->
+<div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4" onclick="closeLightbox()">
+  <button onclick="closeLightbox()" class="absolute top-8 right-8 text-white text-5xl hover:text-gray-300 z-50">
+    <i class="ri-close-line"></i>
+  </button>
+  
+  <button onclick="previousImage(event)" class="absolute left-8 text-white text-5xl hover:text-gray-300 z-50 bg-black bg-opacity-50 rounded-full w-16 h-16 flex items-center justify-center">
+    <i class="ri-arrow-left-line"></i>
+  </button>
+  
+  <img id="lightbox-img" src="" alt="Sample Page" class="max-w-full max-h-full rounded-2xl shadow-2xl" onclick="event.stopPropagation()">
+  
+  <button onclick="nextImage(event)" class="absolute right-8 text-white text-5xl hover:text-gray-300 z-50 bg-black bg-opacity-50 rounded-full w-16 h-16 flex items-center justify-center">
+    <i class="ri-arrow-right-line"></i>
+  </button>
+  
+  <div id="lightbox-caption" class="absolute bottom-8 text-white text-2xl font-bold"></div>
+</div>
 
     <!-- ORDER SECTION -->
     <section id="order" class="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
@@ -706,6 +732,85 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         closeLightbox();
+      }
+    });
+  </script>
+  <!-- Lightbox JavaScript -->
+  <script>
+    const sampleImages = [
+      {
+        src: 'images/books/who-made-all-this/sample1.png',
+        caption: 'Sample Page 1'
+      },
+      {
+        src: 'images/books/who-made-all-this/sample2.png',
+        caption: 'Sample Page 2'
+      },
+      {
+        src: 'images/books/who-made-all-this/sample3.png',
+        caption: 'Sample Page 3'
+      },
+      {
+        src: 'images/books/who-made-all-this/sample4.png',
+        caption: 'Sample Page 4'
+      }
+    ];
+    
+    let currentImageIndex = 0;
+    
+    function openLightbox(index) {
+      currentImageIndex = index;
+      const lightbox = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      const caption = document.getElementById('lightbox-caption');
+      
+      img.src = sampleImages[index].src;
+      caption.textContent = sampleImages[index].caption;
+      lightbox.classList.remove('hidden');
+      
+      // Prevent body scroll
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.classList.add('hidden');
+      
+      // Restore body scroll
+      document.body.style.overflow = 'auto';
+    }
+    
+    function nextImage(event) {
+      event.stopPropagation();
+      currentImageIndex = (currentImageIndex + 1) % sampleImages.length;
+      const img = document.getElementById('lightbox-img');
+      const caption = document.getElementById('lightbox-caption');
+      
+      img.src = sampleImages[currentImageIndex].src;
+      caption.textContent = sampleImages[currentImageIndex].caption;
+    }
+    
+    function previousImage(event) {
+      event.stopPropagation();
+      currentImageIndex = (currentImageIndex - 1 + sampleImages.length) % sampleImages.length;
+      const img = document.getElementById('lightbox-img');
+      const caption = document.getElementById('lightbox-caption');
+      
+      img.src = sampleImages[currentImageIndex].src;
+      caption.textContent = sampleImages[currentImageIndex].caption;
+    }
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      const lightbox = document.getElementById('lightbox');
+      if (!lightbox.classList.contains('hidden')) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        } else if (e.key === 'ArrowRight') {
+          nextImage(e);
+        } else if (e.key === 'ArrowLeft') {
+          previousImage(e);
+        }
       }
     });
   </script>

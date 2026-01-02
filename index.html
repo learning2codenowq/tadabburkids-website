@@ -255,6 +255,19 @@
 .color-block-blue:hover {
   background: linear-gradient(135deg, #3A9FD8 0%, #52B8E8 100%);
 }
+/* Struggle emphasis - Rough, emotional font */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.script-emphasis-struggle {
+  font-family: 'Permanent Marker', cursive;
+  color: #E63946;
+  font-size: 1.15em;
+  font-weight: 400;
+  display: inline-block;
+  transform: rotate(-1deg);
+  text-shadow: 3px 3px 6px rgba(230, 57, 70, 0.3);
+  letter-spacing: 0.02em;
+}
   </style>
   
 </head>
@@ -339,111 +352,64 @@
   </div>
 </section>
 
-    <!-- PROBLEM SECTION -->
-<section class="relative py-20 bg-white overflow-hidden">
-  <!-- Decorative Doodles -->
-  <i class="ri-star-fill doodle doodle-star" style="top: 10%; right: 5%;"></i>
-  <i class="ri-moon-fill doodle doodle-moon" style="bottom: 10%; left: 5%;"></i>
-  <i class="ri-book-open-fill doodle doodle-book" style="top: 50%; right: 10%;"></i>
-  <i class="ri-sparkling-fill doodle doodle-sparkle" style="bottom: 20%; right: 15%;"></i>
-  <i class="ri-plant-fill doodle doodle-plant" style="top: 30%; left: 8%;"></i>
-  
+   <!-- PROBLEM SECTION -->
+<section class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Heading with Emphasis -->
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-darkBrown mb-6">
-        The <span class="text-emphasis">Struggle</span> Every Muslim Parent Faces
+      <h2 class="text-4xl md:text-5xl font-bold text-darkBrown mb-4">
+        The <span class="script-emphasis-struggle">Struggle</span> Every Muslim Parent Faces
       </h2>
-      <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-        You want your child to love the Quran... but finding authentic, engaging resources feels impossible.
-      </p>
     </div>
     
     <!-- Pain Points Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
       
       <!-- Pain Point 1 -->
-      <div class="icon-card bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl p-8 border-4 border-red-100 playful-shadow">
-        <div class="flex items-start gap-4">
-          <div class="flex-shrink-0">
-            <div class="w-16 h-16 bg-red-200 rounded-2xl flex items-center justify-center transform rotate-6">
-              <i class="ri-close-circle-line text-3xl text-red-600"></i>
-            </div>
-          </div>
-          <div>
-            <h3 class="text-2xl font-bold text-darkBrown mb-3">Lack of Authentic Islamic Books</h3>
-            <p class="text-gray-700 leading-relaxed">
-              Most children's books either water down Islamic teachings or mix culture with religion. You want something rooted purely in Quran and Sunnah.
-            </p>
-          </div>
+      <div class="icon-card bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl p-8 playful-shadow text-center">
+        <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="ri-book-open-line text-4xl text-red-500"></i>
         </div>
+        <h3 class="text-2xl font-bold text-darkBrown mb-4">Quran Feels Like a Chore</h3>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          You want your child to love the Quran, but right now it feels like homework. They memorize without understanding. Your heart breaks when you see them lose interest.
+        </p>
       </div>
       
       <!-- Pain Point 2 -->
-      <div class="icon-card bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 border-4 border-blue-100 playful-shadow">
-        <div class="flex items-start gap-4">
-          <div class="flex-shrink-0">
-            <div class="w-16 h-16 bg-blue-200 rounded-2xl flex items-center justify-center transform -rotate-6">
-              <i class="ri-heart-line text-3xl text-blue-600"></i>
-            </div>
-          </div>
-          <div>
-            <h3 class="text-2xl font-bold text-darkBrown mb-3">Children Disconnected from Quran</h3>
-            <p class="text-gray-700 leading-relaxed">
-              They memorize verses but don't understand what they mean. They recite beautifully but don't feel the connection to Allah's words.
-            </p>
-          </div>
+      <div class="icon-card bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 playful-shadow text-center">
+        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="ri-search-line text-4xl text-blue-500"></i>
         </div>
+        <h3 class="text-2xl font-bold text-darkBrown mb-4">Nothing Feels Right</h3>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          You search for good Islamic books and resources, but everything is either too babyish or too serious. You know your child needs something better.
+        </p>
       </div>
       
       <!-- Pain Point 3 -->
-      <div class="icon-card bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 border-4 border-purple-100 playful-shadow">
-        <div class="flex items-start gap-4">
-          <div class="flex-shrink-0">
-            <div class="w-16 h-16 bg-purple-200 rounded-2xl flex items-center justify-center transform rotate-6">
-              <i class="ri-question-line text-3xl text-purple-600"></i>
-            </div>
-          </div>
-          <div>
-            <h3 class="text-2xl font-bold text-darkBrown mb-3">Parents Don't Know HOW to Teach Tadabbur</h3>
-            <p class="text-gray-700 leading-relaxed">
-              You want to raise your child with Islamic values, but you're not sure where to start. You need guidance, not just generic advice.
-            </p>
-          </div>
+      <div class="icon-card bg-gradient-to-br from-yellow-50 to-green-50 rounded-3xl p-8 playful-shadow text-center">
+        <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="ri-smartphone-line text-4xl text-yellow-600"></i>
         </div>
-      </div>
-      
-      <!-- Pain Point 4 -->
-      <div class="icon-card bg-gradient-to-br from-yellow-50 to-orange-50 rounded-3xl p-8 border-4 border-yellow-100 playful-shadow">
-        <div class="flex items-start gap-4">
-          <div class="flex-shrink-0">
-            <div class="w-16 h-16 bg-yellow-200 rounded-2xl flex items-center justify-center transform -rotate-6">
-              <i class="ri-book-open-line text-3xl text-yellow-600"></i>
-            </div>
-          </div>
-          <div>
-            <h3 class="text-2xl font-bold text-darkBrown mb-3">No Interactive Resources</h3>
-            <p class="text-gray-700 leading-relaxed">
-              Boring textbooks don't engage young minds. You need something colorful, interactive, and fun—that still teaches authentic Islam.
-            </p>
-          </div>
-        </div>
+        <h3 class="text-2xl font-bold text-darkBrown mb-4">Screens Are Winning</h3>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Your child can watch videos for hours, but ten minutes of Quran feels like a battle. You want Islamic learning to be just as fun and exciting.
+        </p>
       </div>
       
     </div>
     
-    <!-- Empathy Statement -->
-    <div class="mt-16 text-center">
-      <div class="color-block-yellow playful-shadow p-10 max-w-3xl mx-auto transform hover:scale-105 transition">
-        <p class="text-2xl md:text-3xl font-bold text-darkBrown mb-4">
-          We felt this struggle too.
-        </p>
-        <p class="text-xl text-darkBrown/90">
-          As parents raising our own children on Quran and Sunnah, we searched everywhere for authentic, engaging resources... and couldn't find them.
-        </p>
-        <p class="text-xl text-darkBrown/90 mt-4 font-bold">
-          So we created them ourselves. ✨
-        </p>
-      </div>
+    <!-- Transition - Hope -->
+    <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-3xl p-12 playful-shadow text-center max-w-4xl mx-auto">
+      <i class="ri-lightbulb-line text-6xl text-primary mb-6 inline-block"></i>
+      <h3 class="text-3xl md:text-4xl font-bold text-darkBrown mb-6 leading-tight">
+        What if there was a way to make Islamic learning feel like play?
+      </h3>
+      <p class="text-xl md:text-2xl text-gray-700 leading-relaxed">
+        What if your child asked for <span class="font-bold text-primary">more</span> Quran time instead of less?
+      </p>
     </div>
     
   </div>
@@ -713,310 +679,6 @@
     
   </div>
 </section>
-
-<!-- VISION SECTION -->
-<section class="relative py-20 bg-white overflow-hidden">
-  <!-- Decorative Doodles -->
-  <i class="ri-star-fill doodle doodle-star" style="top: 20%; left: 10%;"></i>
-  <i class="ri-moon-fill doodle doodle-moon" style="bottom: 15%; right: 8%;"></i>
-  <i class="ri-plant-fill doodle doodle-plant" style="top: 40%; right: 5%;"></i>
-  
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <div class="max-w-4xl mx-auto text-center">
-      
-      <!-- Vision Badge -->
-      <div class="inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full px-6 py-3 mb-8">
-        <i class="ri-rocket-line text-3xl text-primary"></i>
-        <span class="text-lg font-bold text-darkBrown">Our Vision</span>
-      </div>
-      
-      <!-- Main Headline -->
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-darkBrown mb-8 leading-tight">
-        Building a <span class="text-emphasis">Global Institute</span><br>
-        for Quranic Tarbiyyah
-      </h2>
-      
-      <!-- Vision Description -->
-      <p class="text-xl md:text-2xl text-gray-700 mb-6 leading-relaxed">
-        TadabburKids is just the beginning. Our dream is to establish an academy where Muslim families worldwide can access authentic Quranic education—through books, lessons, and resources that make reflecting on Allah's words a natural part of childhood.
-      </p>
-      
-      <p class="text-lg text-gray-600 mb-10">
-        We're building this as <strong class="text-primary">Sadaqah Jariyah</strong>—a continuous charity that benefits generations of Muslim children, helping them grow up knowing Allah, loving Allah, and living with purpose.
-      </p>
-      
-      <!-- Call to Join -->
-      <div class="color-block-yellow playful-shadow rounded-3xl p-10 transform hover:scale-105 transition">
-        <h3 class="text-3xl font-bold text-darkBrown mb-4">
-          Join Us from the Beginning ✨
-        </h3>
-        <p class="text-xl text-darkBrown/80 mb-8">
-          Be part of the journey as we grow from books and lessons into a full Islamic education institute. Your support today helps shape the future of Quranic learning for children worldwide.
-        </p>
-        
-        <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="books.html" class="inline-flex items-center justify-center color-block-green text-white font-bold py-4 px-8 rounded-full text-lg playful-shadow hover:scale-105 transition transform">
-            Start with Our Books
-            <i class="ri-arrow-right-line ml-2"></i>
-          </a>
-          <a href="quran-lessons.html" class="inline-flex items-center justify-center color-block-orange text-white font-bold py-4 px-8 rounded-full text-lg playful-shadow hover:scale-105 transition transform">
-            Enroll in Lessons
-            <i class="ri-arrow-right-line ml-2"></i>
-          </a>
-        </div>
-      </div>
-      
-    </div>
-    
-  </div>
-</section>
-<!-- FAQ SECTION -->
-<section class="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <!-- Section Header -->
-    <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-darkBrown mb-6">
-        Frequently Asked <span class="text-emphasis">Questions</span>
-      </h2>
-      <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-        Everything you need to know about our books and Quran lessons
-      </p>
-    </div>
-    
-    <!-- FAQ Categories -->
-    <div class="max-w-4xl mx-auto space-y-6">
-      
-      <!-- About Books -->
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">What age range are the books for?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          Our interactive Tadabbur books are designed for children aged <strong>3 to 12 years old</strong>. Each book includes age-appropriate activities, reflections, and parent guides to help facilitate learning.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">Are the books physical or digital?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          We offer <strong>both physical and ebook versions</strong>. Physical books are beautifully printed with high-quality paper and illustrations. Digital versions are available as PDFs for instant access.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">Do you ship internationally?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          Yes! We're currently finalizing our international shipping partners. Contact us via WhatsApp to check if we ship to your country. Digital ebooks are available worldwide instantly.
-        </div>
-      </div>
-      
-      <!-- About Quran Lessons -->
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">What age range are the Quran lessons for?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          Our live Quran Tadabbur lessons are for children aged <strong>4 to 16 years old</strong>. We tailor each lesson to your child's age, understanding level, and learning pace.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">How many lessons per week?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          We recommend <strong>3 to 5 lessons per week</strong> for consistent progress. However, we offer flexible scheduling based on your family's availability and your child's needs.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">Do you offer a free trial lesson?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          <strong>Yes!</strong> We offer <strong>1 free trial lesson</strong> so you and your child can experience our teaching approach with no commitment. Book your trial through the Quran Lessons page.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">What if my child misses a lesson?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          If you're enrolled in a monthly package, missed lessons are still counted as part of your monthly commitment. We recommend scheduling makeup lessons in advance when possible. Contact us to discuss specific circumstances.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">What platform do you use for lessons?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          We conduct all lessons via <strong>Google Meet</strong>. It's easy to use, secure, and works on any device. We'll send you the meeting link before each session.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">Can parents sit in on lessons?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          <strong>Absolutely!</strong> We encourage parents to join lessons, especially for younger children. It helps you reinforce learning at home and see your child's progress firsthand.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">Do we need any materials before starting?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          <strong>No!</strong> We provide all necessary learning materials digitally. Your child just needs a device with internet access and a quiet space to learn.
-        </div>
-      </div>
-      
-      <!-- Payment & General -->
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">What payment methods do you accept?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          We accept <strong>Wise transfers and direct bank transfers</strong>. Payment is processed monthly. We support multiple currencies: <strong>AED, USD, EUR, and PKR</strong>.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">Do you offer certificates upon completion?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          <strong>Yes!</strong> Students receive certificates upon completing lesson milestones, recognizing their progress in Quranic Tadabbur and understanding.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">My child is shy—will they feel comfortable?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          <strong>Yes!</strong> We're experienced in working with shy children. Our teachers create a warm, encouraging environment where every child feels safe to participate at their own pace. Many shy students blossom with personalized attention.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">We're not Arabic speakers—is that okay?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          <strong>Absolutely!</strong> Our lessons are conducted in <strong>English</strong>. We teach Quranic Arabic gradually, making it accessible for non-Arabic speaking families. Understanding comes first.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">How will I know if lessons are working?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          You'll notice your child <strong>starting to remember Allah in their daily activities</strong>—making connections between Quranic teachings and everyday life. We also provide regular progress updates and encourage parent involvement.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">Do you teach Quran recitation or just Tadabbur?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          We teach <strong>both</strong>! Our lessons cover proper Quranic recitation (Qaaidah and Tajweed) alongside Tadabbur (reflection and understanding). We believe beautiful recitation paired with deep understanding creates lasting connection to the Quran.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">Can we switch between 1-on-1 and group classes?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          <strong>Yes!</strong> You can switch between class types based on your child's needs and family circumstances. Just let us know in advance so we can adjust scheduling.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">Do you offer scholarships or financial assistance?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          Yes, we review scholarship requests on a <strong>case-by-case basis</strong>. We believe every child deserves access to authentic Quranic education. Contact us to discuss your situation privately.
-        </div>
-      </div>
-      
-      <div class="bg-white rounded-2xl p-6 playful-shadow">
-        <button class="faq-question w-full flex items-center justify-between text-left" onclick="toggleFAQ(this)">
-          <span class="text-xl font-bold text-darkBrown pr-8">What are your teacher's qualifications?</span>
-          <i class="ri-add-line text-3xl text-primary flex-shrink-0 transition-transform"></i>
-        </button>
-        <div class="faq-answer hidden mt-4 text-gray-700 leading-relaxed">
-          Our teacher has <strong>memorized the Quran</strong> and received certification from the Sharjah government. He is currently <strong>pursuing Ijazah in teaching Qaaidah from Masjid Nabawi</strong> in Madinah—learning directly from the scholars at the Prophet's Mosque ﷺ.
-        </div>
-      </div>
-      
-    </div>
-    
-    <!-- Still Have Questions CTA -->
-    <div class="mt-16 text-center">
-      <div class="bg-white rounded-3xl p-10 playful-shadow max-w-2xl mx-auto">
-        <h3 class="text-3xl font-bold text-darkBrown mb-4">Still have questions?</h3>
-        <p class="text-xl text-gray-700 mb-6">We're here to help! Message us directly on WhatsApp.</p>
-        <a href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I%20have%20a%20question%20about%20TadabburKids." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-4 px-8 rounded-full text-lg playful-shadow transition transform hover:scale-105">
-          <i class="ri-whatsapp-line text-2xl mr-2"></i>
-          Chat on WhatsApp
-        </a>
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-<!-- FAQ JavaScript -->
-<script>
-function toggleFAQ(button) {
-  const answer = button.nextElementSibling;
-  const icon = button.querySelector('i');
-  const isOpen = !answer.classList.contains('hidden');
-  
-  if (isOpen) {
-    answer.classList.add('hidden');
-    icon.classList.remove('ri-subtract-line');
-    icon.classList.add('ri-add-line');
-  } else {
-    answer.classList.remove('hidden');
-    icon.classList.remove('ri-add-line');
-    icon.classList.add('ri-subtract-line');
-  }
-}
-</script>
 
 <!-- EMAIL CAPTURE SECTION -->
 <section class="relative py-20 bg-white overflow-hidden">
