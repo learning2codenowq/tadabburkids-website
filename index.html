@@ -471,27 +471,42 @@
 .hover\:scale-102:hover {
   transform: scale(1.02);
 }
-/* Uthmani Arabic Font */
+/* KFGQPCNastaleeq Arabic Font - Smaller Size */
 @font-face {
-  font-family: 'Uthmani';
-  src: url('fonts/KFGQPCNastaleeq-Regular.ttf') format('opentype');
-  /* Adjust the path and filename based on your actual font file */
+  font-family: 'KFGQPCNastaleeq';
+  src: url('fonts/me_quran_volt_newmet.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 .arabic-text {
-  font-family: 'Uthmani', 'Traditional Arabic', 'Arabic Typesetting', serif;
-  font-size: 2rem;
-  line-height: 2.5;
+  font-family: 'KFGQPCNastaleeq', 'Scheherazade New', 'Traditional Arabic', serif;
+  font-size: 1.75rem;
+  /* Reduced from 2.25rem */
+  line-height: 2.2;
   direction: rtl;
   text-align: center;
-  color: #000000ff;
+  color: #000000;
+  letter-spacing: 0.02em;
+  word-spacing: 0.15em;
+  padding: 0.5rem 0;
+  font-weight: 400;
 }
 
 @media (min-width: 768px) {
   .arabic-text {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    /* Reduced from 2.5rem */
+    line-height: 2.3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .arabic-text {
+    font-size: 2.25rem;
+    /* Reduced from 2.75rem */
+    line-height: 2.4;
   }
 }
   </style>
@@ -603,27 +618,30 @@
     </div>
     
     <!-- Ayah Display with Arabic -->
-    <div class="max-w-4xl mx-auto mb-16">
-      <div class="bg-gradient-to-br from-green-100 to-teal-100 border-4 border-green-300 rounded-3xl p-8 md:p-12 playful-shadow text-center transform hover:scale-105 transition-all duration-300">
-        <div class="flex items-center justify-center gap-3 mb-6">
-          <i class="ri-book-open-fill text-5xl text-primary"></i>
-          <span class="text-2xl font-bold text-darkBrown">Allah Says:</span>
-        </div>
-        
-        <!-- Arabic Text -->
-        <p class="arabic-text mb-8">
-          كِتَابٌ أَنزَلْنَاهُ إِلَيْكَ مُبَارَكٌ لِّيَدَّبَّرُوا آيَاتِهِ وَلِيَتَذَكَّرَ أُولُو الْأَلْبَابِ
-        </p>
-        
-        <!-- Simple English Translation -->
-        <p class="text-2xl md:text-3xl font-semibold text-darkBrown leading-relaxed mb-6" style="font-family: 'Fredoka', sans-serif;">
-          "Allah sent down the Quran so we can <span class="text-primary">think deeply</span> about its meanings and <span class="text-secondary">learn</span> from it."
-        </p>
-        <p class="text-lg text-gray-600 font-medium">
-          — Surah Sad, 38:29
-        </p>
-      </div>
+<div class="max-w-3xl mx-auto mb-16">
+  <div class="bg-gradient-to-br from-green-100 to-teal-100 border-4 border-green-300 rounded-3xl p-8 md:p-10 playful-shadow text-center transform hover:scale-105 transition-all duration-300">
+    
+    <!-- Allah Says Header -->
+    <div class="flex items-center justify-center gap-3 mb-6">
+      <span class="text-3xl md:text-4xl font-bold text-darkBrown" style="font-family: 'Fredoka', sans-serif;">
+        Allah Says:
+      </span>
     </div>
+    
+    <!-- Arabic Text - Smaller -->
+    <p class="arabic-text mb-6">
+      كِتَابٌ أَنزَلْنَاهُ إِلَيْكَ مُبَارَكٌ لِّيَدَّبَّرُوا آيَاتِهِ وَلِيَتَذَكَّرَ أُولُو الْأَلْبَابِ
+    </p>
+    
+    <!-- Simple English Translation -->
+    <p class="text-xl md:text-2xl font-semibold text-darkBrown leading-relaxed mb-6" style="font-family: 'Fredoka', sans-serif;">
+      "This is a blessed Book which We have revealed to you, O Muhammad, that they might <span class="text-primary">reflect upon its verses</span> and that those of understanding would be <span class="text-secondary">reminded</span>."
+    </p>
+    <p class="text-lg text-gray-600 font-medium">
+      — Surah Sad, 38:29
+    </p>
+  </div>
+</div>
     
     <!-- Tadabbur Definition - Updated -->
     <div class="max-w-4xl mx-auto mb-16">
