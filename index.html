@@ -548,6 +548,45 @@
     0 6px 12px rgba(0, 0, 0, 0.1),
     0 15px 30px rgba(47, 170, 111, 0.2);
 }
+/* Slide Up Animation for Heading */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up-heading {
+  animation: slideUp 0.8s ease-out;
+}
+
+/* Highlight Marker Effect for TadabburKids */
+.highlight-marker {
+  background: linear-gradient(180deg, transparent 60%, #FFC72C 60%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  padding: 0 8px;
+  display: inline;
+  animation: highlightSweep 1s ease-out 0.3s forwards;
+}
+
+@keyframes highlightSweep {
+  from {
+    background-size: 0% 100%;
+  }
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+/* Smooth scroll to these sections */
+html {
+  scroll-behavior: smooth;
+}
   </style>
   
 </head>
@@ -703,6 +742,85 @@
     </div>
     
   </div>
+</section>
+<!-- WHY TADABBUR MATTERS FOR KIDS SECTION -->
+<section class="py-16 md:py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Heading with Slide Up Animation -->
+    <div class="text-center mb-10 md:mb-12">
+      <h2 class="slide-up-heading text-3xl sm:text-4xl md:text-5xl font-bold text-darkBrown mb-4" style="font-family: 'Fredoka', sans-serif;">
+        Why Tadabbur Matters for Kids
+      </h2>
+    </div>
+    
+    <!-- Body Content -->
+    <div class="prose prose-lg max-w-none">
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6" style="font-family: 'Nunito', sans-serif;">
+        Children often learn how to read the Quran from a young age, and many even memorize it. But without understanding, the Quran can sometimes feel distant or difficult to connect with.
+      </p>
+      
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6" style="font-family: 'Nunito', sans-serif;">
+        Tadabbur helps children slow down and think about what Allah is saying. It teaches them to reflect, ask questions, and see how the Quran relates to their everyday lives.
+      </p>
+      
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6" style="font-family: 'Nunito', sans-serif;">
+        When children practice tadabbur, the Quran becomes more than words... it becomes a source of guidance, comfort, and tarbiyyah.
+      </p>
+      
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6" style="font-family: 'Nunito', sans-serif;">
+        This early connection helps build a strong foundation of love for the Quran that can last a lifetime.
+      </p>
+      
+      <!-- Transition Text -->
+      <p class="text-xl md:text-2xl text-primary font-bold text-center mt-10 mb-6" style="font-family: 'Fredoka', sans-serif;">
+        This understanding made us realize something important…
+      </p>
+    </div>
+    
+  </div>
+</section>
+
+<!-- WHY WE CREATED TADABBURKIDS SECTION -->
+<section class="py-16 md:py-20 bg-gradient-to-br from-green-50 to-blue-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Heading with Highlight Effect -->
+    <div class="text-center mb-10 md:mb-12">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-darkBrown mb-4" style="font-family: 'Fredoka', sans-serif;">
+        Why We Created <span class="highlight-marker">TadabburKids</span>
+      </h2>
+    </div>
+    
+    <!-- Body Content -->
+    <div class="prose prose-lg max-w-none">
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6" style="font-family: 'Nunito', sans-serif;">
+        We realized that while tadabbur is powerful, it isn't always taught in a way that children can easily understand or enjoy.
+      </p>
+      
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6" style="font-family: 'Nunito', sans-serif;">
+        Children need explanations that speak their language, lessons that spark curiosity, and guidance that helps them apply Allah's words in real life.
+      </p>
+      
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6" style="font-family: 'Nunito', sans-serif;">
+        That's why we created TadabburKids.
+      </p>
+      
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6" style="font-family: 'Nunito', sans-serif;">
+        To make Quran reflection simple, engaging, and meaningful for children and families.
+      </p>
+      
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6" style="font-family: 'Nunito', sans-serif;">
+        Our goal is to help children grow up not just reading the Quran, but loving it, understanding it, and living by it.
+      </p>
+      
+      <!-- Transition Text -->
+      <p class="text-xl md:text-2xl text-primary font-bold text-center mt-10 mb-6" style="font-family: 'Fredoka', sans-serif;">
+        So how do we help children experience tadabbur in a practical way?
+      </p>
+    </div>
+    
+  </div>
 </section>  
 <!-- SOLUTION SECTION - Two Pillars -->
 <section class="relative py-20 bg-white overflow-hidden">
@@ -720,7 +838,7 @@
         Your Child to the Quran
       </h2>
       <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-        Choose the path that fits your family—or combine both for the deepest impact.
+        Choose the path that fits your family or combine both for the deepest impact.
       </p>
     </div>
     
@@ -895,79 +1013,6 @@
     </div>
   </div>
   
-  <!-- Bottom Note -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-    <div class="color-block-yellow playful-shadow p-10 text-center transform hover:scale-105 transition rounded-3xl">
-      <p class="text-2xl md:text-3xl font-bold text-darkBrown mb-2">
-        ✨ Best Results: Combine Both!
-      </p>
-      <p class="text-xl text-darkBrown/80">
-        Many families use our books at home AND enroll in live lessons for complete Tadabbur learning.
-      </p>
-    </div>
-  </div>
-  
-</section>
-
-<!-- WHY TADABBURKIDS SECTION -->
-<section class="relative py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 overflow-hidden">
-  <!-- Decorative Doodles -->
-  <i class="ri-star-fill doodle doodle-star" style="top: 10%; left: 8%;"></i>
-  <i class="ri-sparkling-fill doodle doodle-sparkle" style="top: 25%; right: 10%;"></i>
-  <i class="ri-plant-fill doodle doodle-plant" style="bottom: 15%; left: 12%;"></i>
-  <i class="ri-book-open-fill doodle doodle-book" style="bottom: 20%; right: 15%;"></i>
-  
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <!-- Section Header -->
-    <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-darkBrown mb-6">
-        Why <span class="text-emphasis">TadabburKids</span>?
-      </h2>
-      <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-        Authentic. Interactive. Purpose-Driven.
-      </p>
-    </div>
-    
-    <!-- Three Value Props in Colorful Blocks -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      
-      <!-- Value 1: Rooted in Quran & Sunnah -->
-      <div class="icon-card color-block-green text-white p-8 rounded-3xl playful-shadow transform hover:rotate-1 transition">
-        <div class="w-20 h-20 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 mx-auto transform -rotate-6">
-          <i class="ri-book-2-line text-5xl text-white"></i>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-center">Rooted in Quran & Sunnah</h3>
-        <p class="text-white/90 leading-relaxed text-center">
-          No cultural mixing. No diluted content. Every lesson and book is grounded in authentic Islamic sources—verified and true.
-        </p>
-      </div>
-      
-      <!-- Value 2: Teaches Kids to THINK -->
-      <div class="icon-card color-block-red text-white p-8 rounded-3xl playful-shadow transform hover:-rotate-1 transition">
-        <div class="w-20 h-20 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 mx-auto transform rotate-6">
-          <i class="ri-lightbulb-line text-5xl text-white"></i>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-center">Teaches Kids to THINK</h3>
-        <p class="text-white/90 leading-relaxed text-center">
-          We don't just teach verses—we teach children to <strong>reflect on their meanings</strong>. Tadabbur helps them think deeply and connect to Allah.
-        </p>
-      </div>
-      
-      <!-- Value 3: Built by Parents (DARK BLUE) -->
-      <div class="icon-card text-white p-8 rounded-3xl playful-shadow transform hover:rotate-1 transition" style="background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);">
-        <div class="w-20 h-20 bg-white/30 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 mx-auto transform -rotate-6">
-          <i class="ri-parent-line text-5xl text-white"></i>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-center">Built by Parents, For Parents</h3>
-        <p class="text-white/90 leading-relaxed text-center">
-          Created by parents raising their own family on Quran & Sunnah. We understand your struggles because we've lived them.
-        </p>
-      </div>
-      
-    </div>
-    
-  </div>
 </section>
 
 <!-- EMAIL CAPTURE SECTION -->
