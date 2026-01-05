@@ -369,49 +369,44 @@ nav a:not(.flex):hover {
 
 /* Arabic Text Styles */
 @font-face {
-  font-family: 'KFGQPCNastaleeq';
-  src: url('fonts/KFGQPCNastaleeq-Regular.ttf') format('truetype');
+  font-family: 'QuranVolt';
+  src: url('fonts/me_quran_volt_newmet.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-.arabic-text-small {
-  font-family: 'KFGQPCNastaleeq', 'Scheherazade New', 'Traditional Arabic', serif;
-  font-size: 1.5rem;
+.arabic-text-quranic {
+  font-family: 'QuranVolt', 'Scheherazade New', 'Traditional Arabic', serif;
+  font-size: 1.25rem;
   line-height: 2.2;
   direction: rtl;
   text-align: center;
   color: #000000;
-  letter-spacing: 0.02em;
-  word-spacing: 0.15em;
-  padding: 0.5rem 0;
+  letter-spacing: 0.03em;
+  word-spacing: 0.2em;
+  padding: 1rem 0;
   font-weight: 400;
 }
 
-@media (min-width: 768px) {
-  .arabic-text-small {
-    font-size: 1.75rem;
+@media (min-width: 640px) {
+  .arabic-text-quranic {
+    font-size: 1.4rem;
     line-height: 2.3;
   }
 }
 
-@media (min-width: 1024px) {
-  .arabic-text-small {
-    font-size: 2rem;
+@media (min-width: 768px) {
+  .arabic-text-quranic {
+    font-size: 1.5rem;
     line-height: 2.4;
   }
 }
 
-/* Slide Up Animation */
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media (min-width: 1024px) {
+  .arabic-text-quranic {
+    font-size: 1.65rem;
+    line-height: 2.5;
   }
 }
 
@@ -603,66 +598,67 @@ nav a:not(.flex):hover {
   </div>
 </section>
 <!-- WHAT IS TADABBUR SECTION -->
-<section class="relative py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 overflow-hidden">
+<section class="relative py-16 md:py-20 bg-white overflow-hidden">
   
-  <!-- Background Speech Bubbles - 3 on Left, 3 on Right -->
-  <div class="speech-bubble speech-bubble-left-1" style="top: 10%; left: 5%;">Why?</div>
-  <div class="speech-bubble speech-bubble-left-2" style="top: 40%; left: 3%;">What?</div>
-  <div class="speech-bubble speech-bubble-left-3" style="top: 70%; left: 8%;">How?</div>
+  <!-- Speech Bubbles Background - Logo Colors -->
+  <div class="speech-bubble speech-bubble-left-1 hidden md:block" style="top: 15%; left: 8%;">Why?</div>
+  <div class="speech-bubble speech-bubble-left-2 hidden md:block" style="top: 45%; left: 5%;">What?</div>
+  <div class="speech-bubble speech-bubble-left-3 hidden lg:block" style="bottom: 20%; left: 10%;">How?</div>
   
-  <div class="speech-bubble speech-bubble-right-1" style="top: 15%; right: 5%;">Who?</div>
-  <div class="speech-bubble speech-bubble-right-2" style="top: 50%; right: 3%;">When?</div>
-  <div class="speech-bubble speech-bubble-right-3" style="top: 80%; right: 7%;">Where?</div>
+  <div class="speech-bubble speech-bubble-right-1 hidden md:block" style="top: 20%; right: 8%;">Who?</div>
+  <div class="speech-bubble speech-bubble-right-2 hidden md:block" style="top: 50%; right: 5%;">When?</div>
+  <div class="speech-bubble speech-bubble-right-3 hidden lg:block" style="bottom: 25%; right: 10%;">Where?</div>
   
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     
-    <!-- Ayah Display - Small Rectangle -->
-    <div class="max-w-4xl mx-auto mb-12">
-      <div class="bg-gradient-to-br from-green-100 to-teal-100 border-3 border-green-300 rounded-2xl p-6 md:p-8 playful-shadow text-center">
-        
-        <!-- Header -->
-        <p class="text-lg md:text-xl font-semibold text-darkBrown mb-4" style="font-family: 'Fredoka', sans-serif;">
-          Allah says in the Quran...
-        </p>
-        
-        <!-- Arabic Text -->
-        <p class="arabic-text-small mb-4">
-          كِتَابٌ أَنزَلْنَاهُ إِلَيْكَ مُبَارَكٌ لِّيَدَّبَّرُوا آيَاتِهِ وَلِيَتَذَكَّرَ أُولُو الْأَلْبَابِ
-        </p>
-        
-        <!-- English Translation -->
-        <p class="text-base md:text-lg text-darkBrown leading-relaxed mb-3" style="font-family: 'Fredoka', sans-serif; font-weight: 500;">
-          "This is a blessed Book which We have revealed to you, O Muhammad, that they might <span class="text-primary font-bold">reflect upon its verses</span> and that those of understanding would be <span class="text-secondary font-bold">reminded</span>."
-        </p>
-        
-        <!-- Reference -->
-        <p class="text-sm text-gray-600 font-medium">
-          — Surah Sad, 38:29
-        </p>
-      </div>
-    </div>
+    <!-- Quranic Ayah Box - Compact Version -->
+<div class="mb-12 md:mb-16">
+  <div class="max-w-3xl mx-auto bg-gradient-to-br from-green-100 to-teal-100 border-4 border-primary rounded-3xl p-5 sm:p-6 md:p-8 text-center shadow-lg">
+    
+    <!-- Header - Bigger but not thicker -->
+    <p class="text-lg sm:text-xl md:text-2xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #2FAA6F;">
+      Allah says in the Quran...
+    </p>
+    
+    <!-- Arabic Text with New Font -->
+    <p class="arabic-text-quranic mb-5">
+      كِتَابٌ أَنزَلْنَاهُ إِلَيْكَ مُبَارَكٌ لِّيَدَّبَّرُوا آيَاتِهِ وَلِيَتَذَكَّرَ أُولُو الْأَلْبَابِ
+    </p>
+    
+    <!-- English Translation -->
+    <p class="text-sm sm:text-base md:text-lg text-gray-800 leading-relaxed mb-3" style="font-family: 'Nunito', sans-serif;">
+      "This is a blessed Book which We have revealed to you, O Muhammad, that they might <span class="font-bold" style="color: #2FAA6F;">reflect upon its verses</span> and that those of understanding would be <span class="font-bold" style="color: #FFA500;">reminded</span>."
+    </p>
+    
+    <!-- Reference -->
+    <p class="text-xs sm:text-sm text-gray-600 font-semibold" style="font-family: 'Nunito', sans-serif;">
+      — Surah Sad, 38:29
+    </p>
+    
+  </div>
+</div>
     
     <!-- Section Heading - What is Tadabbur? -->
-    <div class="text-center mb-10">
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4" style="font-family: 'Fredoka', sans-serif; text-shadow: 0 0 20px rgba(47, 170, 111, 0.3);">
+    <div class="text-center mb-10 md:mb-12">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
         What is Tadabbur?
       </h2>
     </div>
     
-    <!-- Tadabbur Definition - Small Kid-Friendly Box -->
+    <!-- Tadabbur Definition - Kid-Friendly Box -->
     <div class="max-w-2xl mx-auto">
-      <div class="relative bg-white border-4 border-dashed border-primary rounded-3xl p-6 md:p-8 playful-shadow-soft text-center transform hover:rotate-1 transition-all duration-300">
+      <div class="relative bg-gradient-to-br from-orange-50 to-yellow-50 border-4 border-dashed rounded-3xl p-6 md:p-8 playful-shadow-soft text-center transform hover:rotate-1 transition-all duration-300" style="border-color: #FFA500;">
         
-        <!-- Decorative Corner Stickers -->
-        <div class="absolute -top-3 -right-3 w-12 h-12 bg-pink-400 rounded-full flex items-center justify-center text-2xl transform -rotate-12">
+        <!-- Decorative Corner Stickers - Logo Colors -->
+        <div class="absolute -top-3 -right-3 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-xl sm:text-2xl transform -rotate-12 z-10" style="background-color: #FF69B4;">
           📖
         </div>
-        <div class="absolute -bottom-3 -left-3 w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-2xl transform -rotate-12">
+        <div class="absolute -bottom-3 -left-3 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-xl sm:text-2xl transform -rotate-12 z-10" style="background-color: #40C9BE;">
           💡
         </div>
         
         <!-- Definition Text -->
-        <p class="text-xl md:text-2xl font-bold text-darkBrown leading-relaxed" style="font-family: 'Fredoka', sans-serif;">
+        <p class="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed px-4 sm:px-6 md:px-8" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
           Tadabbur means thinking deeply about what the Quran says and what Allah wants to teach us.
         </p>
         
