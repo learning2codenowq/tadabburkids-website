@@ -16,32 +16,33 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   
   <!-- Remix Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
   
-  <!-- Tailwind Config (Same as index.html) -->
+  <!-- Tailwind Config -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
             primary: '#2FAA6F',
-            secondary: '#FF8C42',
-            accent: '#52B8E8',
-            yellow: '#FFC72C',
-            teal: '#26C6DA',
+            secondary: '#FFA500',
+            accent: '#40C9BE',
+            pink: '#FF69B4',
+            olive: '#B8B446',
             darkBrown: '#3A2A1F',
           },
           fontFamily: {
-            heading: ['Poppins', 'sans-serif'],
+            heading: ['Fredoka', 'sans-serif'],
             body: ['Nunito', 'sans-serif'],
           }
         }
       }
     }
   </script>
+
   <!-- Firebase Analytics -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
@@ -60,172 +61,230 @@
   </script>
   
   <style>
-    body { 
-      font-family: 'Nunito', sans-serif;
-      font-size: 18px;
-      color: #3A2A1F;
-    }
-    
-    h1, h2, h3, h4, h5, h6 { 
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-    }
-    
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    /* WhatsApp button pulse animation */
-    @keyframes whatsappPulse {
-      0%, 100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-      }
-      50% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-      }
-    }
-    
-    .whatsapp-float {
-      animation: whatsappPulse 2s infinite;
-    }
-    
-    .whatsapp-float:hover {
-      animation: none;
-    }
-    
-    /* Decorative Elements */
-    .doodle {
-      position: absolute;
-      opacity: 0.08;
-      animation: float 6s ease-in-out infinite;
-      z-index: 0;
-    }
-    
-    .doodle-star {
-      font-size: 3rem;
-      color: #FFC72C;
-      animation: float 6s ease-in-out infinite, rotate 20s linear infinite;
-    }
-    
-    .doodle-moon {
-      font-size: 3.5rem;
-      color: #2FAA6F;
-      animation: float 8s ease-in-out infinite;
-    }
-    
-    .doodle-book {
-      font-size: 3rem;
-      color: #FF8C42;
-      animation: float 7s ease-in-out infinite;
-    }
-    
-    .doodle-sparkle {
-      font-size: 2.5rem;
-      color: #52B8E8;
-      animation: float 5s ease-in-out infinite, pulse 3s ease-in-out infinite;
-    }
-    
-    .doodle-plant {
-      font-size: 3rem;
-      color: #26C6DA;
-      animation: float 9s ease-in-out infinite;
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-    
-    @keyframes rotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    
-    @keyframes pulse {
-      0%, 100% { opacity: 0.08; }
-      50% { opacity: 0.15; }
-    }
-    
-    .text-emphasis {
-      color: #2FAA6F;
-      font-weight: 800;
-      position: relative;
-      display: inline-block;
-    }
-    
-    .color-block-green {
-      background: linear-gradient(135deg, #2FAA6F 0%, #25906B 100%);
-      border-radius: 24px;
-    }
-    
-    .color-block-orange {
-      background: linear-gradient(135deg, #FF8C42 0%, #FF7040 100%);
-      border-radius: 24px;
-    }
-    
-    .color-block-blue {
-      background: linear-gradient(135deg, #52B8E8 0%, #3A9FD8 100%);
-      border-radius: 24px;
-    }
-    
-    .color-block-yellow {
-      background: linear-gradient(135deg, #FFC72C 0%, #FFB000 100%);
-      border-radius: 24px;
-    }
-    
-    .playful-shadow {
-      box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
-    }
-    
-    .icon-card {
-      transition: all 0.3s ease;
-    }
-    
-    .icon-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    }
-    
-    /* Lightbox for sample pages */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.9);
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .lightbox.active {
-      display: flex;
-    }
-    
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90vh;
-      border-radius: 8px;
-    }
+/* ============================================
+   TADABBURKIDS BRAND THEME 2025
+   Based on logo colors and design system
+   ============================================ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
+/* CSS Variables - Brand Colors from Logo */
+:root {
+  /* Primary Brand Colors */
+  --color-primary: #2FAA6F;
+  --color-secondary: #FFA500;
+  --color-accent-teal: #40C9BE;
+  --color-accent-pink: #FF69B4;
+  --color-accent-olive: #B8B446;
+  
+  /* Text Colors */
+  --color-text-dark: #1A1A1A;
+  --color-text-body: #666666;
+  
+  /* Background Colors */
+  --color-bg-cream: #FFF8F0;
+  --color-bg-light-green: #F0F9F4;
+  --color-bg-light-blue: #F0F8FC;
+  --color-bg-light-orange: #FFF4E6;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.12);
+  
+  /* Border Radius */
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+}
+
+/* Base Styles */
+body { 
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  line-height: 1.2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation Styles */
+nav {
+  background: white;
+  box-shadow: var(--shadow-sm);
+}
+
+nav a:not(.flex) {
+  color: var(--color-text-dark);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:not(.flex):hover {
+  color: var(--color-primary);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #238B5A 100%);
+  color: white;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #238B5A 0%, var(--color-primary) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, #E69500 100%);
+  color: white;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #E69500 0%, var(--color-secondary) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card Styles */
+.playful-shadow {
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.playful-shadow:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.icon-card {
+  transition: all 0.3s ease;
+}
+
+.icon-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* WhatsApp button pulse animation */
+@keyframes whatsappPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-float {
+  animation: whatsappPulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+  animation: none;
+}
+
+/* Decorative Elements */
+.doodle {
+  position: absolute;
+  opacity: 0.08;
+  animation: float 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Lightbox for sample pages */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 8px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .doodle {
+    display: none;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
   </style>
+  
 </head>
 <body class="bg-white text-gray-800">
 
-  <!-- Navigation Bar (Same as index.html) -->
+  <!-- Navigation Bar -->
   <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <!-- Logo -->
-<a href="index.html" class="flex items-center">
-  <img 
-    src="images/logo.svg" 
-    alt="TadabburKids Logo" 
-    class="h-20 w-auto" 
-  >
-</a>
+        <a href="index.html" class="flex items-center">
+          <img 
+            src="images/logo.svg" 
+            alt="TadabburKids Logo" 
+            class="h-20 w-auto" 
+          >
+        </a>
         
+        <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-8">
           <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition">Home</a>
           <a href="books.html" class="text-gray-700 hover:text-primary font-medium transition">Books</a>
@@ -234,11 +293,13 @@
           <a href="contact.html" class="text-gray-700 hover:text-primary font-medium transition">Contact</a>
         </div>
         
+        <!-- Mobile Menu Toggle -->
         <button id="mobile-menu-toggle" class="md:hidden text-3xl text-primary focus:outline-none">
           <i class="ri-menu-line"></i>
         </button>
       </div>
       
+      <!-- Mobile Menu -->
       <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 bg-white shadow-lg rounded-b-xl px-6 py-4">
         <a href="index.html" class="block text-gray-700 hover:text-primary font-medium">Home</a>
         <a href="books.html" class="block text-gray-700 hover:text-primary font-medium">Books</a>
@@ -255,33 +316,29 @@
     <!-- HERO SECTION -->
     <section class="relative bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 py-20 md:py-32 overflow-hidden">
       <!-- Decorative Doodles -->
-      <i class="ri-sparkling-fill doodle doodle-sparkle" style="top: 15%; left: 8%;"></i>
-      <i class="ri-star-fill doodle doodle-star" style="top: 25%; right: 10%;"></i>
-      <i class="ri-book-open-fill doodle doodle-book" style="bottom: 20%; left: 12%;"></i>
-      <i class="ri-moon-fill doodle doodle-moon" style="bottom: 30%; right: 15%;"></i>
+      <i class="ri-sparkling-fill doodle text-3xl" style="top: 15%; left: 8%; color: #40C9BE;"></i>
+      <i class="ri-star-fill doodle text-4xl" style="top: 25%; right: 10%; color: #FFA500;"></i>
+      <i class="ri-book-open-fill doodle text-4xl" style="bottom: 20%; left: 12%; color: #2FAA6F;"></i>
+      <i class="ri-moon-fill doodle text-5xl" style="bottom: 30%; right: 15%; color: #FF69B4;"></i>
       
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center">
-          <div class="inline-flex items-center gap-3 bg-primary/10 rounded-full px-6 py-3 mb-6">
-            <i class="ri-book-2-line text-2xl text-primary"></i>
-            <span class="text-lg font-bold text-darkBrown">Tadabbur Book Set</span>
-          </div>
           
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-darkBrown mb-6 leading-tight">
-            Interactive <span class="text-emphasis">Tadabbur Books</span><br>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-6 px-2 sm:px-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+            Interactive Tadabbur Books<br>
             for Young Hearts
           </h1>
           
-          <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p class="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-medium leading-relaxed px-4" style="color: #666666; font-family: 'Nunito', sans-serif;">
             Beautifully illustrated books that teach children to <strong>know Allah, remember Allah,</strong> and <strong>reflect on His creation</strong> through engaging stories and activities.
           </p>
           
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#order" class="inline-flex items-center justify-center color-block-green text-white font-bold py-5 px-10 text-lg playful-shadow hover:scale-105 transition transform">
+          <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
+            <a href="#order" class="inline-flex items-center justify-center text-white font-medium py-4 sm:py-5 px-8 sm:px-10 text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform" style="font-family: 'Fredoka', sans-serif; background: linear-gradient(135deg, #40C9BE 0%, #40C9BE 100%);">
               Order Now
               <i class="ri-arrow-right-line ml-2"></i>
             </a>
-            <a href="#sample-pages" class="inline-flex items-center justify-center bg-white text-primary border-4 border-primary font-bold py-5 px-10 text-lg rounded-3xl playful-shadow hover:scale-105 transition transform">
+            <a href="#sample-pages" class="inline-flex items-center justify-center bg-white font-medium py-4 sm:py-5 px-8 sm:px-10 text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform border-4" style="font-family: 'Fredoka', sans-serif; color: #FF69B4; border-color: #FF69B4;">
               View Sample Pages
               <i class="ri-image-line ml-2"></i>
             </a>
@@ -296,81 +353,81 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           <!-- Left: Book Cover Image -->
-<div class="relative">
-  <div class="bg-gradient-to-br from-green-100 to-blue-100 rounded-3xl p-8 playful-shadow transform hover:scale-105 transition">
-    <img 
-      src="images/books/who-made-all-this/cover.png" 
-      alt="Who Made All This? - Interactive Tadabbur Book Cover" 
-      class="w-full h-auto rounded-2xl shadow-lg"
-      onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 600%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22400%22 height=%22600%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2224%22%3EBook Cover%3C/text%3E%3C/svg%3E';"
-    >
-  </div>
-  <!-- Decorative Elements -->
-  <div class="absolute -top-6 -right-6 w-24 h-24 bg-yellow rounded-full opacity-30"></div>
-  <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-primary rounded-full opacity-20"></div>
-</div>
+          <div class="relative">
+            <div class="bg-gradient-to-br from-green-100 to-blue-100 rounded-3xl p-8 playful-shadow transform hover:scale-105 transition">
+              <img 
+                src="images/books/who-made-all-this/cover.png" 
+                alt="Who Made All This? - Interactive Tadabbur Book Cover" 
+                class="w-full h-auto rounded-2xl shadow-lg"
+                onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 600%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22400%22 height=%22600%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2224%22%3EBook Cover%3C/text%3E%3C/svg%3E';"
+              >
+            </div>
+            <!-- Decorative Elements -->
+            <div class="absolute -top-6 -right-6 w-24 h-24 rounded-full opacity-30" style="background: #FFC72C;"></div>
+            <div class="absolute -bottom-6 -left-6 w-32 h-32 rounded-full opacity-20" style="background: #2FAA6F;"></div>
+          </div>
           
           <!-- Right: Book Details -->
           <div>
-            <div class="inline-flex items-center gap-2 bg-yellow/20 rounded-full px-4 py-2 mb-4">
-              <span class="text-sm font-bold text-darkBrown">📚 Book 1 of 4 - Tadabbur Set</span>
+            <div class="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-4" style="background: rgba(255, 199, 44, 0.2);">
+              <span class="text-sm font-medium" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">📚 Book 1 of 4 - Tadabbur Set</span>
             </div>
             
-            <h2 class="text-4xl md:text-5xl font-bold text-darkBrown mb-6">
+            <h2 class="text-4xl md:text-5xl font-medium mb-6" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
               Who Made All This?
             </h2>
             
             <div class="flex flex-wrap gap-3 mb-6">
-              <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">Ages 3-12</span>
-              <span class="bg-secondary/10 text-secondary px-4 py-2 rounded-full text-sm font-semibold">Interactive Flap Book</span>
-              <span class="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold">Quran & Sunnah Based</span>
+              <span class="rounded-full px-4 py-2 text-sm font-semibold" style="background: #ffe8f3ff; color: #FF69B4;">Ages 3-7</span>
+              <span class="rounded-full px-4 py-2 text-sm font-semibold" style="background: rgba(255, 165, 0, 0.1); color: #FFA500;">Interactive Flap Book</span>
+              <span class="rounded-full px-4 py-2 text-sm font-semibold" style="background: rgba(64, 201, 190, 0.1); color: #40C9BE;">Quran & Sunnah Based</span>
             </div>
             
-            <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+            <p class="text-xl mb-8 leading-relaxed" style="color: #666666; font-family: 'Nunito', sans-serif;">
               Follow a curious ladybug as she journeys through Allah's beautiful creation! This interactive flap book teaches children <strong>who created them, everyone, and everything</strong> around them. Through dhikr (remembrance), reflection, and gratitude, children learn to see Allah in every moment.
             </p>
             
-            <div class="bg-green-50 border-2 border-primary rounded-2xl p-6 mb-8">
-              <h3 class="text-2xl font-bold text-darkBrown mb-4">What Your Child Will Learn:</h3>
+            <div class="rounded-2xl p-6 mb-8 border-2" style="background: #F0F9F4; border-color: #b7b340;">
+              <h3 class="text-2xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">What Your Child Will Learn:</h3>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3">
-                  <i class="ri-check-line text-2xl text-primary flex-shrink-0 mt-1"></i>
-                  <span class="text-gray-700"><strong>Who created everything</strong> — Understanding Allah as the Creator</span>
+                  <i class="ri-check-line text-2xl flex-shrink-0 mt-1" style="color: #b7b340;"></i>
+                  <span style="color: #666666; font-family: 'Nunito', sans-serif;"><strong>Who created everything</strong> — Understanding Allah as the Creator</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <i class="ri-check-line text-2xl text-primary flex-shrink-0 mt-1"></i>
-                  <span class="text-gray-700"><strong>Remember Allah through dhikr</strong> — Beautiful supplications throughout the journey</span>
+                  <i class="ri-check-line text-2xl flex-shrink-0 mt-1" style="color: #b7b340;"></i>
+                  <span style="color: #666666; font-family: 'Nunito', sans-serif;"><strong>Remember Allah through dhikr</strong> — Beautiful supplications throughout the journey</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <i class="ri-check-line text-2xl text-primary flex-shrink-0 mt-1"></i>
-                  <span class="text-gray-700"><strong>Reflect on His creation</strong> — Tadabbur on the world around them</span>
+                  <i class="ri-check-line text-2xl flex-shrink-0 mt-1" style="color: #b7b340;"></i>
+                  <span style="color: #666666; font-family: 'Nunito', sans-serif;"><strong>Reflect on His creation</strong> — Tadabbur on the world around them</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <i class="ri-check-line text-2xl text-primary flex-shrink-0 mt-1"></i>
-                  <span class="text-gray-700"><strong>Thank Allah</strong> — Cultivating gratitude from a young age</span>
+                  <i class="ri-check-line text-2xl flex-shrink-0 mt-1" style="color: #b7b340;"></i>
+                  <span style="color: #666666; font-family: 'Nunito', sans-serif;"><strong>Thank Allah</strong> — Cultivating gratitude from a young age</span>
                 </li>
               </ul>
             </div>
             
             <!-- Pricing -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-              <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 text-center">
-                <i class="ri-file-text-line text-4xl text-accent mb-3"></i>
-                <h4 class="text-xl font-bold text-darkBrown mb-2">E-Book</h4>
-                <p class="text-3xl font-bold text-accent mb-2">13 AED</p>
-                <p class="text-sm text-gray-600">Instant digital download</p>
+              <div class="rounded-2xl p-6 text-center" style="background: linear-gradient(135deg, #E6F4F9 0%, #D0EFF7 100%);">
+                <i class="ri-file-text-line text-4xl mb-3" style="color: #40C9BE;"></i>
+                <h4 class="text-xl font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">E-Book</h4>
+                <p class="text-3xl font-medium mb-2" style="color: #40C9BE; font-family: 'Fredoka', sans-serif;">13 AED</p>
+                <p class="text-sm" style="color: #666666; font-family: 'Nunito', sans-serif;">Instant digital download</p>
               </div>
               
-              <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 text-center">
-                <i class="ri-book-line text-4xl text-secondary mb-3"></i>
-                <h4 class="text-xl font-bold text-darkBrown mb-2">Physical Book</h4>
-                <p class="text-lg font-bold text-secondary mb-2">Contact for Price</p>
-                <p class="text-sm text-gray-600">Interactive flap book with mirror page</p>
+              <div class="rounded-2xl p-6 text-center" style="background: linear-gradient(135deg, #FFF4E6 0%, #FFE8CC 100%);">
+                <i class="ri-book-line text-4xl mb-3" style="color: #FFA500;"></i>
+                <h4 class="text-xl font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Physical Book</h4>
+                <p class="text-3xl font-medium mb-2" style="color: #FFA500; font-family: 'Fredoka', sans-serif;">25 AED</p>
+                <p class="text-sm" style="color: #666666; font-family: 'Nunito', sans-serif;">Interactive flap book with mirror page</p>
               </div>
             </div>
             
             <!-- Order CTA -->
-            <a href="#order" class="block w-full color-block-green text-white text-center font-bold py-5 px-8 text-xl playful-shadow hover:scale-105 transition transform">
+            <a href="#order" class="block w-full text-white text-center font-medium py-5 px-8 text-xl rounded-full transition-all duration-300 hover:scale-105" style="font-family: 'Fredoka', sans-serif; background: linear-gradient(135deg, #2FAA6F 0%, #238B5A 100%); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
               Order Your Copy Now →
             </a>
           </div>
@@ -384,79 +441,79 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold text-darkBrown mb-6">
-            What Makes This Book <span class="text-emphasis">Special</span>?
+          <h2 class="text-4xl md:text-5xl font-medium mb-6" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+            What Makes This Book <span style="color: #b7b340;">Special</span>?
           </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Not just another children's book—this is an interactive journey of faith
+          <p class="text-xl max-w-3xl mx-auto" style="color: #666666; font-family: 'Nunito', sans-serif;">
+            An interactive journey that nurtures a child’s deen.
           </p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           <!-- Feature 1 -->
           <div class="icon-card bg-white rounded-3xl p-8 playful-shadow text-center">
-            <div class="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-6">
-              <i class="ri-hand-heart-line text-5xl text-primary"></i>
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-6" style="background: linear-gradient(135deg, #e9e9dbff 0%, #dddcb7ff 100%);">
+              <i class="ri-hand-heart-line text-5xl" style="color: #b7b340;"></i>
             </div>
-            <h3 class="text-2xl font-bold text-darkBrown mb-4">Interactive Flap Design</h3>
-            <p class="text-gray-700 leading-relaxed">
+            <h3 class="text-2xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Interactive Flap Design</h3>
+            <p class="leading-relaxed" style="color: #666666; font-family: 'Nunito', sans-serif;">
               Physical book features <strong>lift-the-flap surprises</strong> that reveal Allah's creations. Includes a special mirror page where children see themselves as part of Allah's beautiful creation.
             </p>
           </div>
           
           <!-- Feature 2 -->
           <div class="icon-card bg-white rounded-3xl p-8 playful-shadow text-center">
-            <div class="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-6">
-              <i class="ri-footprint-line text-5xl text-secondary"></i>
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-6" style="background: linear-gradient(135deg, #FFE8CC 0%, #FFD9A8 100%);">
+              <i class="ri-footprint-line text-5xl" style="color: #FFA500;"></i>
             </div>
-            <h3 class="text-2xl font-bold text-darkBrown mb-4">Follow the Ladybug</h3>
-            <p class="text-gray-700 leading-relaxed">
+            <h3 class="text-2xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Follow the Ladybug</h3>
+            <p class="leading-relaxed" style="color: #666666; font-family: 'Nunito', sans-serif;">
               A curious ladybug guides children through nature, <strong>discovering Allah's signs</strong> in trees, flowers, birds, and more. Each page sparks wonder and reflection.
             </p>
           </div>
           
           <!-- Feature 3 -->
           <div class="icon-card bg-white rounded-3xl p-8 playful-shadow text-center">
-            <div class="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-6">
-              <i class="ri-chat-quote-line text-5xl text-accent"></i>
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-6" style="background: linear-gradient(135deg, #E6F4F9 0%, #CCE9F3 100%);">
+              <i class="ri-chat-quote-line text-5xl" style="color: #40C9BE;"></i>
             </div>
-            <h3 class="text-2xl font-bold text-darkBrown mb-4">Dhikr Throughout</h3>
-            <p class="text-gray-700 leading-relaxed">
+            <h3 class="text-2xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Dhikr Throughout</h3>
+            <p class="leading-relaxed" style="color: #666666; font-family: 'Nunito', sans-serif;">
               Every page includes <strong>age-appropriate dhikr and supplications</strong>, teaching children to naturally remember and thank Allah as they explore the world.
             </p>
           </div>
           
           <!-- Feature 4 -->
           <div class="icon-card bg-white rounded-3xl p-8 playful-shadow text-center">
-            <div class="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-6">
-              <i class="ri-question-line text-5xl text-purple-600"></i>
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-6" style="background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);">
+              <i class="ri-question-line text-5xl" style="color: #9C27B0;"></i>
             </div>
-            <h3 class="text-2xl font-bold text-darkBrown mb-4">Curious Questions</h3>
-            <p class="text-gray-700 leading-relaxed">
+            <h3 class="text-2xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Curious Questions</h3>
+            <p class="leading-relaxed" style="color: #666666; font-family: 'Nunito', sans-serif;">
               Thought-provoking questions encourage children to <strong>think, reflect, and discuss</strong> with parents. Perfect for bedtime conversations about faith.
             </p>
           </div>
           
           <!-- Feature 5 -->
           <div class="icon-card bg-white rounded-3xl p-8 playful-shadow text-center">
-            <div class="w-20 h-20 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-6">
-              <i class="ri-parent-line text-5xl text-yellow-600"></i>
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-6" style="background: linear-gradient(135deg, #FFF9C4 0%, #FFF59D 100%);">
+              <i class="ri-parent-line text-5xl" style="color: #FBC02D;"></i>
             </div>
-            <h3 class="text-2xl font-bold text-darkBrown mb-4">Parent-Child Bonding</h3>
-            <p class="text-gray-700 leading-relaxed">
+            <h3 class="text-2xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Parent-Child Bonding</h3>
+            <p class="leading-relaxed" style="color: #666666; font-family: 'Nunito', sans-serif;">
               Designed for <strong>shared reading experiences</strong>. Parents and children explore together, building faith and connection simultaneously.
             </p>
           </div>
           
           <!-- Feature 6 -->
           <div class="icon-card bg-white rounded-3xl p-8 playful-shadow text-center">
-            <div class="w-20 h-20 bg-gradient-to-br from-teal-100 to-teal-200 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-6">
-              <i class="ri-book-2-line text-5xl text-teal"></i>
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-6" style="background: linear-gradient(135deg, #E0F2F1 0%, #B2DFDB 100%);">
+              <i class="ri-book-2-line text-5xl" style="color: #26C6DA;"></i>
             </div>
-            <h3 class="text-2xl font-bold text-darkBrown mb-4">Authentic Sources Only</h3>
-            <p class="text-gray-700 leading-relaxed">
-              Every teaching is <strong>rooted in Quran and Sunnah</strong>. No cultural mixing, no diluted content—just pure Islamic knowledge presented beautifully.
+            <h3 class="text-2xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Authentic Sources Only</h3>
+            <p class="leading-relaxed" style="color: #666666; font-family: 'Nunito', sans-serif;">
+              Every teaching is <strong>rooted in Quran and Sunnah</strong>.
             </p>
           </div>
           
@@ -464,177 +521,196 @@
         
       </div>
     </section>
-
-    <!-- SAMPLE PAGES GALLERY -->
-<section class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- BOOK SET INFO SECTION -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-darkBrown mb-4">
-        Peek Inside the <span class="text-primary">Book</span>
-      </h2>
-      <p class="text-xl text-gray-600">
-        Click any page to view it full-screen
-      </p>
+    <div class="inline-flex items-center gap-2 rounded-full px-5 py-2 mb-4" style="background: #fcf8edff;">
+      <i class="ri-book-line text-xl" style="color: #FBC02D;"></i>
+      <span class="text-sm font-medium" style="font-family: 'Fredoka', sans-serif; color: #FBC02D;">TADABBUR BOOK SET</span>
     </div>
     
-    <!-- Sample Pages Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-      
-      <!-- Sample Page 1 -->
-      <div class="group cursor-pointer" onclick="openLightbox(0)">
-        <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl p-4 playful-shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-          <img 
-            src="images/books/who-made-all-this/sample1.png" 
-            alt="Sample Page 1 - Who Made All This?" 
-            class="w-full rounded-2xl shadow-lg"
-            onerror="this.parentElement.innerHTML='<div class=\'w-full h-64 bg-gray-200 rounded-2xl flex items-center justify-center\'><i class=\'ri-image-line text-6xl text-gray-400\'></i></div>'"
-          >
-          <p class="text-center text-gray-600 font-semibold mt-4">Sample Page 1</p>
-        </div>
-      </div>
-      
-      <!-- Sample Page 2 -->
-      <div class="group cursor-pointer" onclick="openLightbox(1)">
-        <div class="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-3xl p-4 playful-shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-          <img 
-            src="images/books/who-made-all-this/sample2.png" 
-            alt="Sample Page 2 - Who Made All This?" 
-            class="w-full rounded-2xl shadow-lg"
-            onerror="this.parentElement.innerHTML='<div class=\'w-full h-64 bg-gray-200 rounded-2xl flex items-center justify-center\'><i class=\'ri-image-line text-6xl text-gray-400\'></i></div>'"
-          >
-          <p class="text-center text-gray-600 font-semibold mt-4">Sample Page 2</p>
-        </div>
-      </div>
-      
-      <!-- Sample Page 3 -->
-      <div class="group cursor-pointer" onclick="openLightbox(2)">
-        <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-4 playful-shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-          <img 
-            src="images/books/who-made-all-this/sample3.png" 
-            alt="Sample Page 3 - Who Made All This?" 
-            class="w-full rounded-2xl shadow-lg"
-            onerror="this.parentElement.innerHTML='<div class=\'w-full h-64 bg-gray-200 rounded-2xl flex items-center justify-center\'><i class=\'ri-image-line text-6xl text-gray-400\'></i></div>'"
-          >
-          <p class="text-center text-gray-600 font-semibold mt-4">Sample Page 3</p>
-        </div>
-      </div>
-      
-      <!-- Sample Page 4 -->
-      <div class="group cursor-pointer" onclick="openLightbox(3)">
-        <div class="bg-gradient-to-br from-blue-50 to-teal-50 rounded-3xl p-4 playful-shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-          <img 
-            src="images/books/who-made-all-this/sample4.png" 
-            alt="Sample Page 4 - Who Made All This?" 
-            class="w-full rounded-2xl shadow-lg"
-            onerror="this.parentElement.innerHTML='<div class=\'w-full h-64 bg-gray-200 rounded-2xl flex items-center justify-center\'><i class=\'ri-image-line text-6xl text-gray-400\'></i></div>'"
-          >
-          <p class="text-center text-gray-600 font-semibold mt-4">Sample Page 4</p>
-        </div>
-      </div>
-      
-    </div>
+    <h3 class="text-3xl md:text-4xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+      Book 1 of 4
+    </h3>
     
-    <!-- Note about Physical Book -->
-    <div class="text-center">
-      <p class="text-gray-600 text-lg">
-        <strong>Note:</strong> Physical book includes interactive flaps not shown in samples. E-book adapted for digital reading.
-      </p>
-    </div>
+    <p class="text-lg leading-relaxed" style="color: #666666; font-family: 'Nunito', sans-serif;">
+      This is the first book in our complete Tadabbur series. <strong>Books 2, 3, and 4 are coming soon</strong> to continue your child's journey of reflection and connection with Allah.
+    </p>
     
   </div>
 </section>
 
-<!-- LIGHTBOX MODAL (Full-Screen Image Viewer) -->
-<div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4" onclick="closeLightbox()">
-  <button onclick="closeLightbox()" class="absolute top-8 right-8 text-white text-5xl hover:text-gray-300 z-50">
-    <i class="ri-close-line"></i>
-  </button>
-  
-  <button onclick="previousImage(event)" class="absolute left-8 text-white text-5xl hover:text-gray-300 z-50 bg-black bg-opacity-50 rounded-full w-16 h-16 flex items-center justify-center">
-    <i class="ri-arrow-left-line"></i>
-  </button>
-  
-  <img id="lightbox-img" src="" alt="Sample Page" class="max-w-full max-h-full rounded-2xl shadow-2xl" onclick="event.stopPropagation()">
-  
-  <button onclick="nextImage(event)" class="absolute right-8 text-white text-5xl hover:text-gray-300 z-50 bg-black bg-opacity-50 rounded-full w-16 h-16 flex items-center justify-center">
-    <i class="ri-arrow-right-line"></i>
-  </button>
-  
-  <div id="lightbox-caption" class="absolute bottom-8 text-white text-2xl font-bold"></div>
-</div>
-
-    <!-- ORDER SECTION -->
-    <section id="order" class="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- SAMPLE PAGES GALLERY -->
+    <section id="sample-pages" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="color-block-green text-white rounded-3xl p-10 md:p-16 playful-shadow text-center">
-          
-          <div class="w-24 h-24 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-8">
-            <i class="ri-shopping-cart-line text-6xl text-white"></i>
-          </div>
-          
-          <h2 class="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Start Your Child's<br>Tadabbur Journey?
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+            Peek Inside the <span style="color: #b7b340;">Book</span>
           </h2>
-          
-          <p class="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed max-w-2xl mx-auto">
-            Choose your preferred format and order today. Limited first-edition copies available!
+          <p class="text-xl" style="color: #666666; font-family: 'Nunito', sans-serif;">
+            Click any page to view it full-screen
           </p>
+        </div>
+        
+        <!-- Sample Pages Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           
-          <!-- Order Options -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            
-            <!-- E-Book Option -->
-            <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-8 text-center transform hover:scale-105 transition">
-              <i class="ri-file-text-line text-5xl text-white mb-4"></i>
-              <h3 class="text-2xl font-bold text-white mb-3">E-Book (PDF)</h3>
-              <p class="text-4xl font-bold text-white mb-4">13 AED</p>
-              <p class="text-white/80 mb-6">Instant download • Compatible with all devices</p>
-              <a href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I%27d%20like%20to%20purchase%20the%20ebook%20%22Who%20Made%20All%20This%3F%22%20for%2013%20AED." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-white text-primary font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-100 transition playful-shadow">
-                <i class="ri-whatsapp-line text-2xl mr-2"></i>
-                Order E-Book
-              </a>
+          <!-- Sample Page 1 -->
+          <div class="group cursor-pointer" onclick="openLightbox(0)">
+            <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl p-4 playful-shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              <img 
+                src="images/books/who-made-all-this/sample1.png" 
+                alt="Sample Page 1 - Who Made All This?" 
+                class="w-full rounded-2xl shadow-lg"
+                onerror="this.parentElement.innerHTML='<div class=\'w-full h-64 bg-gray-200 rounded-2xl flex items-center justify-center\'><i class=\'ri-image-line text-6xl text-gray-400\'></i></div>'"
+              >
+              <p class="text-center font-semibold mt-4" style="color: #666666; font-family: 'Nunito', sans-serif;">Sample Page 1</p>
             </div>
-            
-            <!-- Physical Book Option -->
-            <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-8 text-center transform hover:scale-105 transition">
-              <i class="ri-book-line text-5xl text-white mb-4"></i>
-              <h3 class="text-2xl font-bold text-white mb-3">Physical Book</h3>
-              <p class="text-2xl font-bold text-white mb-4">Contact for Price</p>
-              <p class="text-white/80 mb-6">Interactive flaps • Mirror page • High-quality print</p>
-              <a href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I%27d%20like%20to%20inquire%20about%20ordering%20the%20physical%20book%20%22Who%20Made%20All%20This%3F%22%20What%27s%20the%20price%20and%20shipping%20to%20my%20location%3F" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-white text-primary font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-100 transition playful-shadow">
-                <i class="ri-whatsapp-line text-2xl mr-2"></i>
-                Inquire About Physical Book
-              </a>
-            </div>
-            
           </div>
           
-          <p class="text-white/80 text-lg">
-            Have questions? <a href="https://wa.me/923165252296" target="_blank" class="underline font-bold hover:text-white transition">Message us on WhatsApp</a>
-          </p>
+          <!-- Sample Page 2 -->
+          <div class="group cursor-pointer" onclick="openLightbox(1)">
+            <div class="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-3xl p-4 playful-shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              <img 
+                src="images/books/who-made-all-this/sample2.png" 
+                alt="Sample Page 2 - Who Made All This?" 
+                class="w-full rounded-2xl shadow-lg"
+                onerror="this.parentElement.innerHTML='<div class=\'w-full h-64 bg-gray-200 rounded-2xl flex items-center justify-center\'><i class=\'ri-image-line text-6xl text-gray-400\'></i></div>'"
+              >
+              <p class="text-center font-semibold mt-4" style="color: #666666; font-family: 'Nunito', sans-serif;">Sample Page 2</p>
+            </div>
+          </div>
           
+          <!-- Sample Page 3 -->
+          <div class="group cursor-pointer" onclick="openLightbox(2)">
+            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-4 playful-shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              <img 
+                src="images/books/who-made-all-this/sample3.png" 
+                alt="Sample Page 3 - Who Made All This?" 
+                class="w-full rounded-2xl shadow-lg"
+                onerror="this.parentElement.innerHTML='<div class=\'w-full h-64 bg-gray-200 rounded-2xl flex items-center justify-center\'><i class=\'ri-image-line text-6xl text-gray-400\'></i></div>'"
+              >
+              <p class="text-center font-semibold mt-4" style="color: #666666; font-family: 'Nunito', sans-serif;">Sample Page 3</p>
+            </div>
+          </div>
+          
+          <!-- Sample Page 4 -->
+          <div class="group cursor-pointer" onclick="openLightbox(3)">
+            <div class="bg-gradient-to-br from-blue-50 to-teal-50 rounded-3xl p-4 playful-shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              <img 
+                src="images/books/who-made-all-this/sample4.png" 
+                alt="Sample Page 4 - Who Made All This?" 
+                class="w-full rounded-2xl shadow-lg"
+                onerror="this.parentElement.innerHTML='<div class=\'w-full h-64 bg-gray-200 rounded-2xl flex items-center justify-center\'><i class=\'ri-image-line text-6xl text-gray-400\'></i></div>'"
+              >
+              <p class="text-center font-semibold mt-4" style="color: #666666; font-family: 'Nunito', sans-serif;">Sample Page 4</p>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Note about Physical Book -->
+        <div class="text-center">
+          <p class="text-lg" style="color: #666666; font-family: 'Nunito', sans-serif;">
+            <strong>Note:</strong> Physical book includes interactive flaps not shown in samples. E-book adapted for digital reading and includes interactive activities in the end.
+          </p>
         </div>
         
       </div>
     </section>
 
+    <!-- LIGHTBOX MODAL (Full-Screen Image Viewer) -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4" onclick="closeLightbox()">
+      <button onclick="closeLightbox()" class="absolute top-8 right-8 text-white text-5xl hover:text-gray-300 z-50">
+        <i class="ri-close-line"></i>
+      </button>
+      
+      <button onclick="previousImage(event)" class="absolute left-8 text-white text-5xl hover:text-gray-300 z-50 bg-black bg-opacity-50 rounded-full w-16 h-16 flex items-center justify-center">
+        <i class="ri-arrow-left-line"></i>
+      </button>
+      
+      <img id="lightbox-img" src="" alt="Sample Page" class="max-w-full max-h-full rounded-2xl shadow-2xl" onclick="event.stopPropagation()">
+      
+      <button onclick="nextImage(event)" class="absolute right-8 text-white text-5xl hover:text-gray-300 z-50 bg-black bg-opacity-50 rounded-full w-16 h-16 flex items-center justify-center">
+        <i class="ri-arrow-right-line"></i>
+      </button>
+      
+      <div id="lightbox-caption" class="absolute bottom-8 text-white text-2xl font-bold"></div>
+    </div>
+
+    <!-- ORDER SECTION -->
+<section id="order" class="py-20" style="background: linear-gradient(135deg, #FDFDF5 0%, #FAFAEB 100%);">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="rounded-3xl p-10 md:p-16 playful-shadow text-center" style="background: #FFFFFF;">
+      
+      <div class="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8" style="background: rgba(183, 179, 64, 0.15);">
+        <i class="ri-shopping-cart-line text-6xl" style="color: #B7B340;"></i>
+      </div>
+      
+      <h2 class="text-4xl md:text-5xl font-medium mb-6" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+        Ready to Start Your Child's<br>Tadabbur Journey?
+      </h2>
+      
+      <p class="text-xl md:text-2xl mb-10 leading-relaxed max-w-2xl mx-auto" style="font-family: 'Nunito', sans-serif; color: #666666;">
+        Choose your preferred format and order today.
+      </p>
+      
+      <!-- Order Options -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+        
+        <!-- E-Book Option -->
+        <div class="rounded-2xl p-8 text-center transform hover:scale-105 transition border-2" style="background: #FDFDF8; border-color: #E8E7C8;">
+          <i class="ri-file-text-line text-5xl mb-4" style="color: #B7B340;"></i>
+          <h3 class="text-2xl font-medium mb-3" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">E-Book (PDF)</h3>
+          <p class="text-4xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #B7B340;">13 AED</p>
+          <p class="mb-6" style="font-family: 'Nunito', sans-serif; color: #666666;">Instant download • Compatible with all devices</p>
+          <a href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I%27d%20like%20to%20purchase%20the%20ebook%20%22Who%20Made%20All%20This%3F%22%20for%2013%20AED." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center font-medium py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105" style="font-family: 'Fredoka', sans-serif; background: #B7B340; color: #FFFFFF; box-shadow: 0 4px 12px rgba(183, 179, 64, 0.3);">
+            <i class="ri-whatsapp-line text-2xl mr-2"></i>
+            Order E-Book
+          </a>
+        </div>
+        
+        <!-- Physical Book Option -->
+        <div class="rounded-2xl p-8 text-center transform hover:scale-105 transition border-2" style="background: #FDFDF8; border-color: #B7B340;">
+          <i class="ri-book-line text-5xl mb-4" style="color: #8B8830;"></i>
+          <h3 class="text-2xl font-medium mb-3" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Physical Book</h3>
+          <p class="text-4xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #8B8830;">25 AED</p>
+          <p class="mb-6" style="font-family: 'Nunito', sans-serif; color: #666666;">Interactive flaps • Mirror page • High-quality print</p>
+          <a href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I%27d%20like%20to%20order%20the%20physical%20book%20%22Who%20Made%20All%20This%3F%22%20for%2025%20AED.%20Please%20confirm%20availability%20and%20delivery%20details." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center font-medium py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105" style="font-family: 'Fredoka', sans-serif; background: #8B8830; color: #FFFFFF; box-shadow: 0 4px 12px rgba(139, 136, 48, 0.3);">
+            <i class="ri-whatsapp-line text-2xl mr-2"></i>
+            Order Physical Book
+          </a>
+        </div>
+        
+      </div>
+      
+      <p class="text-lg" style="font-family: 'Nunito', sans-serif; color: #666666;">
+        Have questions? <a href="https://wa.me/923165252296" target="_blank" class="underline font-medium transition-colors duration-300" style="color: #B7B340;">Message us on WhatsApp</a>
+      </p>
+      
+    </div>
+    
+  </div>
+</section>
+
     <!-- CROSS-SELL TO LESSONS -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="color-block-orange text-white rounded-3xl p-10 md:p-16 playful-shadow text-center transform hover:scale-105 transition">
+        <div class="text-white rounded-3xl p-10 md:p-16 playful-shadow text-center transform hover:scale-105 transition" style="background: linear-gradient(135deg, #d7d013ff 0%, #b7b340 100%);">
           
-          <h3 class="text-3xl md:text-4xl font-bold mb-6">
-            Want Guided Learning Too?
+          <h3 class="text-3xl md:text-4xl font-medium mb-6" style="font-family: 'Fredoka', sans-serif;">
+            Want Live Quran Classes Too?
           </h3>
           
-          <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Pair this book with our <strong>live Quran Tadabbur lessons</strong> for deeper understanding. Many families do both for the best results!
+          <p class="text-xl mb-8 max-w-2xl mx-auto leading-relaxed" style="font-family: 'Nunito', sans-serif; color: #000000ff;">
+            Combine self-paced learning with our <strong>live Quran Tadabbur lessons</strong> where children learn recitation and reflection with experienced teachers. Many families use both for complete Islamic education!
           </p>
           
-          <a href="quran-lessons.html" class="inline-flex items-center justify-center bg-white text-secondary font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-100 transition playful-shadow">
+          <a href="quran-lessons.html" class="inline-flex items-center justify-center bg-white font-medium py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 playful-shadow" style="font-family: 'Fredoka', sans-serif; color: #000000ff;">
             Explore Quran Lessons
             <i class="ri-arrow-right-line ml-2"></i>
           </a>
@@ -646,54 +722,96 @@
 
   </main>
 
-  <!-- Footer (Same as index.html) -->
-  <footer class="bg-gray-900 text-white py-12">
+  <!-- FOOTER -->
+  <footer class="py-12" style="background-color: #1A1A1A;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        
+        <!-- Column 1: Brand -->
         <div>
-          <h3 class="text-xl font-bold mb-4 text-primary">TadabburKids</h3>
-          <p class="text-gray-400 text-sm">
+          <a href="index.html" class="flex items-center">
+            <img 
+              src="images/logo_dark.svg" 
+              alt="TadabburKids Logo" 
+              class="h-20 w-auto" 
+            >
+          </a>
+          <p class="text-sm leading-relaxed mb-4" style="font-family: 'Nunito', sans-serif; color: #999999;">
             Connecting young hearts to the Quran through Tadabbur. Authentic Islamic education for children worldwide.
           </p>
         </div>
         
+        <!-- Column 2: Quick Links -->
         <div>
-          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="books.html" class="text-gray-400 hover:text-primary transition">Books</a></li>
-            <li><a href="quran-lessons.html" class="text-gray-400 hover:text-primary transition">Quran Lessons</a></li>
-            <li><a href="blog.html" class="text-gray-400 hover:text-primary transition">Blog</a></li>
-            <li><a href="contact.html" class="text-gray-400 hover:text-primary transition">Contact</a></li>
+          <h4 class="text-lg font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #FFFFFF;">
+            Quick Links
+          </h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="index.html" class="text-sm transition-colors duration-300" style="font-family: 'Nunito', sans-serif; color: #999999;">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="books.html" class="text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+                Books
+              </a>
+            </li>
+            <li>
+              <a href="quran-lessons.html" class="text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+                Quran Lessons
+              </a>
+            </li>
+            <li>
+              <a href="blog.html" class="text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
         
+        <!-- Column 3: Contact -->
         <div>
-          <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li class="flex items-center gap-2">
-              <i class="ri-mail-line"></i>
-              <a href="mailto:contact@tadabburkids.com" class="hover:text-primary transition">contact@tadabburkids.com</a>
-            </li>
-            <li class="flex items-center gap-2">
-              <i class="ri-whatsapp-line"></i>
-              <span>WhatsApp: +92 316 525 2296</span>
-            </li>
-          </ul>
+          <h4 class="text-lg font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #FFFFFF;">
+            Get in Touch
+          </h4>
+          <div class="space-y-3">
+            <a href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I'm%20interested%20in%20TadabburKids%20books." target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+              <i class="ri-whatsapp-line text-2xl" style="color: #25D366;"></i>
+              <span>+92 316 525 2296</span>
+            </a>
+            <a href="mailto:contact@tadabburkids.com" class="flex items-center gap-3 text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+              <i class="ri-mail-line text-2xl" style="color: #FFA500;"></i>
+              <span>contact@tadabburkids.com</span>
+            </a>
+          </div>
         </div>
+        
       </div>
       
-      <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-        <p>&copy; 2025 TadabburKids. All rights reserved.</p>
+      <!-- Bottom Bar -->
+      <div class="border-t pt-8 text-center" style="border-color: #2D2D2D;">
+        <p class="text-sm" style="font-family: 'Nunito', sans-serif; color: #666666;">
+          © 2026 TadabburKids. All rights reserved.
+        </p>
       </div>
+      
     </div>
   </footer>
 
   <!-- WhatsApp Floating Button -->
   <a 
-    href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I'm%20interested%20in%20learning%20more%20about%20TadabburKids." 
+    href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I'm%20interested%20in%20learning%20more%20about%20TadabburKids%20books." 
     target="_blank"
     rel="noopener noreferrer"
-    class="whatsapp-float fixed bottom-8 right-8 z-50 bg-[#25D366] text-white rounded-full shadow-2xl w-16 h-16 flex items-center justify-center text-3xl transition-all duration-300 hover:bg-[#128C7E] hover:scale-110"
+    class="whatsapp-float fixed bottom-8 right-8 z-50 text-white rounded-full shadow-2xl w-16 h-16 flex items-center justify-center text-3xl transition-all duration-300 hover:scale-110"
+    style="background-color: #25D366;"
     aria-label="Contact us on WhatsApp"
   >
     <i class="ri-whatsapp-line"></i>
@@ -715,33 +833,7 @@
       });
     });
     
-    // Lightbox functions
-    function openLightbox(imageId) {
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
-      
-      // In production, you'd set actual image paths here
-      // For now, placeholder
-      lightboxImg.src = `images/books/who-made-all-this/${imageId}.jpg`;
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-    
-    function closeLightbox() {
-      const lightbox = document.getElementById('lightbox');
-      lightbox.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-    
-    // Close lightbox on Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeLightbox();
-      }
-    });
-  </script>
-  <!-- Lightbox JavaScript -->
-  <script>
+    // Lightbox JavaScript
     const sampleImages = [
       {
         src: 'images/books/who-made-all-this/sample1.png',
