@@ -16,7 +16,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   
   <!-- Remix Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
@@ -28,14 +28,14 @@
         extend: {
           colors: {
             primary: '#2FAA6F',
-            secondary: '#FF8C42',
-            accent: '#52B8E8',
-            yellow: '#FFC72C',
-            teal: '#26C6DA',
+            secondary: '#FFA500',
+            accent: '#40C9BE',
+            pink: '#FF69B4',
+            olive: '#B8B446',
             darkBrown: '#3A2A1F',
           },
           fontFamily: {
-            heading: ['Poppins', 'sans-serif'],
+            heading: ['Fredoka', 'sans-serif'],
             body: ['Nunito', 'sans-serif'],
           }
         }
@@ -61,132 +61,210 @@
   </script>
   
   <style>
-    body { 
-      font-family: 'Nunito', sans-serif;
-      font-size: 18px;
-      color: #3A2A1F;
-    }
-    
-    h1, h2, h3, h4, h5, h6 { 
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-    }
-    
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    /* WhatsApp button pulse animation */
-    @keyframes whatsappPulse {
-      0%, 100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-      }
-      50% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-      }
-    }
-    
-    .whatsapp-float {
-      animation: whatsappPulse 2s infinite;
-    }
-    
-    .whatsapp-float:hover {
-      animation: none;
-    }
-    
-    /* Decorative Elements */
-    .doodle {
-      position: absolute;
-      opacity: 0.08;
-      animation: float 6s ease-in-out infinite;
-      z-index: 0;
-    }
-    
-    .doodle-star {
-      font-size: 3rem;
-      color: #FFC72C;
-      animation: float 6s ease-in-out infinite, rotate 20s linear infinite;
-    }
-    
-    .doodle-moon {
-      font-size: 3.5rem;
-      color: #2FAA6F;
-      animation: float 8s ease-in-out infinite;
-    }
-    
-    .doodle-book {
-      font-size: 3rem;
-      color: #FF8C42;
-      animation: float 7s ease-in-out infinite;
-    }
-    
-    .doodle-sparkle {
-      font-size: 2.5rem;
-      color: #52B8E8;
-      animation: float 5s ease-in-out infinite, pulse 3s ease-in-out infinite;
-    }
-    
-    .doodle-plant {
-      font-size: 3rem;
-      color: #26C6DA;
-      animation: float 9s ease-in-out infinite;
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-    
-    @keyframes rotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    
-    @keyframes pulse {
-      0%, 100% { opacity: 0.08; }
-      50% { opacity: 0.15; }
-    }
-    
-    .text-emphasis {
-      color: #2FAA6F;
-      font-weight: 800;
-      position: relative;
-      display: inline-block;
-    }
-    
-    .color-block-green {
-      background: linear-gradient(135deg, #2FAA6F 0%, #25906B 100%);
-      border-radius: 24px;
-    }
-    
-    .color-block-orange {
-      background: linear-gradient(135deg, #FF8C42 0%, #FF7040 100%);
-      border-radius: 24px;
-    }
-    
-    .color-block-blue {
-      background: linear-gradient(135deg, #52B8E8 0%, #3A9FD8 100%);
-      border-radius: 24px;
-    }
-    
-    .color-block-yellow {
-      background: linear-gradient(135deg, #FFC72C 0%, #FFB000 100%);
-      border-radius: 24px;
-    }
-    
-    .playful-shadow {
-      box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
-    }
-    
-    .icon-card {
-      transition: all 0.3s ease;
-    }
-    
-    .icon-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    }
+/* ============================================
+   TADABBURKIDS BRAND THEME 2025
+   Based on logo colors and design system
+   ============================================ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
+/* CSS Variables - Brand Colors from Logo */
+:root {
+  /* Primary Brand Colors */
+  --color-primary: #2FAA6F;
+  --color-secondary: #FFA500;
+  --color-accent-teal: #40C9BE;
+  --color-accent-pink: #FF69B4;
+  --color-accent-olive: #B8B446;
+  
+  /* Text Colors */
+  --color-text-dark: #1A1A1A;
+  --color-text-body: #666666;
+  
+  /* Background Colors */
+  --color-bg-cream: #FFF8F0;
+  --color-bg-light-green: #F0F9F4;
+  --color-bg-light-blue: #F0F8FC;
+  --color-bg-light-orange: #FFF4E6;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.12);
+  
+  /* Border Radius */
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+}
+
+/* Base Styles */
+body { 
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  line-height: 1.2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation Styles */
+nav {
+  background: white;
+  box-shadow: var(--shadow-sm);
+}
+
+nav a:not(.flex) {
+  color: var(--color-text-dark);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:not(.flex):hover {
+  color: var(--color-primary);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #238B5A 100%);
+  color: white;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #238B5A 0%, var(--color-primary) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, #E69500 100%);
+  color: white;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #E69500 0%, var(--color-secondary) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-teal {
+  background: linear-gradient(135deg, #40C9BE 0%, #26C6DA 100%);
+  color: white;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-teal:hover {
+  background: linear-gradient(135deg, #26C6DA 0%, #40C9BE 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card Styles */
+.playful-shadow {
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.playful-shadow:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.icon-card {
+  transition: all 0.3s ease;
+}
+
+.icon-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* WhatsApp button pulse animation */
+@keyframes whatsappPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-float {
+  animation: whatsappPulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+  animation: none;
+}
+
+/* Decorative Elements */
+.doodle {
+  position: absolute;
+  opacity: 0.08;
+  animation: float 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .doodle {
+    display: none;
+  }
+  
+  .btn-primary,
+  .btn-secondary,
+  .btn-teal {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
   </style>
+  
 </head>
 <body class="bg-white text-gray-800">
 
@@ -195,14 +273,15 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <!-- Logo -->
-<a href="index.html" class="flex items-center">
-  <img 
-    src="images/logo.svg" 
-    alt="TadabburKids Logo" 
-    class="h-20 w-auto" 
-  >
-</a>
+        <a href="index.html" class="flex items-center">
+          <img 
+            src="images/logo.svg" 
+            alt="TadabburKids Logo" 
+            class="h-20 w-auto" 
+          >
+        </a>
         
+        <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-8">
           <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition">Home</a>
           <a href="books.html" class="text-gray-700 hover:text-primary font-medium transition">Books</a>
@@ -211,11 +290,13 @@
           <a href="contact.html" class="text-gray-700 hover:text-primary font-medium transition">Contact</a>
         </div>
         
+        <!-- Mobile Menu Toggle -->
         <button id="mobile-menu-toggle" class="md:hidden text-3xl text-primary focus:outline-none">
           <i class="ri-menu-line"></i>
         </button>
       </div>
       
+      <!-- Mobile Menu -->
       <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 bg-white shadow-lg rounded-b-xl px-6 py-4">
         <a href="index.html" class="block text-gray-700 hover:text-primary font-medium">Home</a>
         <a href="books.html" class="block text-gray-700 hover:text-primary font-medium">Books</a>
@@ -232,33 +313,33 @@
     <!-- HERO SECTION -->
     <section class="relative bg-gradient-to-br from-orange-50 via-yellow-50 to-green-50 py-20 md:py-32 overflow-hidden">
       <!-- Decorative Doodles -->
-      <i class="ri-moon-fill doodle doodle-moon" style="top: 15%; left: 8%;"></i>
-      <i class="ri-star-fill doodle doodle-star" style="top: 25%; right: 10%;"></i>
-      <i class="ri-book-open-fill doodle doodle-book" style="bottom: 20%; left: 12%;"></i>
-      <i class="ri-sparkling-fill doodle doodle-sparkle" style="bottom: 30%; right: 15%;"></i>
+      <i class="ri-moon-fill doodle text-5xl" style="top: 15%; left: 8%; color: #2FAA6F;"></i>
+      <i class="ri-star-fill doodle text-4xl" style="top: 25%; right: 10%; color: #FFA500;"></i>
+      <i class="ri-book-open-fill doodle text-4xl" style="bottom: 20%; left: 12%; color: #40C9BE;"></i>
+      <i class="ri-sparkling-fill doodle text-3xl" style="bottom: 30%; right: 15%; color: #FF69B4;"></i>
       
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center">
           <div class="inline-flex items-center gap-3 bg-secondary/10 rounded-full px-6 py-3 mb-6">
-            <i class="ri-vidicon-line text-2xl text-secondary"></i>
-            <span class="text-lg font-bold text-darkBrown">Live Online Lessons</span>
+            <i class="ri-vidicon-line text-2xl" style="color: #FFA500;"></i>
+            <span class="text-lg font-medium" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Live Online Lessons</span>
           </div>
           
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-darkBrown mb-6 leading-tight">
-            Personalized <span class="text-emphasis">Quran Lessons</span><br>
-            That Teach Kids to Reflect
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-6 px-2 sm:px-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+            Live Quran Lessons That<br>Teach Kids Tadabbur
           </h1>
           
-          <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Live 1-on-1 or sibling group classes teaching <strong>Quranic recitation and Tadabbur</strong>—helping children understand, connect with, and love Allah's words.
+          <p class="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-medium leading-relaxed px-4" style="color: #666666; font-family: 'Nunito', sans-serif;">
+            1-on-1 or sibling group classes where children learn how to recite the Quran and reflect on Allah's words
           </p>
           
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#enroll" class="inline-flex items-center justify-center color-block-orange text-white font-bold py-5 px-10 text-lg playful-shadow hover:scale-105 transition transform">
-              Book Free Trial Lesson
+          <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
+            <a href="#enroll" class="inline-flex items-center justify-center text-white font-medium py-4 sm:py-5 px-8 sm:px-10 text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform" style="font-family: 'Fredoka', sans-serif; background: linear-gradient(135deg, #E69500 0%, #CC8400 100%);">
+              Book Free Trial
               <i class="ri-arrow-right-line ml-2"></i>
             </a>
-            <a href="#pricing" class="inline-flex items-center justify-center bg-white text-secondary border-4 border-secondary font-bold py-5 px-10 text-lg rounded-3xl playful-shadow hover:scale-105 transition transform">
+            
+            <a href="#pricing" class="inline-flex items-center justify-center text-white font-medium py-4 sm:py-5 px-8 sm:px-10 text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform" style="font-family: 'Fredoka', sans-serif; background: linear-gradient(135deg, #2BA89E 0%, #1E8B81 100%);">
               View Pricing
               <i class="ri-price-tag-3-line ml-2"></i>
             </a>
@@ -267,62 +348,51 @@
       </div>
     </section>
 
-    <!-- WHAT KIDS WILL LEARN -->
-    <section class="py-20 bg-white">
+    <!-- WHAT KIDS WILL LEARN SECTION -->
+    <section class="py-16 md:py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold text-darkBrown mb-6">
-            What Your Child Will <span class="text-emphasis">Learn</span>
+        <div class="text-center mb-12 md:mb-16">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+            What Your Child Will <span style="color: #2FAA6F;">Learn</span>
           </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            We don't just teach recitation—we teach connection to Allah
+          <p class="text-xl max-w-3xl mx-auto" style="color: #666666; font-family: 'Nunito', sans-serif;">
+            Every lesson is a step toward a deeper connection with Allah through the Quran.
           </p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           
-          <!-- Learning Outcome 1 -->
-          <div class="icon-card bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 playful-shadow text-center">
-            <div class="w-20 h-20 bg-primary/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-6">
-              <i class="ri-book-read-line text-5xl text-primary"></i>
+          <!-- Card 1: Quran Recitation -->
+          <div class="icon-card rounded-3xl p-8 text-center" style="background: linear-gradient(135deg, #F0F9F4 0%, #E8F5EE 100%); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6" style="background: rgba(47, 170, 111, 0.2);">
+              <i class="ri-book-read-line text-5xl" style="color: #2FAA6F;"></i>
             </div>
-            <h3 class="text-xl font-bold text-darkBrown mb-3">Quranic Recitation</h3>
-            <p class="text-gray-700 leading-relaxed">
-              Learn proper Qaaidah and Tajweed with authentic pronunciation
+            <h3 class="text-2xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Quran Recitation</h3>
+            <p class="leading-relaxed" style="color: #666666; font-family: 'Nunito', sans-serif;">
+              Learn proper Qaaidah and Tajweed with authentic pronunciation.
             </p>
           </div>
           
-          <!-- Learning Outcome 2 -->
-          <div class="icon-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-8 playful-shadow text-center">
-            <div class="w-20 h-20 bg-secondary/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-6">
-              <i class="ri-lightbulb-line text-5xl text-secondary"></i>
+          <!-- Card 2: Tadabbur (Reflection) -->
+          <div class="icon-card rounded-3xl p-8 text-center" style="background: linear-gradient(135deg, #FFF4E6 0%, #FFE8CC 100%); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6" style="background: rgba(255, 165, 0, 0.2);">
+              <i class="ri-lightbulb-line text-5xl" style="color: #FFA500;"></i>
             </div>
-            <h3 class="text-xl font-bold text-darkBrown mb-3">Tadabbur (Reflection)</h3>
-            <p class="text-gray-700 leading-relaxed">
-              Understand meanings and reflect on Allah's words deeply
+            <h3 class="text-2xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Tadabbur (Reflection)</h3>
+            <p class="leading-relaxed" style="color: #666666; font-family: 'Nunito', sans-serif;">
+              Understand meanings and reflect on Allah's words deeply.
             </p>
           </div>
           
-          <!-- Learning Outcome 3 -->
-          <div class="icon-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 playful-shadow text-center">
-            <div class="w-20 h-20 bg-accent/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-6">
-              <i class="ri-heart-3-line text-5xl text-accent"></i>
+          <!-- Card 3: Apply & Love the Quran -->
+          <div class="icon-card rounded-3xl p-8 text-center" style="background: linear-gradient(135deg, #F0F8FC 0%, #E6F4F9 100%); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6" style="background: rgba(64, 201, 190, 0.2);">
+              <i class="ri-heart-3-line text-5xl" style="color: #40C9BE;"></i>
             </div>
-            <h3 class="text-xl font-bold text-darkBrown mb-3">Love for Allah</h3>
-            <p class="text-gray-700 leading-relaxed">
-              Build genuine connection and love for the Quran
-            </p>
-          </div>
-          
-          <!-- Learning Outcome 4 -->
-          <div class="icon-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-8 playful-shadow text-center">
-            <div class="w-20 h-20 bg-purple-600/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-6">
-              <i class="ri-compass-3-line text-5xl text-purple-600"></i>
-            </div>
-            <h3 class="text-xl font-bold text-darkBrown mb-3">Living with Purpose</h3>
-            <p class="text-gray-700 leading-relaxed">
-              Apply Quranic teachings to daily life and actions
+            <h3 class="text-2xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Apply & Love the Quran</h3>
+            <p class="leading-relaxed" style="color: #666666; font-family: 'Nunito', sans-serif;">
+              Children start reciting while playing, look forward to classes, and naturally apply teachings from the Quran in daily life
             </p>
           </div>
           
@@ -332,109 +402,111 @@
     </section>
 
     <!-- PRICING SECTION -->
-    <section id="pricing" class="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+    <section id="pricing" class="py-16 md:py-20" style="background: linear-gradient(135deg, #F0F8FC 0%, #FFE8F5 100%);">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold text-darkBrown mb-6">
-            Choose Your <span class="text-emphasis">Learning Path</span>
+        <div class="text-center mb-12 md:mb-16">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+            Choose Your <span style="color: #2FAA6F;">Learning Path</span>
           </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p class="text-xl max-w-3xl mx-auto" style="color: #666666; font-family: 'Nunito', sans-serif;">
             Flexible options to fit your family's needs and schedule
           </p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto mb-12">
           
-          <!-- 1-on-1 Classes -->
-          <div class="icon-card bg-white rounded-3xl p-10 playful-shadow transform hover:scale-105 transition">
-            <div class="inline-flex items-center gap-3 bg-primary/10 rounded-full px-4 py-2 mb-6">
-              <i class="ri-user-line text-2xl text-primary"></i>
-              <span class="text-sm font-bold text-darkBrown">1-on-1 Classes</span>
+          <!-- Card 1: 1-on-1 Classes -->
+          <div class="icon-card bg-white rounded-3xl p-8 md:p-10 relative" style="box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); border: 4px solid #2FAA6F;">
+            
+            <div class="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6" style="background: rgba(47, 170, 111, 0.1);">
+              <i class="ri-user-line text-xl" style="color: #2FAA6F;"></i>
+              <span class="text-sm font-medium" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Individual Attention</span>
             </div>
             
-            <h3 class="text-3xl font-bold text-darkBrown mb-4">Individual Attention</h3>
+            <h3 class="text-3xl font-medium mb-6" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">1-on-1 Classes</h3>
             
             <div class="mb-6">
-              <div class="text-5xl font-bold text-primary mb-2">25 AED</div>
-              <p class="text-gray-600">per 40-minute session</p>
+              <div class="text-5xl font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #2FAA6F;">25 AED</div>
+              <p style="color: #666666; font-family: 'Nunito', sans-serif;">per 40-minute session</p>
             </div>
             
             <ul class="space-y-4 mb-8">
               <li class="flex items-start gap-3">
-                <i class="ri-check-line text-2xl text-primary flex-shrink-0 mt-1"></i>
-                <span class="text-gray-700"><strong>Personalized pace</strong> tailored to your child</span>
+                <i class="ri-check-line text-2xl flex-shrink-0 mt-1" style="color: #2FAA6F;"></i>
+                <span style="color: #666666; font-family: 'Nunito', sans-serif;"><strong>Personalized pace</strong> tailored to your child</span>
               </li>
               <li class="flex items-start gap-3">
-                <i class="ri-check-line text-2xl text-primary flex-shrink-0 mt-1"></i>
-                <span class="text-gray-700"><strong>Flexible scheduling</strong> (3-5 days/week recommended)</span>
+                <i class="ri-check-line text-2xl flex-shrink-0 mt-1" style="color: #2FAA6F;"></i>
+                <span style="color: #666666; font-family: 'Nunito', sans-serif;"><strong>Flexible scheduling</strong> (3-5 days/week recommended)</span>
               </li>
               <li class="flex items-start gap-3">
-                <i class="ri-check-line text-2xl text-primary flex-shrink-0 mt-1"></i>
-                <span class="text-gray-700"><strong>Focused attention</strong> on strengths & challenges</span>
+                <i class="ri-check-line text-2xl flex-shrink-0 mt-1" style="color: #2FAA6F;"></i>
+                <span style="color: #666666; font-family: 'Nunito', sans-serif;"><strong>Focused attention</strong> on strengths & challenges</span>
               </li>
               <li class="flex items-start gap-3">
-                <i class="ri-check-line text-2xl text-primary flex-shrink-0 mt-1"></i>
-                <span class="text-gray-700"><strong>Ages 4-16</strong></span>
+                <i class="ri-check-line text-2xl flex-shrink-0 mt-1" style="color: #2FAA6F;"></i>
+                <span style="color: #666666; font-family: 'Nunito', sans-serif;"><strong>Ages 4-16</strong></span>
               </li>
             </ul>
             
-            <a href="#enroll" class="block w-full color-block-green text-white text-center font-bold py-4 px-8 text-lg playful-shadow hover:scale-105 transition transform">
-              Book 1-on-1 Lesson
+            <a href="#enroll" class="block w-full text-white text-center font-medium py-4 px-8 text-lg rounded-full transition-all duration-300 hover:scale-105" style="font-family: 'Fredoka', sans-serif; background: linear-gradient(135deg, #2FAA6F 0%, #238B5A 100%); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+              Book Free Trial
             </a>
           </div>
           
-          <!-- Sibling Group Classes -->
-          <div class="icon-card bg-white rounded-3xl p-10 playful-shadow transform hover:scale-105 transition border-4 border-secondary relative">
-            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-white px-6 py-2 rounded-full text-sm font-bold playful-shadow">
+          <!-- Card 2: Sibling Group Classes -->
+          <div class="icon-card bg-white rounded-3xl p-8 md:p-10 relative" style="box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); border: 4px solid #FFA500;">
+            
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 rounded-full text-sm font-medium text-white" style="background: #FFA500; font-family: 'Fredoka', sans-serif; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
               Most Popular
             </div>
             
-            <div class="inline-flex items-center gap-3 bg-secondary/10 rounded-full px-4 py-2 mb-6">
-              <i class="ri-group-line text-2xl text-secondary"></i>
-              <span class="text-sm font-bold text-darkBrown">Sibling Group</span>
+            <div class="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6" style="background: rgba(255, 165, 0, 0.1);">
+              <i class="ri-group-line text-xl" style="color: #FFA500;"></i>
+              <span class="text-sm font-medium" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Learn Together</span>
             </div>
             
-            <h3 class="text-3xl font-bold text-darkBrown mb-4">Learn Together</h3>
+            <h3 class="text-3xl font-medium mb-6" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Sibling Group</h3>
             
             <div class="mb-6">
-              <div class="text-5xl font-bold text-secondary mb-2">15 AED</div>
-              <p class="text-gray-600">per student / 60-minute session</p>
+              <div class="text-5xl font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #FFA500;">15 AED</div>
+              <p style="color: #666666; font-family: 'Nunito', sans-serif;">per student / 60-minute session</p>
             </div>
             
             <ul class="space-y-4 mb-8">
               <li class="flex items-start gap-3">
-                <i class="ri-check-line text-2xl text-secondary flex-shrink-0 mt-1"></i>
-                <span class="text-gray-700"><strong>Interactive group learning</strong> with siblings</span>
+                <i class="ri-check-line text-2xl flex-shrink-0 mt-1" style="color: #FFA500;"></i>
+                <span style="color: #666666; font-family: 'Nunito', sans-serif;"><strong>Interactive group learning</strong> with siblings</span>
               </li>
               <li class="flex items-start gap-3">
-                <i class="ri-check-line text-2xl text-secondary flex-shrink-0 mt-1"></i>
-                <span class="text-gray-700"><strong>Longer sessions</strong> (60 minutes vs 40)</span>
+                <i class="ri-check-line text-2xl flex-shrink-0 mt-1" style="color: #FFA500;"></i>
+                <span style="color: #666666; font-family: 'Nunito', sans-serif;"><strong>Longer sessions</strong> (60 minutes vs 40)</span>
               </li>
               <li class="flex items-start gap-3">
-                <i class="ri-check-line text-2xl text-secondary flex-shrink-0 mt-1"></i>
-                <span class="text-gray-700"><strong>Cost-effective</strong> for multiple children</span>
+                <i class="ri-check-line text-2xl flex-shrink-0 mt-1" style="color: #FFA500;"></i>
+                <span style="color: #666666; font-family: 'Nunito', sans-serif;"><strong>Cost-effective</strong> for multiple children</span>
               </li>
               <li class="flex items-start gap-3">
-                <i class="ri-check-line text-2xl text-secondary flex-shrink-0 mt-1"></i>
-                <span class="text-gray-700"><strong>Build bond</strong> while learning together</span>
+                <i class="ri-check-line text-2xl flex-shrink-0 mt-1" style="color: #FFA500;"></i>
+                <span style="color: #666666; font-family: 'Nunito', sans-serif;"><strong>Build bond</strong> while learning together</span>
               </li>
             </ul>
             
-            <a href="#enroll" class="block w-full color-block-orange text-white text-center font-bold py-4 px-8 text-lg playful-shadow hover:scale-105 transition transform">
-              Book Group Lesson
+            <a href="#enroll" class="block w-full text-white text-center font-medium py-4 px-8 text-lg rounded-full transition-all duration-300 hover:scale-105" style="font-family: 'Fredoka', sans-serif; background: linear-gradient(135deg, #E69500 0%, #CC8400 100%); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+              Book Free Trial
             </a>
           </div>
           
         </div>
         
         <!-- Free Trial Banner -->
-        <div class="color-block-yellow text-center p-10 rounded-3xl playful-shadow max-w-3xl mx-auto transform hover:scale-105 transition">
-          <h3 class="text-3xl font-bold text-darkBrown mb-4">✨ Try 1 Lesson FREE</h3>
-          <p class="text-xl text-darkBrown/80 mb-6">
+        <div class="text-center p-8 md:p-10 rounded-3xl max-w-3xl mx-auto" style="background: linear-gradient(135deg, #FFC72C 0%, #FFB000 100%); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+          <h3 class="text-2xl sm:text-3xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Try 1 FREE Lesson</h3>
+          <p class="text-lg sm:text-xl mb-6" style="color: #1A1A1A; font-family: 'Nunito', sans-serif;">
             Experience our teaching approach with zero commitment. Perfect for seeing if it's the right fit for your family.
           </p>
-          <a href="#enroll" class="inline-flex items-center justify-center bg-white text-darkBrown font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-100 transition playful-shadow">
+          <a href="#enroll" class="inline-flex items-center justify-center bg-white font-medium py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
             Claim Free Trial
             <i class="ri-gift-line ml-2"></i>
           </a>
@@ -443,140 +515,121 @@
       </div>
     </section>
 
-    <!-- MEET YOUR TEACHER -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- MEET YOUR TEACHER SECTION -->
+    <section class="py-16 md:py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
-          <!-- Left: Teacher Photo -->
-<div class="relative order-2 lg:order-1">
-  <div class="bg-gradient-to-br from-orange-100 to-yellow-100 rounded-3xl p-8 playful-shadow transform hover:scale-105 transition">
-    <div class="aspect-square bg-white rounded-2xl overflow-hidden">
-      <img 
-        src="images/teacher.jpg" 
-        alt="Shayan Qureshi - Quran Teacher and Hafiz" 
-        class="w-full h-full object-cover"
-        onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full\'><div class=\'text-center text-gray-400\'><i class=\'ri-user-smile-line text-6xl mb-4\'></i><p class=\'text-lg font-semibold\'>Teacher Photo<br>Not Found</p></div></div>';"
-      >
-    </div>
-  </div>
-  <!-- Decorative Elements -->
-  <div class="absolute -top-6 -left-6 w-24 h-24 bg-accent rounded-full opacity-30"></div>
-  <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-full opacity-20"></div>
-</div>
-          
-          <!-- Right: Teacher Info -->
-          <div class="order-1 lg:order-2">
-            <div class="inline-flex items-center gap-3 bg-primary/10 rounded-full px-6 py-3 mb-6">
-              <i class="ri-graduation-cap-line text-2xl text-primary"></i>
-              <span class="text-lg font-bold text-darkBrown">Meet Your Teacher</span>
-            </div>
-            
-            <h2 class="text-4xl md:text-5xl font-bold text-darkBrown mb-6">
-              Taught by Experienced<br>Quran Educators
-            </h2>
-            
-            <p class="text-xl text-gray-700 mb-8 leading-relaxed">
-              Our teacher is not just an educator—he's a <strong>father raising his own children on Quran and Sunnah</strong>, who understands the challenges Muslim parents face today.
-            </p>
-            
-            <div class="space-y-6 mb-8">
-              
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <i class="ri-book-2-line text-2xl text-primary"></i>
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-darkBrown mb-2">Hafiz of the Quran</h4>
-                  <p class="text-gray-700">Memorized the entire Quran and received certification from the Sharjah government</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <i class="ri-building-line text-2xl text-secondary"></i>
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-darkBrown mb-2">Pursuing Ijazah from Masjid Nabawi</h4>
-                  <p class="text-gray-700">Currently learning Qaaidah teaching methodology directly from scholars at the Prophet's Mosque ﷺ in Madinah</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <i class="ri-parent-line text-2xl text-accent"></i>
-                </div>
-                <div>
-                  <h4 class="text-xl font-bold text-darkBrown mb-2">Parent & Educator</h4>
-                  <p class="text-gray-700">Raising a family on authentic Islamic principles—teaching with patience, love, and understanding</p>
-                </div>
-              </div>
-              
-            </div>
-            
-            <div class="bg-green-50 border-2 border-primary rounded-2xl p-6">
-              <p class="text-lg text-gray-700 italic">
-                "I teach children the way I teach my own—with love, patience, and a focus on building their relationship with Allah through His book."
-              </p>
-            </div>
-            
+        <div class="text-center mb-12 md:mb-16">
+          <div class="inline-flex items-center gap-3 rounded-full px-6 py-3 mb-6" style="background: rgba(47, 170, 111, 0.1);">
+            <i class="ri-graduation-cap-line text-2xl" style="color: #2FAA6F;"></i>
+            <span class="text-lg font-medium" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Meet Your Teacher</span>
           </div>
           
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-medium mb-6" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+            Taught by Experienced<br>Quran Educator
+          </h2>
+          
+          <p class="text-xl leading-relaxed max-w-2xl mx-auto mb-8" style="color: #666666; font-family: 'Nunito', sans-serif;">
+            Your child will learn from a teacher who is not just an educator but he's a <strong>father raising his own children on Quran and Sunnah</strong>, who understands the challenges Muslim parents face today.
+          </p>
+        </div>
+        
+        <div class="space-y-6 mb-10">
+          
+          <!-- Credential 1 -->
+          <div class="flex items-start gap-4 p-6 rounded-2xl" style="background: linear-gradient(135deg, #F0F9F4 0%, #E8F5EE 100%);">
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(47, 170, 111, 0.2);">
+              <i class="ri-book-2-line text-3xl" style="color: #2FAA6F;"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Hafiz of the Quran</h4>
+              <p style="color: #666666; font-family: 'Nunito', sans-serif;">Memorized the entire Quran and received certification from the Government of Sharjah</p>
+            </div>
+          </div>
+          
+          <!-- Credential 2 -->
+          <div class="flex items-start gap-4 p-6 rounded-2xl" style="background: linear-gradient(135deg, #fffdd6ff 0%, #fffba7ff 100%);">
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(255, 165, 0, 0.2);">
+              <i class="ri-building-line text-3xl" style="color: #FFA500;"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Pursuing Ijazah from Masjid Nabawi</h4>
+              <p style="color: #666666; font-family: 'Nunito', sans-serif;">Currently learning Qaaidah teaching methodology directly from teachers at the Prophet's ﷺ  Mosque in Madinah</p>
+            </div>
+          </div>
+          
+          <!-- Credential 3 -->
+          <div class="flex items-start gap-4 p-6 rounded-2xl" style="background: linear-gradient(135deg, #F0F8FC 0%, #E6F4F9 100%);">
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(64, 201, 190, 0.2);">
+              <i class="ri-parent-line text-3xl" style="color: #40C9BE;"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Parent & Educator</h4>
+              <p style="color: #666666; font-family: 'Nunito', sans-serif;">Raising a family on authentic Islamic principles... teaching with patience, love, and understanding</p>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Teacher Quote -->
+        <div class="rounded-2xl p-8 border-2" style="background: #F0F9F4; border-color: #2FAA6F;">
+          <p class="text-lg italic leading-relaxed" style="color: #666666; font-family: 'Nunito', sans-serif;">
+            "I teach children the way I teach my own, I focus on building their relationship with Allah through His book." - Shayan Qureshi
+          </p>
         </div>
         
       </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
+    <!-- HOW IT WORKS SECTION -->
+    <section class="py-16 md:py-20" style="background: linear-gradient(135deg, #F0F9F4 0%, #E6F4F9 100%);">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold text-darkBrown mb-6">
-            How It <span class="text-emphasis">Works</span>
+        <div class="text-center mb-12 md:mb-16">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+            How It <span style="color: #FFA500;">Works</span>
           </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p class="text-xl max-w-3xl mx-auto" style="color: #666666; font-family: 'Nunito', sans-serif;">
             Simple, straightforward process to get your child started
           </p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           
           <!-- Step 1 -->
           <div class="text-center">
-            <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 text-white text-4xl font-bold playful-shadow">
+            <div class="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-4xl font-medium" style="font-family: 'Fredoka', sans-serif; background: #2FAA6F; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
               1
             </div>
-            <h3 class="text-xl font-bold text-darkBrown mb-3">Fill Enrollment Form</h3>
-            <p class="text-gray-700">Tell us about your child and their learning goals</p>
+            <h3 class="text-xl font-medium mb-3" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Fill Enrollment Form</h3>
+            <p style="color: #666666; font-family: 'Nunito', sans-serif;">Tell us about your child and their learning goals</p>
           </div>
           
           <!-- Step 2 -->
           <div class="text-center">
-            <div class="w-24 h-24 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6 text-white text-4xl font-bold playful-shadow">
+            <div class="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-4xl font-medium" style="font-family: 'Fredoka', sans-serif; background: #FFA500; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
               2
             </div>
-            <h3 class="text-xl font-bold text-darkBrown mb-3">Schedule Free Trial</h3>
-            <p class="text-gray-700">We'll coordinate a time that works for your family</p>
+            <h3 class="text-xl font-medium mb-3" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Schedule Free Trial</h3>
+            <p style="color: #666666; font-family: 'Nunito', sans-serif;">We'll coordinate a time that works for your family</p>
           </div>
           
           <!-- Step 3 -->
           <div class="text-center">
-            <div class="w-24 h-24 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 text-white text-4xl font-bold playful-shadow">
+            <div class="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-4xl font-medium" style="font-family: 'Fredoka', sans-serif; background: #40C9BE; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
               3
             </div>
-            <h3 class="text-xl font-bold text-darkBrown mb-3">Experience the Lesson</h3>
-            <p class="text-gray-700">Meet the teacher, see our approach, ask questions</p>
+            <h3 class="text-xl font-medium mb-3" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Experience the Lesson</h3>
+            <p style="color: #666666; font-family: 'Nunito', sans-serif;">Meet the teacher, see our approach, ask questions</p>
           </div>
           
           <!-- Step 4 -->
           <div class="text-center">
-            <div class="w-24 h-24 bg-yellow rounded-full flex items-center justify-center mx-auto mb-6 text-white text-4xl font-bold playful-shadow">
+            <div class="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-4xl font-medium" style="font-family: 'Fredoka', sans-serif; background: #FFC72C; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
               4
             </div>
-            <h3 class="text-xl font-bold text-darkBrown mb-3">Start Learning</h3>
-            <p class="text-gray-700">Begin your child's Tadabbur journey with us</p>
+            <h3 class="text-xl font-medium mb-3" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Start Learning</h3>
+            <p style="color: #666666; font-family: 'Nunito', sans-serif;">Begin your child's Tadabbur journey with us</p>
           </div>
           
         </div>
@@ -584,52 +637,54 @@
       </div>
     </section>
 
-    <!-- ENROLLMENT FORM -->
-    <section id="enroll" class="py-20 bg-white">
+    <!-- ENROLLMENT FORM SECTION -->
+    <section id="enroll" class="py-16 md:py-20 bg-white">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center mb-12">
-          <h2 class="text-4xl md:text-5xl font-bold text-darkBrown mb-6">
-            Book Your <span class="text-emphasis">Free Trial</span>
+        <div class="text-center mb-10 md:mb-12">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-medium mb-6" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+            Book Your <span style="color: #40C9BE;">Free Trial</span>
           </h2>
-          <p class="text-xl text-gray-600">
+          <p class="text-xl" style="color: #666666; font-family: 'Nunito', sans-serif;">
             Fill out this form and we'll contact you on WhatsApp within 24 hours
           </p>
         </div>
         
-        <form id="enrollment-form" class="bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl p-10 playful-shadow" onsubmit="handleEnrollment(event)">
+        <form id="enrollment-form" class="rounded-3xl p-8 md:p-10" style="background: linear-gradient(135deg, #F0F9F4 0%, #E6F4F9 100%); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);" onsubmit="handleEnrollment(event)">
           
           <div class="space-y-6">
             
             <!-- Parent Name -->
             <div>
-              <label for="parent-name" class="block text-lg font-bold text-darkBrown mb-2">Parent's Name *</label>
+              <label for="parent-name" class="block text-lg font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Parent's Name *</label>
               <input 
                 type="text" 
                 id="parent-name" 
                 name="parent_name" 
                 required
-                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none text-darkBrown text-lg transition"
+                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:outline-none text-lg transition"
+                style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5; focus:border-color: #2FAA6F;"
                 placeholder="Your full name"
               >
             </div>
             
             <!-- Child's Name -->
             <div>
-              <label for="child-name" class="block text-lg font-bold text-darkBrown mb-2">Child's Name *</label>
+              <label for="child-name" class="block text-lg font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Child's Name *</label>
               <input 
                 type="text" 
                 id="child-name" 
                 name="child_name" 
                 required
-                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none text-darkBrown text-lg transition"
+                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:outline-none text-lg transition"
+                style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5;"
                 placeholder="Your child's name"
               >
             </div>
             
             <!-- Child's Age -->
             <div>
-              <label for="child-age" class="block text-lg font-bold text-darkBrown mb-2">Child's Age *</label>
+              <label for="child-age" class="block text-lg font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Child's Age *</label>
               <input 
                 type="number" 
                 id="child-age" 
@@ -637,19 +692,21 @@
                 min="4" 
                 max="16" 
                 required
-                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none text-darkBrown text-lg transition"
+                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:outline-none text-lg transition"
+                style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5;"
                 placeholder="Age (4-16)"
               >
             </div>
             
             <!-- Class Type -->
             <div>
-              <label for="class-type" class="block text-lg font-bold text-darkBrown mb-2">Preferred Class Type *</label>
+              <label for="class-type" class="block text-lg font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Preferred Class Type *</label>
               <select 
                 id="class-type" 
                 name="class_type" 
                 required
-                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none text-darkBrown text-lg transition appearance-none bg-white"
+                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:outline-none text-lg transition appearance-none bg-white"
+                style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5;"
               >
                 <option value="">Select class type</option>
                 <option value="1-on-1">1-on-1 (40 min | 25 AED)</option>
@@ -660,25 +717,27 @@
             
             <!-- WhatsApp Number -->
             <div>
-              <label for="whatsapp" class="block text-lg font-bold text-darkBrown mb-2">WhatsApp Number *</label>
+              <label for="whatsapp" class="block text-lg font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">WhatsApp Number *</label>
               <input 
                 type="tel" 
                 id="whatsapp" 
                 name="whatsapp" 
                 required
-                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none text-darkBrown text-lg transition"
+                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:outline-none text-lg transition"
+                style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5;"
                 placeholder="+92 300 1234567"
               >
             </div>
             
             <!-- Goals/Questions -->
             <div>
-              <label for="goals" class="block text-lg font-bold text-darkBrown mb-2">Any specific goals or questions? (Optional)</label>
+              <label for="goals" class="block text-lg font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Any specific goals or questions? (Optional)</label>
               <textarea 
                 id="goals" 
                 name="goals" 
                 rows="4"
-                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none text-darkBrown text-lg transition resize-none"
+                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:outline-none text-lg transition resize-none"
+                style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5;"
                 placeholder="Tell us what you hope your child will achieve..."
               ></textarea>
             </div>
@@ -686,13 +745,14 @@
             <!-- Submit Button -->
             <button 
               type="submit" 
-              class="w-full color-block-orange text-white font-bold py-5 px-8 text-xl playful-shadow hover:scale-105 transition transform"
+              class="w-full text-white font-medium py-5 px-8 text-xl rounded-full transition-all duration-300 hover:scale-105"
+              style="font-family: 'Fredoka', sans-serif; background: linear-gradient(135deg, #35ada3ff 0%, #40C9BE 100%); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);"
             >
               Submit & Book Free Trial
               <i class="ri-send-plane-fill ml-2"></i>
             </button>
             
-            <p class="text-center text-gray-600 text-sm mt-4">
+            <p class="text-center text-sm mt-4" style="color: #666666; font-family: 'Nunito', sans-serif;">
               We'll contact you on WhatsApp within 24 hours to schedule your free trial lesson.
             </p>
             
@@ -701,13 +761,13 @@
         </form>
         
         <!-- Success Message (Hidden by default) -->
-        <div id="enrollment-success" class="hidden mt-10 bg-green-50 border-4 border-primary rounded-3xl p-10 text-center playful-shadow">
-          <i class="ri-checkbox-circle-line text-7xl text-primary mb-4"></i>
-          <h3 class="text-3xl font-bold text-darkBrown mb-4">Thank You! 🎉</h3>
-          <p class="text-xl text-gray-700 mb-6">
+        <div id="enrollment-success" class="hidden mt-10 rounded-3xl p-10 text-center" style="background: #F0F9F4; border: 4px solid #2FAA6F; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+          <i class="ri-checkbox-circle-line text-7xl mb-4" style="color: #2FAA6F;"></i>
+          <h3 class="text-3xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Thank You! 🎉</h3>
+          <p class="text-xl mb-6" style="color: #666666; font-family: 'Nunito', sans-serif;">
             Your enrollment request has been received. We'll contact you on WhatsApp within 24 hours to schedule your free trial lesson.
           </p>
-          <a href="https://wa.me/923165252296" target="_blank" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-4 px-8 rounded-full text-lg transition transform hover:scale-105">
+          <a href="https://wa.me/923165252296" target="_blank" class="inline-flex items-center justify-center text-white font-medium py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105" style="font-family: 'Fredoka', sans-serif; background: #25D366; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
             <i class="ri-whatsapp-line text-2xl mr-2"></i>
             Chat on WhatsApp Now
           </a>
@@ -716,21 +776,21 @@
       </div>
     </section>
 
-    <!-- CROSS-SELL TO BOOKS -->
-    <section class="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50">
+    <!-- CROSS-SELL TO BOOKS SECTION -->
+    <section class="py-16 md:py-20" style="background: linear-gradient(135deg, #FFE8F5 0%, #FFF4E6 100%);">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="color-block-green text-white rounded-3xl p-10 md:p-16 playful-shadow text-center transform hover:scale-105 transition">
+        <div class="text-white rounded-3xl p-10 md:p-16 text-center transition-all duration-300 hover:scale-105" style="background: linear-gradient(135deg, #E69500 0%, #FFA500 100%); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
           
-          <h3 class="text-3xl md:text-4xl font-bold mb-6">
+          <h3 class="text-white md:text-4xl font-medium mb-6" style="font-family: 'Fredoka', sans-serif;">
             Reinforce Learning at Home
           </h3>
           
-          <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Pair your lessons with our <strong>interactive Tadabbur books</strong> for even deeper understanding. Many families use both for the best results!
+          <p class="text-xl mb-8 max-w-2xl mx-auto leading-relaxed" style="font-family: 'Nunito', sans-serif; opacity: 0.95;">
+            Pair your lessons with our <strong>interactive Tadabbur kids books</strong> for even deeper understanding.
           </p>
           
-          <a href="books.html" class="inline-flex items-center justify-center bg-white text-primary font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-100 transition playful-shadow">
+          <a href="books.html" class="inline-flex items-center justify-center bg-white font-medium py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105" style="font-family: 'Fredoka', sans-serif; color: #FFA500; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
             Explore Our Books
             <i class="ri-arrow-right-line ml-2"></i>
           </a>
@@ -742,45 +802,86 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
+  <!-- FOOTER -->
+  <footer class="py-12" style="background-color: #1A1A1A;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        
+        <!-- Column 1: Brand -->
         <div>
-          <h3 class="text-xl font-bold mb-4 text-primary">TadabburKids</h3>
-          <p class="text-gray-400 text-sm">
+          <a href="index.html" class="flex items-center">
+            <img 
+              src="images/logo_dark.svg" 
+              alt="TadabburKids Logo" 
+              class="h-20 w-auto" 
+            >
+          </a>
+          <p class="text-sm leading-relaxed mb-4" style="font-family: 'Nunito', sans-serif; color: #999999;">
             Connecting young hearts to the Quran through Tadabbur. Authentic Islamic education for children worldwide.
           </p>
         </div>
         
+        <!-- Column 2: Quick Links -->
         <div>
-          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="books.html" class="text-gray-400 hover:text-primary transition">Books</a></li>
-            <li><a href="quran-lessons.html" class="text-gray-400 hover:text-primary transition">Quran Lessons</a></li>
-            <li><a href="blog.html" class="text-gray-400 hover:text-primary transition">Blog</a></li>
-            <li><a href="contact.html" class="text-gray-400 hover:text-primary transition">Contact</a></li>
+          <h4 class="text-lg font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #FFFFFF;">
+            Quick Links
+          </h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="index.html" class="text-sm transition-colors duration-300" style="font-family: 'Nunito', sans-serif; color: #999999;">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="books.html" class="text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+                Books
+              </a>
+            </li>
+            <li>
+              <a href="quran-lessons.html" class="text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+                Quran Lessons
+              </a>
+            </li>
+            <li>
+              <a href="blog.html" class="text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
         
+        <!-- Column 3: Contact -->
         <div>
-          <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li class="flex items-center gap-2">
-              <i class="ri-mail-line"></i>
-              <a href="mailto:contact@tadabburkids.com" class="hover:text-primary transition">contact@tadabburkids.com</a>
-            </li>
-            <li class="flex items-center gap-2">
-              <i class="ri-whatsapp-line"></i>
-              <span>WhatsApp: +92 316 525 2296</span>
-            </li>
-          </ul>
+          <h4 class="text-lg font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #FFFFFF;">
+            Get in Touch
+          </h4>
+          <div class="space-y-3">
+            <a href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I'm%20interested%20in%20Quran%20lessons%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+              <i class="ri-whatsapp-line text-2xl" style="color: #25D366;"></i>
+              <span>+92 316 525 2296</span>
+            </a>
+            <a href="mailto:contact@tadabburkids.com" class="flex items-center gap-3 text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+              <i class="ri-mail-line text-2xl" style="color: #FFA500;"></i>
+              <span>contact@tadabburkids.com</span>
+            </a>
+          </div>
         </div>
+        
       </div>
       
-      <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-        <p>&copy; 2025 TadabburKids. All rights reserved.</p>
+      <!-- Bottom Bar -->
+      <div class="border-t pt-8 text-center" style="border-color: #2D2D2D;">
+        <p class="text-sm" style="font-family: 'Nunito', sans-serif; color: #666666;">
+          © 2026 TadabburKids. All rights reserved.
+        </p>
       </div>
+      
     </div>
   </footer>
 
@@ -789,7 +890,8 @@
     href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I'm%20interested%20in%20Quran%20lessons%20for%20my%20child." 
     target="_blank"
     rel="noopener noreferrer"
-    class="whatsapp-float fixed bottom-8 right-8 z-50 bg-[#25D366] text-white rounded-full shadow-2xl w-16 h-16 flex items-center justify-center text-3xl transition-all duration-300 hover:bg-[#128C7E] hover:scale-110"
+    class="whatsapp-float fixed bottom-8 right-8 z-50 text-white rounded-full shadow-2xl w-16 h-16 flex items-center justify-center text-3xl transition-all duration-300 hover:scale-110"
+    style="background-color: #25D366;"
     aria-label="Contact us on WhatsApp"
   >
     <i class="ri-whatsapp-line"></i>
