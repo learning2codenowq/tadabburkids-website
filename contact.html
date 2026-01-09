@@ -16,7 +16,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   
   <!-- Remix Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
@@ -28,14 +28,14 @@
         extend: {
           colors: {
             primary: '#2FAA6F',
-            secondary: '#FF8C42',
-            accent: '#52B8E8',
-            yellow: '#FFC72C',
-            teal: '#26C6DA',
+            secondary: '#FFA500',
+            accent: '#40C9BE',
+            pink: '#FF69B4',
+            olive: '#B8B446',
             darkBrown: '#3A2A1F',
           },
           fontFamily: {
-            heading: ['Poppins', 'sans-serif'],
+            heading: ['Fredoka', 'sans-serif'],
             body: ['Nunito', 'sans-serif'],
           }
         }
@@ -61,98 +61,163 @@
   </script>
   
   <style>
-    body { 
-      font-family: 'Nunito', sans-serif;
-      font-size: 18px;
-      color: #3A2A1F;
-    }
-    
-    h1, h2, h3, h4, h5, h6 { 
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-    }
-    
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    /* WhatsApp button pulse animation */
-    @keyframes whatsappPulse {
-      0%, 100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-      }
-      50% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-      }
-    }
-    
-    .whatsapp-float {
-      animation: whatsappPulse 2s infinite;
-    }
-    
-    .whatsapp-float:hover {
-      animation: none;
-    }
-    
-    /* Decorative Elements */
-    .doodle {
-      position: absolute;
-      opacity: 0.08;
-      animation: float 6s ease-in-out infinite;
-      z-index: 0;
-    }
-    
-    .doodle-star {
-      font-size: 3rem;
-      color: #FFC72C;
-      animation: float 6s ease-in-out infinite, rotate 20s linear infinite;
-    }
-    
-    .doodle-moon {
-      font-size: 3.5rem;
-      color: #2FAA6F;
-      animation: float 8s ease-in-out infinite;
-    }
-    
-    .doodle-sparkle {
-      font-size: 2.5rem;
-      color: #52B8E8;
-      animation: float 5s ease-in-out infinite, pulse 3s ease-in-out infinite;
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-    
-    @keyframes rotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    
-    @keyframes pulse {
-      0%, 100% { opacity: 0.08; }
-      50% { opacity: 0.15; }
-    }
-    
-    .text-emphasis {
-      color: #2FAA6F;
-      font-weight: 800;
-    }
-    
-    .playful-shadow {
-      box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
-    }
-    
-    .icon-card {
-      transition: all 0.3s ease;
-    }
-    
-    .icon-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    }
+/* ============================================
+   TADABBURKIDS BRAND THEME 2025
+   Based on logo colors and design system
+   ============================================ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
+/* CSS Variables - Brand Colors from Logo */
+:root {
+  /* Primary Brand Colors */
+  --color-primary: #2FAA6F;
+  --color-secondary: #FFA500;
+  --color-accent-teal: #40C9BE;
+  --color-accent-pink: #FF69B4;
+  --color-accent-olive: #B8B446;
+  
+  /* Text Colors */
+  --color-text-dark: #1A1A1A;
+  --color-text-body: #666666;
+  
+  /* Background Colors */
+  --color-bg-cream: #FFF8F0;
+  --color-bg-light-green: #F0F9F4;
+  --color-bg-light-blue: #F0F8FC;
+  --color-bg-light-orange: #FFF4E6;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.12);
+  
+  /* Border Radius */
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+}
+
+/* Base Styles */
+body { 
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  line-height: 1.2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation Styles */
+nav {
+  background: white;
+  box-shadow: var(--shadow-sm);
+}
+
+nav a:not(.flex) {
+  color: var(--color-text-dark);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:not(.flex):hover {
+  color: var(--color-primary);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #238B5A 100%);
+  color: white;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #238B5A 0%, var(--color-primary) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card Styles */
+.playful-shadow {
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.playful-shadow:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.icon-card {
+  transition: all 0.3s ease;
+}
+
+.icon-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* WhatsApp button pulse animation */
+@keyframes whatsappPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-float {
+  animation: whatsappPulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+  animation: none;
+}
+
+/* Decorative Elements */
+.doodle {
+  position: absolute;
+  opacity: 0.08;
+  animation: float 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .doodle {
+    display: none;
+  }
+  
+  .btn-primary {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
   </style>
+  
 </head>
 <body class="bg-white text-gray-800">
 
@@ -161,14 +226,15 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <!-- Logo -->
-<a href="index.html" class="flex items-center">
-  <img 
-    src="images/logo.svg" 
-    alt="TadabburKids Logo" 
-    class="h-20 w-auto" 
-  >
-</a>
+        <a href="index.html" class="flex items-center">
+          <img 
+            src="images/logo.svg" 
+            alt="TadabburKids Logo" 
+            class="h-20 w-auto" 
+          >
+        </a>
         
+        <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-8">
           <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition">Home</a>
           <a href="books.html" class="text-gray-700 hover:text-primary font-medium transition">Books</a>
@@ -177,11 +243,13 @@
           <a href="contact.html" class="text-gray-700 hover:text-primary font-medium transition">Contact</a>
         </div>
         
+        <!-- Mobile Menu Toggle -->
         <button id="mobile-menu-toggle" class="md:hidden text-3xl text-primary focus:outline-none">
           <i class="ri-menu-line"></i>
         </button>
       </div>
       
+      <!-- Mobile Menu -->
       <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 bg-white shadow-lg rounded-b-xl px-6 py-4">
         <a href="index.html" class="block text-gray-700 hover:text-primary font-medium">Home</a>
         <a href="books.html" class="block text-gray-700 hover:text-primary font-medium">Books</a>
@@ -198,187 +266,76 @@
     <!-- HERO SECTION -->
     <section class="relative bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 py-20 md:py-32 overflow-hidden">
       <!-- Decorative Doodles -->
-      <i class="ri-mail-line doodle doodle-sparkle" style="top: 15%; left: 8%;"></i>
-      <i class="ri-star-fill doodle doodle-star" style="top: 25%; right: 10%;"></i>
-      <i class="ri-chat-3-line doodle doodle-sparkle" style="bottom: 20%; left: 12%;"></i>
-      <i class="ri-heart-3-line doodle doodle-sparkle" style="bottom: 30%; right: 15%;"></i>
+      <i class="ri-mail-line doodle text-5xl" style="top: 15%; left: 8%; color: #2FAA6F;"></i>
+      <i class="ri-chat-3-line doodle text-4xl" style="top: 25%; right: 10%; color: #FFA500;"></i>
+      <i class="ri-message-3-line doodle text-4xl" style="bottom: 20%; left: 12%; color: #40C9BE;"></i>
+      <i class="ri-heart-3-line doodle text-3xl" style="bottom: 30%; right: 15%; color: #FF69B4;"></i>
       
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <div class="inline-flex items-center gap-3 bg-primary/10 rounded-full px-6 py-3 mb-6">
-          <i class="ri-message-3-line text-2xl text-primary"></i>
-          <span class="text-lg font-bold text-darkBrown">Get in Touch</span>
+        <div class="inline-flex items-center gap-3 bg-secondary/10 rounded-full px-6 py-3 mb-6">
+          <i class="ri-message-3-line text-2xl" style="color: #FFA500;"></i>
+          <span class="text-lg font-medium" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Get in Touch</span>
         </div>
         
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-darkBrown mb-6 leading-tight">
-          We'd <span class="text-emphasis">Love</span> to<br>
-          Hear From You!
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-6 px-2 sm:px-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+          We'd Love to<br>
+          <span style="color: #FFA500;">Hear From You</span>
         </h1>
         
-        <p class="text-xl md:text-2xl text-gray-700 leading-relaxed">
-          Have questions about our books or lessons? Want to share feedback? Reach out—we respond to every message.
+        <p class="text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto" style="color: #666666; font-family: 'Nunito', sans-serif;">
+          Have questions about our books or lessons? Want to share feedback? We're here to help!
         </p>
       </div>
     </section>
 
-    <!-- CONTACT OPTIONS & FORM -->
+    <!-- CONTACT OPTIONS -->
     <section class="py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+            Choose Your Preferred <span style="color: #40C9BE;">Contact Method</span>
+          </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           
-          <!-- LEFT: Contact Options -->
-          <div>
-            
-            <h2 class="text-3xl font-bold text-darkBrown mb-8">
-              Ways to <span class="text-emphasis">Connect</span>
-            </h2>
-            
-            <div class="space-y-6">
-              
-              <!-- WhatsApp (Primary) -->
-              <div class="icon-card bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 playful-shadow">
-                <div class="flex items-start gap-4">
-                  <div class="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center flex-shrink-0">
-                    <i class="ri-whatsapp-line text-3xl text-white"></i>
-                  </div>
-                  <div>
-                    <h3 class="text-xl font-bold text-darkBrown mb-2">WhatsApp (Fastest)</h3>
-                    <p class="text-gray-700 mb-4">Get a response within 24 hours</p>
-                    <a href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I%20have%20a%20question%20about%20TadabburKids." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 px-6 rounded-full transition">
-                      Chat on WhatsApp
-                      <i class="ri-arrow-right-line ml-2"></i>
-                    </a>
-                  </div>
-                </div>
+          <!-- WhatsApp (Primary) -->
+          <div class="icon-card bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 playful-shadow">
+            <div class="flex items-start gap-4">
+              <div class="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0" style="background: #25D366;">
+                <i class="ri-whatsapp-line text-3xl text-white"></i>
               </div>
-              
-              <!-- Email -->
-              <div class="icon-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 playful-shadow">
-                <div class="flex items-start gap-4">
-                  <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
-                    <i class="ri-mail-line text-3xl text-white"></i>
-                  </div>
-                  <div>
-                    <h3 class="text-xl font-bold text-darkBrown mb-2">Email</h3>
-                    <p class="text-gray-700 mb-2">For detailed inquiries</p>
-                    <a href="mailto:contact@tadabburkids.com" class="text-accent hover:text-primary font-semibold transition">
-                      contact@tadabburkids.com
-                    </a>
-                  </div>
+              <div>
+                <div class="inline-flex items-center gap-2 rounded-full px-4 py-1 mb-3" style="background: rgba(37, 211, 102, 0.2);">
+                  <i class="ri-flashlight-line text-sm" style="color: #25D366;"></i>
+                  <span class="text-xs font-medium" style="font-family: 'Fredoka', sans-serif; color: #25D366;">FASTEST RESPONSE</span>
                 </div>
+                <h3 class="text-2xl font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">WhatsApp</h3>
+                <p class="mb-4" style="color: #666666; font-family: 'Nunito', sans-serif;">Get a response within 24 hours</p>
+                <a href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I%20have%20a%20question%20about%20TadabburKids." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center font-medium py-3 px-6 rounded-full transition-all duration-300 hover:scale-105" style="font-family: 'Fredoka', sans-serif; background: #25D366; color: white; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);">
+                  Chat on WhatsApp
+                  <i class="ri-arrow-right-line ml-2"></i>
+                </a>
               </div>
-              
-              <!-- Response Time -->
-              <div class="bg-yellow-50 border-2 border-yellow-200 rounded-2xl p-6">
-                <div class="flex items-start gap-3">
-                  <i class="ri-time-line text-2xl text-yellow-600 mt-1"></i>
-                  <div>
-                    <h4 class="font-bold text-darkBrown mb-2">Response Time</h4>
-                    <p class="text-gray-700 text-sm">
-                      We typically respond within <strong>24 hours</strong>. If you need urgent assistance, WhatsApp is the fastest way to reach us.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
             </div>
-            
           </div>
           
-          <!-- RIGHT: Contact Form -->
-          <div>
-            
-            <h2 class="text-3xl font-bold text-darkBrown mb-8">
-              Send Us a <span class="text-emphasis">Message</span>
-            </h2>
-            
-            <form id="contact-form" class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 playful-shadow" onsubmit="handleContact(event)">
-              
-              <div class="space-y-6">
-                
-                <!-- Name -->
-                <div>
-                  <label for="name" class="block text-lg font-bold text-darkBrown mb-2">Your Name *</label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    required
-                    class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none text-darkBrown text-lg transition"
-                    placeholder="Enter your name"
-                  >
-                </div>
-                
-                <!-- Email -->
-                <div>
-                  <label for="email" class="block text-lg font-bold text-darkBrown mb-2">Your Email *</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    required
-                    class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none text-darkBrown text-lg transition"
-                    placeholder="your@email.com"
-                  >
-                </div>
-                
-                <!-- Subject -->
-                <div>
-                  <label for="subject" class="block text-lg font-bold text-darkBrown mb-2">Subject *</label>
-                  <select 
-                    id="subject" 
-                    name="subject" 
-                    required
-                    class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none text-darkBrown text-lg transition appearance-none bg-white"
-                  >
-                    <option value="">Select a topic</option>
-                    <option value="Books Inquiry">Question about Books</option>
-                    <option value="Lessons Inquiry">Question about Quran Lessons</option>
-                    <option value="General Question">General Question</option>
-                    <option value="Feedback">Feedback or Suggestion</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                
-                <!-- Message -->
-                <div>
-                  <label for="message" class="block text-lg font-bold text-darkBrown mb-2">Your Message *</label>
-                  <textarea 
-                    id="message" 
-                    name="message" 
-                    rows="5"
-                    required
-                    class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none text-darkBrown text-lg transition resize-none"
-                    placeholder="Tell us how we can help..."
-                  ></textarea>
-                </div>
-                
-                <!-- Submit Button -->
-                <button 
-                  type="submit" 
-                  class="w-full bg-gradient-to-r from-primary to-teal text-white font-bold py-5 px-8 rounded-full text-xl hover:from-teal hover:to-primary transition playful-shadow"
-                >
-                  Send Message
-                  <i class="ri-send-plane-fill ml-2"></i>
-                </button>
-                
+          <!-- Email -->
+          <div class="icon-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 playful-shadow">
+            <div class="flex items-start gap-4">
+              <div class="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0" style="background: #40C9BE;">
+                <i class="ri-mail-line text-3xl text-white"></i>
               </div>
-              
-            </form>
-            
-            <!-- Success Message (Hidden by default) -->
-            <div id="contact-success" class="hidden mt-8 bg-green-50 border-4 border-primary rounded-3xl p-8 text-center playful-shadow">
-              <i class="ri-checkbox-circle-line text-6xl text-primary mb-4"></i>
-              <h3 class="text-2xl font-bold text-darkBrown mb-3">Message Sent! 🎉</h3>
-              <p class="text-lg text-gray-700 mb-6">
-                Thank you for reaching out! We'll get back to you within 24 hours.
-              </p>
-              <a href="https://wa.me/923165252296" target="_blank" class="inline-flex items-center justify-center bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 px-6 rounded-full transition">
-                <i class="ri-whatsapp-line text-xl mr-2"></i>
-                Chat on WhatsApp Now
-              </a>
+              <div>
+                <h3 class="text-2xl font-medium mb-2 mt-7" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Email</h3>
+                <p class="mb-4" style="color: #666666; font-family: 'Nunito', sans-serif;">For detailed inquiries</p>
+                <a href="mailto:contact@tadabburkids.com" class="inline-flex items-center font-semibold transition-colors duration-300 hover:underline" style="color: #40C9BE; font-family: 'Nunito', sans-serif; font-size: 1.1rem;">
+                  contact@tadabburkids.com
+                  <i class="ri-external-link-line ml-2"></i>
+                </a>
+              </div>
             </div>
-            
           </div>
           
         </div>
@@ -386,29 +343,109 @@
       </div>
     </section>
 
-    <!-- FAQ LINK -->
-    <section class="py-20 bg-gradient-to-br from-orange-50 via-yellow-50 to-green-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <!-- CONTACT FORM -->
+    <section class="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="bg-white rounded-3xl p-10 playful-shadow">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl md:text-4xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+            Send Us a <span style="color: #40C9BE;">Message</span>
+          </h2>
+          <p class="text-lg" style="color: #666666; font-family: 'Nunito', sans-serif;">
+            Fill out the form below and we'll get back to you soon
+          </p>
+        </div>
+        
+        <form id="contact-form" class="bg-white rounded-3xl p-8 md:p-10 playful-shadow" onsubmit="handleContact(event)">
           
-          <div class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <i class="ri-question-line text-4xl text-primary"></i>
+          <div class="space-y-6">
+            
+            <!-- Name -->
+            <div>
+              <label for="name" class="block text-lg font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Your Name *</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required
+                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:outline-none text-lg transition"
+                style="font-family: 'Nunito', sans-serif; color: #1A1A1A;"
+                placeholder="Enter your name"
+              >
+            </div>
+            
+            <!-- Email -->
+            <div>
+              <label for="email" class="block text-lg font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Your Email *</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:outline-none text-lg transition"
+                style="font-family: 'Nunito', sans-serif; color: #1A1A1A;"
+                placeholder="your@email.com"
+              >
+            </div>
+            
+            <!-- Subject -->
+            <div>
+              <label for="subject" class="block text-lg font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Subject *</label>
+              <select 
+                id="subject" 
+                name="subject" 
+                required
+                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:outline-none text-lg transition appearance-none bg-white"
+                style="font-family: 'Nunito', sans-serif; color: #1A1A1A;"
+              >
+                <option value="">Select a topic</option>
+                <option value="Books Inquiry">Question about Books</option>
+                <option value="Lessons Inquiry">Question about Quran Lessons</option>
+                <option value="General Question">General Question</option>
+                <option value="Feedback">Feedback or Suggestion</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            
+            <!-- Message -->
+            <div>
+              <label for="message" class="block text-lg font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Your Message *</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5"
+                required
+                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:outline-none text-lg transition resize-none"
+                style="font-family: 'Nunito', sans-serif; color: #1A1A1A;"
+                placeholder="Tell us how we can help..."
+              ></textarea>
+            </div>
+            
+            <!-- Submit Button -->
+            <button 
+              type="submit" 
+              class="w-full text-white font-medium py-5 px-8 text-xl rounded-full transition-all duration-300 hover:scale-105"
+              style="font-family: 'Fredoka', sans-serif; background: linear-gradient(135deg, #228078 0%, #40C9BE 100%); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);"
+            >
+              Send Message
+              <i class="ri-send-plane-fill ml-2"></i>
+            </button>
+            
           </div>
           
-          <h2 class="text-3xl font-bold text-darkBrown mb-4">
-            Looking for Quick Answers?
-          </h2>
-          
-          <p class="text-xl text-gray-700 mb-8">
-            Check out our FAQ page—your question might already be answered!
+        </form>
+        
+        <!-- Success Message (Hidden by default) -->
+        <div id="contact-success" class="hidden mt-10 bg-white rounded-3xl p-10 text-center playful-shadow">
+          <i class="ri-checkbox-circle-line text-7xl mb-4" style="color: #2FAA6F;"></i>
+          <h3 class="text-3xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Thank You!</h3>
+          <p class="text-xl mb-6" style="color: #666666; font-family: 'Nunito', sans-serif;">
+            Your message has been sent. We'll get back to you within 24 hours.
           </p>
-          
-          <a href="index.html#faq" class="inline-flex items-center justify-center bg-gradient-to-r from-secondary to-yellow text-white font-bold py-4 px-8 rounded-full text-lg hover:from-yellow hover:to-secondary transition playful-shadow">
-            View FAQs
-            <i class="ri-arrow-right-line ml-2"></i>
+          <a href="https://wa.me/923165252296" target="_blank" class="inline-flex items-center justify-center font-medium py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105" style="font-family: 'Fredoka', sans-serif; background: #25D366; color: white; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);">
+            <i class="ri-whatsapp-line text-2xl mr-2"></i>
+            Chat on WhatsApp Now
           </a>
-          
         </div>
         
       </div>
@@ -416,45 +453,86 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
+  <!-- FOOTER -->
+  <footer class="py-12" style="background-color: #1A1A1A;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        
+        <!-- Column 1: Brand -->
         <div>
-          <h3 class="text-xl font-bold mb-4 text-primary">TadabburKids</h3>
-          <p class="text-gray-400 text-sm">
+          <a href="index.html" class="flex items-center">
+            <img 
+              src="images/logo_dark.svg" 
+              alt="TadabburKids Logo" 
+              class="h-20 w-auto" 
+            >
+          </a>
+          <p class="text-sm leading-relaxed mb-4" style="font-family: 'Nunito', sans-serif; color: #999999;">
             Connecting young hearts to the Quran through Tadabbur. Authentic Islamic education for children worldwide.
           </p>
         </div>
         
+        <!-- Column 2: Quick Links -->
         <div>
-          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="books.html" class="text-gray-400 hover:text-primary transition">Books</a></li>
-            <li><a href="quran-lessons.html" class="text-gray-400 hover:text-primary transition">Quran Lessons</a></li>
-            <li><a href="blog.html" class="text-gray-400 hover:text-primary transition">Blog</a></li>
-            <li><a href="contact.html" class="text-gray-400 hover:text-primary transition">Contact</a></li>
+          <h4 class="text-lg font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #FFFFFF;">
+            Quick Links
+          </h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="index.html" class="text-sm transition-colors duration-300" style="font-family: 'Nunito', sans-serif; color: #999999;">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="books.html" class="text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+                Books
+              </a>
+            </li>
+            <li>
+              <a href="quran-lessons.html" class="text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+                Quran Lessons
+              </a>
+            </li>
+            <li>
+              <a href="blog.html" class="text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
         
+        <!-- Column 3: Contact -->
         <div>
-          <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li class="flex items-center gap-2">
-              <i class="ri-mail-line"></i>
-              <a href="mailto:contact@tadabburkids.com" class="hover:text-primary transition">contact@tadabburkids.com</a>
-            </li>
-            <li class="flex items-center gap-2">
-              <i class="ri-whatsapp-line"></i>
-              <span>WhatsApp: +92 316 525 2296</span>
-            </li>
-          </ul>
+          <h4 class="text-lg font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #FFFFFF;">
+            Get in Touch
+          </h4>
+          <div class="space-y-3">
+            <a href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I'm%20interested%20in%20TadabburKids." target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+              <i class="ri-whatsapp-line text-2xl" style="color: #25D366;"></i>
+              <span>+92 316 525 2296</span>
+            </a>
+            <a href="mailto:contact@tadabburkids.com" class="flex items-center gap-3 text-sm transition-colors duration-300 hover:text-primary" style="font-family: 'Nunito', sans-serif; color: #999999;">
+              <i class="ri-mail-line text-2xl" style="color: #FFA500;"></i>
+              <span>contact@tadabburkids.com</span>
+            </a>
+          </div>
         </div>
+        
       </div>
       
-      <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-        <p>&copy; 2025 TadabburKids. All rights reserved.</p>
+      <!-- Bottom Bar -->
+      <div class="border-t pt-8 text-center" style="border-color: #2D2D2D;">
+        <p class="text-sm" style="font-family: 'Nunito', sans-serif; color: #666666;">
+          © 2026 TadabburKids. All rights reserved.
+        </p>
       </div>
+      
     </div>
   </footer>
 
@@ -463,7 +541,8 @@
     href="https://wa.me/923165252296?text=Assalamu%20alaikum!%20I'm%20interested%20in%20learning%20more%20about%20TadabburKids." 
     target="_blank"
     rel="noopener noreferrer"
-    class="whatsapp-float fixed bottom-8 right-8 z-50 bg-[#25D366] text-white rounded-full shadow-2xl w-16 h-16 flex items-center justify-center text-3xl transition-all duration-300 hover:bg-[#128C7E] hover:scale-110"
+    class="whatsapp-float fixed bottom-8 right-8 z-50 text-white rounded-full shadow-2xl w-16 h-16 flex items-center justify-center text-3xl transition-all duration-300 hover:scale-110"
+    style="background-color: #25D366;"
     aria-label="Contact us on WhatsApp"
   >
     <i class="ri-whatsapp-line"></i>
