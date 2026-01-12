@@ -529,7 +529,7 @@ nav a:not(.flex):hover {
         Calculate Your <span style="color: #2FAA6F;">Monthly Plan</span>
       </h2>
       <p class="text-xl mb-4" style="color: #666666; font-family: 'Nunito', sans-serif;">
-        Choose your schedule and see your monthly fee
+        Configure your schedule and see your monthly fee
       </p>
       <div class="inline-flex items-center gap-2 rounded-full px-6 py-3" style="background: #FFF4E6;">
         <i class="ri-gift-line text-xl" style="color: #FFA500;"></i>
@@ -540,101 +540,100 @@ nav a:not(.flex):hover {
     <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl p-8 md:p-10" style="box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
       
       <!-- STEP 1: Class Type Selection -->
-      <div class="mb-8">
+<div id="step1" class="mb-8">
+  <h3 class="text-2xl font-medium mb-6" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+    Step 1: Choose Class Type
+  </h3>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    
+    <!-- 1-on-1 Option (REMOVED checked attribute) -->
+    <label class="cursor-pointer">
+      <input type="radio" name="classType" value="one-on-one" class="hidden peer" onchange="selectClassType()">
+      <div class="bg-white rounded-2xl p-6 border-2 transition-all duration-300 peer-checked:border-primary peer-checked:bg-green-50" style="border-color: #E5E5E5;">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(47, 170, 111, 0.1);">
+            <i class="ri-user-line text-2xl" style="color: #2FAA6F;"></i>
+          </div>
+          <div>
+            <h4 class="text-xl font-medium" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">1-on-1 Classes</h4>
+            <p class="text-sm" style="color: #666666; font-family: 'Nunito', sans-serif;">40 min/class</p>
+          </div>
+        </div>
+        <p class="text-lg font-medium" style="font-family: 'Fredoka', sans-serif; color: #2FAA6F;">30 AED per class</p>
+      </div>
+    </label>
+    
+    <!-- Sibling Group Option -->
+    <label class="cursor-pointer">
+      <input type="radio" name="classType" value="sibling" class="hidden peer" onchange="selectClassType()">
+      <div class="bg-white rounded-2xl p-6 border-2 transition-all duration-300 peer-checked:border-primary peer-checked:bg-green-50" style="border-color: #E5E5E5;">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(47, 170, 111, 0.1);">
+            <i class="ri-group-line text-2xl" style="color: #2FAA6F;"></i>
+          </div>
+          <div>
+            <h4 class="text-xl font-medium" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Sibling Group</h4>
+            <p class="text-sm" style="color: #666666; font-family: 'Nunito', sans-serif;">60 min/class</p>
+          </div>
+        </div>
+        <p class="text-lg font-medium" style="font-family: 'Fredoka', sans-serif; color: #2FAA6F;">20 AED per student</p>
+      </div>
+    </label>
+    
+  </div>
+</div>
+      
+      <!-- STEP 2: Days Per Week (Hidden initially) -->
+      <div id="step2" class="mb-8 hidden">
         <h3 class="text-2xl font-medium mb-6" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
-          Step 1: Choose Class Type
+          Step 2: How many days per week?
         </h3>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="grid grid-cols-3 gap-3 sm:gap-4">
           
-          <!-- 1-on-1 Option -->
+          <!-- 3 Days -->
           <label class="cursor-pointer">
-            <input type="radio" name="classType" value="one-on-one" class="hidden peer" checked onchange="updatePrice()">
-            <div class="bg-white rounded-2xl p-6 border-2 transition-all duration-300 peer-checked:border-primary peer-checked:bg-green-50" style="border-color: #E5E5E5;">
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(47, 170, 111, 0.1);">
-                  <i class="ri-user-line text-2xl" style="color: #2FAA6F;"></i>
-                </div>
-                <div>
-                  <h4 class="text-xl font-medium" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">1-on-1 Classes</h4>
-                  <p class="text-sm" style="color: #666666; font-family: 'Nunito', sans-serif;">40 min/class</p>
-                </div>
-              </div>
-              <p class="text-lg font-medium" style="font-family: 'Fredoka', sans-serif; color: #2FAA6F;">30 AED per class</p>
+            <input type="radio" name="daysPerWeek" value="3" class="hidden peer" onchange="selectDays()">
+            <div class="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-6 text-center border-2 transition-all duration-300 peer-checked:border-primary peer-checked:bg-green-50" style="border-color: #E5E5E5;">
+              <p class="text-2xl sm:text-3xl font-medium mb-1 sm:mb-2" style="font-family: 'Fredoka', sans-serif; color: #2FAA6F;">3</p>
+              <p class="text-xs sm:text-sm font-medium" style="color: #666666; font-family: 'Nunito', sans-serif;">days/week</p>
+              <p class="text-xs mt-1 hidden sm:block" style="color: #999999; font-family: 'Nunito', sans-serif;">12 classes/month</p>
             </div>
           </label>
           
-          <!-- Sibling Group Option -->
+          <!-- 4 Days -->
           <label class="cursor-pointer">
-            <input type="radio" name="classType" value="sibling" class="hidden peer" onchange="updatePrice()">
-            <div class="bg-white rounded-2xl p-6 border-2 transition-all duration-300 peer-checked:border-primary peer-checked:bg-green-50" style="border-color: #E5E5E5;">
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(47, 170, 111, 0.1);">
-                  <i class="ri-group-line text-2xl" style="color: #2FAA6F;"></i>
-                </div>
-                <div>
-                  <h4 class="text-xl font-medium" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Sibling Group</h4>
-                  <p class="text-sm" style="color: #666666; font-family: 'Nunito', sans-serif;">60 min/class</p>
-                </div>
-              </div>
-              <p class="text-lg font-medium" style="font-family: 'Fredoka', sans-serif; color: #2FAA6F;">20 AED per student</p>
+            <input type="radio" name="daysPerWeek" value="4" class="hidden peer" onchange="selectDays()">
+            <div class="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-6 text-center border-2 transition-all duration-300 peer-checked:border-primary peer-checked:bg-green-50" style="border-color: #E5E5E5;">
+              <p class="text-2xl sm:text-3xl font-medium mb-1 sm:mb-2" style="font-family: 'Fredoka', sans-serif; color: #2FAA6F;">4</p>
+              <p class="text-xs sm:text-sm font-medium" style="color: #666666; font-family: 'Nunito', sans-serif;">days/week</p>
+              <p class="text-xs mt-1 hidden sm:block" style="color: #999999; font-family: 'Nunito', sans-serif;">16 classes/month</p>
+            </div>
+          </label>
+          
+          <!-- 5 Days -->
+          <label class="cursor-pointer">
+            <input type="radio" name="daysPerWeek" value="5" class="hidden peer" checked onchange="selectDays()">
+            <div class="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-6 text-center border-2 transition-all duration-300 peer-checked:border-primary peer-checked:bg-green-50" style="border-color: #E5E5E5;">
+              <p class="text-2xl sm:text-3xl font-medium mb-1 sm:mb-2" style="font-family: 'Fredoka', sans-serif; color: #2FAA6F;">5</p>
+              <p class="text-xs sm:text-sm font-medium" style="color: #666666; font-family: 'Nunito', sans-serif;">days/week</p>
+              <p class="text-xs mt-1 hidden sm:block" style="color: #999999; font-family: 'Nunito', sans-serif;">20 classes/month</p>
             </div>
           </label>
           
         </div>
+        
+        <!-- Mobile: Show selected classes/month info below -->
+        <div class="mt-3 sm:hidden text-center">
+          <p class="text-sm" style="color: #666666; font-family: 'Nunito', sans-serif;">
+            <span id="mobile-classes-info">20 classes per month</span>
+          </p>
+        </div>
       </div>
       
-      <!-- STEP 2: Days Per Week -->
-<div class="mb-8">
-  <h3 class="text-2xl font-medium mb-6" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
-    Step 2: How many days per week?
-  </h3>
-  
-  <div class="grid grid-cols-3 gap-3 sm:gap-4">
-    
-    <!-- 3 Days -->
-    <label class="cursor-pointer">
-      <input type="radio" name="daysPerWeek" value="3" class="hidden peer" onchange="updatePrice()">
-      <div class="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-6 text-center border-2 transition-all duration-300 peer-checked:border-primary peer-checked:bg-green-50" style="border-color: #E5E5E5;">
-        <p class="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2" style="font-family: 'Fredoka', sans-serif; color: #2FAA6F;">3</p>
-        <p class="text-xs sm:text-sm font-medium" style="color: #666666; font-family: 'Nunito', sans-serif;">days/week</p>
-        <p class="text-xs mt-1 hidden sm:block" style="color: #999999; font-family: 'Nunito', sans-serif;">12 classes/month</p>
-      </div>
-    </label>
-    
-    <!-- 4 Days -->
-    <label class="cursor-pointer">
-      <input type="radio" name="daysPerWeek" value="4" class="hidden peer" onchange="updatePrice()">
-      <div class="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-6 text-center border-2 transition-all duration-300 peer-checked:border-primary peer-checked:bg-green-50" style="border-color: #E5E5E5;">
-        <p class="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2" style="font-family: 'Fredoka', sans-serif; color: #2FAA6F;">4</p>
-        <p class="text-xs sm:text-sm font-medium" style="color: #666666; font-family: 'Nunito', sans-serif;">days/week</p>
-        <p class="text-xs mt-1 hidden sm:block" style="color: #999999; font-family: 'Nunito', sans-serif;">16 classes/month</p>
-      </div>
-    </label>
-    
-    <!-- 5 Days -->
-    <label class="cursor-pointer">
-      <input type="radio" name="daysPerWeek" value="5" class="hidden peer" checked onchange="updatePrice()">
-      <div class="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-6 text-center border-2 transition-all duration-300 peer-checked:border-primary peer-checked:bg-green-50" style="border-color: #E5E5E5;">
-        <p class="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2" style="font-family: 'Fredoka', sans-serif; color: #2FAA6F;">5</p>
-        <p class="text-xs sm:text-sm font-medium" style="color: #666666; font-family: 'Nunito', sans-serif;">days/week</p>
-        <p class="text-xs mt-1 hidden sm:block" style="color: #999999; font-family: 'Nunito', sans-serif;">20 classes/month</p>
-      </div>
-    </label>
-    
-  </div>
-  
-  <!-- Mobile: Show selected classes/month info below -->
-  <div class="mt-3 sm:hidden text-center">
-    <p class="text-sm" style="color: #666666; font-family: 'Nunito', sans-serif;">
-      <span id="mobile-classes-info">20 classes per month</span>
-    </p>
-  </div>
-  
-</div>
-      
-      <!-- STEP 3: Number of Children -->
-      <div class="mb-8">
+      <!-- STEP 3: Number of Children (Hidden initially) -->
+      <div id="step3" class="mb-8 hidden">
         <h3 class="text-2xl font-medium mb-6" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
           Step 3: Number of children
         </h3>
@@ -646,7 +645,7 @@ nav a:not(.flex):hover {
           
           <div class="text-center">
             <p id="childrenCount" class="text-4xl font-medium" style="font-family: 'Fredoka', sans-serif; color: #2FAA6F;">1</p>
-            <p class="text-sm" style="color: #666666; font-family: 'Nunito', sans-serif;">child(ren)</p>
+            <p id="childrenLabel" class="text-sm" style="color: #666666; font-family: 'Nunito', sans-serif;">child</p>
           </div>
           
           <button type="button" onclick="incrementChildren()" class="w-12 h-12 rounded-xl flex items-center justify-center transition-colors duration-300" style="background: #F0F9F4; color: #2FAA6F;">
@@ -655,8 +654,8 @@ nav a:not(.flex):hover {
         </div>
       </div>
       
-      <!-- LIVE PRICE CALCULATION -->
-      <div class="bg-white rounded-2xl p-8 border-4 mb-8" style="border-color: #2FAA6F;">
+      <!-- LIVE PRICE CALCULATION (Hidden initially) -->
+      <div id="priceBox" class="bg-white rounded-2xl p-8 border-4 mb-8 hidden" style="border-color: #2FAA6F;">
         
         <div class="text-center mb-6">
           <p class="text-lg mb-2" style="font-family: 'Fredoka', sans-serif; color: #666666;">Your Monthly Fee</p>
@@ -692,108 +691,110 @@ nav a:not(.flex):hover {
         
       </div>
       
-      <!-- PERSONAL INFO FORM -->
-      <form id="pricing-form" onsubmit="handlePricingSubmit(event)">
-        
-        <h3 class="text-2xl font-medium mb-6" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
-          Your Information
-        </h3>
-        
-        <div class="space-y-4">
+      <!-- PERSONAL INFO FORM (Hidden initially) -->
+      <div id="personalInfoForm" class="hidden">
+        <form id="pricing-form" onsubmit="handlePricingSubmit(event)">
           
-          <!-- Parent Name -->
-          <div>
-            <label for="parent-name" class="block text-base font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Parent's Name *</label>
-            <input 
-              type="text" 
-              id="parent-name" 
-              name="parent_name" 
-              required
-              class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none transition bg-white"
-              style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5;"
-              placeholder="Your full name"
-            >
+          <h3 class="text-2xl font-medium mb-6" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">
+            Your Information
+          </h3>
+          
+          <div class="space-y-4">
+            
+            <!-- Parent Name -->
+            <div>
+              <label for="parent-name" class="block text-base font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Parent's Name *</label>
+              <input 
+                type="text" 
+                id="parent-name" 
+                name="parent_name" 
+                required
+                class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none transition bg-white"
+                style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5;"
+                placeholder="Your full name"
+              >
+            </div>
+            
+            <!-- Child Names -->
+            <div>
+              <label for="child-names" class="block text-base font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Child Name(s) *</label>
+              <input 
+                type="text" 
+                id="child-names" 
+                name="child_names" 
+                required
+                class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none transition bg-white"
+                style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5;"
+                placeholder="e.g., Fatima, Hassan"
+              >
+            </div>
+            
+            <!-- Child Ages -->
+            <div>
+              <label for="child-ages" class="block text-base font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Child Age(s) * <span class="text-sm font-normal" style="color: #999999;">(Ages 4+)</span></label>
+              <input 
+                type="text" 
+                id="child-ages" 
+                name="child_ages" 
+                required
+                class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none transition bg-white"
+                style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5;"
+                placeholder="e.g., 5, 7"
+              >
+            </div>
+            
+            <!-- WhatsApp Number -->
+            <div>
+              <label for="whatsapp" class="block text-base font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">WhatsApp Number *</label>
+              <input 
+                type="tel" 
+                id="whatsapp" 
+                name="whatsapp" 
+                required
+                class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none transition bg-white"
+                style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5;"
+                placeholder="+971 50 123 4567"
+              >
+            </div>
+            
+            <!-- Special Requests -->
+            <div>
+              <label for="special-requests" class="block text-base font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Special Requests (Optional)</label>
+              <textarea 
+                id="special-requests" 
+                name="special_requests" 
+                rows="3"
+                class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none transition resize-none bg-white"
+                style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5;"
+                placeholder="Preferred timing, specific goals, etc."
+              ></textarea>
+            </div>
+            
           </div>
           
-          <!-- Child Names -->
-          <div>
-            <label for="child-names" class="block text-base font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Child Name(s) *</label>
-            <input 
-              type="text" 
-              id="child-names" 
-              name="child_names" 
-              required
-              class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none transition bg-white"
-              style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5;"
-              placeholder="e.g., Fatima, Hassan"
-            >
-          </div>
+          <!-- Submit Button -->
+          <button 
+            type="submit" 
+            class="w-full text-white font-medium py-5 px-8 text-xl rounded-full transition-all duration-300 hover:scale-105 mt-6"
+            style="font-family: 'Fredoka', sans-serif; background: linear-gradient(135deg, #2FAA6F 0%, #238B5A 100%); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);"
+          >
+            Submit & Book Free Trial
+            <i class="ri-send-plane-fill ml-2"></i>
+          </button>
           
-          <!-- Child Ages -->
-          <div>
-            <label for="child-ages" class="block text-base font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Child Age(s) * <span class="text-sm font-normal" style="color: #999999;">(Ages 4+)</span></label>
-            <input 
-              type="text" 
-              id="child-ages" 
-              name="child_ages" 
-              required
-              class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none transition bg-white"
-              style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5;"
-              placeholder="e.g., 5, 7"
-            >
-          </div>
+          <p class="text-center text-sm mt-4" style="color: #666666; font-family: 'Nunito', sans-serif;">
+            We'll contact you on WhatsApp within 24 hours to schedule your free trial lesson.
+          </p>
           
-          <!-- WhatsApp Number -->
-          <div>
-            <label for="whatsapp" class="block text-base font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">WhatsApp Number *</label>
-            <input 
-              type="tel" 
-              id="whatsapp" 
-              name="whatsapp" 
-              required
-              class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none transition bg-white"
-              style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5;"
-              placeholder="+971 50 123 4567"
-            >
-          </div>
-          
-          <!-- Special Requests -->
-          <div>
-            <label for="special-requests" class="block text-base font-medium mb-2" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Special Requests (Optional)</label>
-            <textarea 
-              id="special-requests" 
-              name="special_requests" 
-              rows="3"
-              class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none transition resize-none bg-white"
-              style="font-family: 'Nunito', sans-serif; color: #1A1A1A; border-color: #E5E5E5;"
-              placeholder="Preferred timing, specific goals, etc."
-            ></textarea>
-          </div>
-          
-        </div>
-        
-        <!-- Submit Button -->
-        <button 
-          type="submit" 
-          class="w-full text-white font-medium py-5 px-8 text-xl rounded-full transition-all duration-300 hover:scale-105 mt-6"
-          style="font-family: 'Fredoka', sans-serif; background: linear-gradient(135deg, #2FAA6F 0%, #238B5A 100%); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);"
-        >
-          Submit & Book Free Trial
-          <i class="ri-send-plane-fill ml-2"></i>
-        </button>
-        
-        <p class="text-center text-sm mt-4" style="color: #666666; font-family: 'Nunito', sans-serif;">
-          We'll contact you on WhatsApp within 24 hours to schedule your free trial lesson.
-        </p>
-        
-      </form>
+        </form>
+      </div>
       
     </div>
     
     <!-- Success Message (Hidden by default) -->
     <div id="pricing-success" class="hidden mt-10 rounded-3xl p-10 text-center" style="background: #F0F9F4; border: 4px solid #2FAA6F; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
       <i class="ri-checkbox-circle-line text-7xl mb-4" style="color: #2FAA6F;"></i>
-      <h3 class="text-3xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Thank You!</h3>
+      <h3 class="text-3xl font-medium mb-4" style="font-family: 'Fredoka', sans-serif; color: #1A1A1A;">Thank You! 🎉</h3>
       <p class="text-xl mb-6" style="color: #666666; font-family: 'Nunito', sans-serif;">
         Your enrollment request has been received. We'll contact you on WhatsApp within 24 hours to schedule your free trial lesson.
       </p>
@@ -809,6 +810,9 @@ nav a:not(.flex):hover {
 <script>
 // Pricing Calculator Variables
 let currentChildren = 1;
+let classTypeSelected = false;
+let daysSelected = false;
+let childrenSelected = false;
 
 // Classes per month mapping
 const classesPerMonth = {
@@ -823,11 +827,93 @@ const pricePerClass = {
   "sibling": 20
 };
 
+// Step 1: Select Class Type
+function selectClassType() {
+  const classType = document.querySelector('input[name="classType"]:checked').value;
+  
+  // Set default children count based on class type
+  if (classType === 'sibling') {
+    currentChildren = 2;
+  } else {
+    currentChildren = 1;
+  }
+  
+  // Update children count display
+  document.getElementById('childrenCount').textContent = currentChildren;
+  updateChildrenLabel();
+  
+  // If this is first time selecting class type
+  if (!classTypeSelected) {
+    classTypeSelected = true;
+    
+    // Show Step 2
+    document.getElementById('step2').classList.remove('hidden');
+    
+    // Smooth scroll to Step 2
+    setTimeout(() => {
+      document.getElementById('step2').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 100);
+  } else {
+    // User changed class type after initial selection - update price
+    updatePrice();
+  }
+}
+
+// Step 2: Select Days
+function selectDays() {
+  // If this is first time selecting days
+  if (!daysSelected) {
+    daysSelected = true;
+    
+    // Show Step 3
+    document.getElementById('step3').classList.remove('hidden');
+    
+    // Smooth scroll to Step 3
+    setTimeout(() => {
+      document.getElementById('step3').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 100);
+    
+    // Show price box and form
+    showPriceAndForm();
+  } else {
+    // User changed days after initial selection - update price
+    updatePrice();
+  }
+  
+  // Update mobile classes info
+  updateMobileClassesInfo();
+}
+
+// Show price box and personal info form
+function showPriceAndForm() {
+  childrenSelected = true;
+  
+  // Calculate and show price
+  updatePrice();
+  
+  // Show price box
+  document.getElementById('priceBox').classList.remove('hidden');
+  
+  // Show personal info form
+  document.getElementById('personalInfoForm').classList.remove('hidden');
+  
+  // Smooth scroll to price box
+  setTimeout(() => {
+    document.getElementById('priceBox').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, 100);
+}
+
 // Update price calculation
 function updatePrice() {
   // Get selected values
-  const classType = document.querySelector('input[name="classType"]:checked').value;
-  const daysPerWeek = parseInt(document.querySelector('input[name="daysPerWeek"]:checked').value);
+  const classTypeElement = document.querySelector('input[name="classType"]:checked');
+  const daysPerWeekElement = document.querySelector('input[name="daysPerWeek"]:checked');
+  
+  // Don't calculate if not all selections made
+  if (!classTypeElement || !daysPerWeekElement) return;
+  
+  const classType = classTypeElement.value;
+  const daysPerWeek = parseInt(daysPerWeekElement.value);
   const children = currentChildren;
   
   // Calculate
@@ -845,7 +931,8 @@ function updatePrice() {
   document.getElementById('detailPricePerClass').textContent = `${pricePerClassValue} AED per ${classType === 'one-on-one' ? 'class' : 'student per class'}`;
   
   // Update calculation
-  document.getElementById('calculation').textContent = `${classes} classes × ${children} ${children === 1 ? 'child' : 'children'} × ${pricePerClassValue} AED`;
+  const childText = children === 1 ? 'child' : 'children';
+  document.getElementById('calculation').textContent = `${classes} classes × ${children} ${childText} × ${pricePerClassValue} AED`;
   
   // Update mobile classes info
   updateMobileClassesInfo();
@@ -853,11 +940,22 @@ function updatePrice() {
 
 // Update mobile classes info
 function updateMobileClassesInfo() {
-  const daysPerWeek = parseInt(document.querySelector('input[name="daysPerWeek"]:checked').value);
+  const daysPerWeekElement = document.querySelector('input[name="daysPerWeek"]:checked');
+  if (!daysPerWeekElement) return;
+  
+  const daysPerWeek = parseInt(daysPerWeekElement.value);
   const classes = classesPerMonth[daysPerWeek];
   const mobileInfo = document.getElementById('mobile-classes-info');
   if (mobileInfo) {
     mobileInfo.textContent = `${classes} classes per month`;
+  }
+}
+
+// Update children label (child vs children)
+function updateChildrenLabel() {
+  const label = document.getElementById('childrenLabel');
+  if (label) {
+    label.textContent = currentChildren === 1 ? 'child' : 'children';
   }
 }
 
@@ -866,15 +964,22 @@ function incrementChildren() {
   if (currentChildren < 5) {
     currentChildren++;
     document.getElementById('childrenCount').textContent = currentChildren;
+    updateChildrenLabel();
     updatePrice();
   }
 }
 
 // Decrement children
 function decrementChildren() {
-  if (currentChildren > 1) {
+  const classType = document.querySelector('input[name="classType"]:checked').value;
+  
+  // For sibling group, minimum is 2
+  const minChildren = classType === 'sibling' ? 2 : 1;
+  
+  if (currentChildren > minChildren) {
     currentChildren--;
     document.getElementById('childrenCount').textContent = currentChildren;
+    updateChildrenLabel();
     updatePrice();
   }
 }
@@ -924,17 +1029,20 @@ ${specialRequests}
   const whatsappUrl = `https://wa.me/923165252296?text=${encodeURIComponent(message)}`;
   window.open(whatsappUrl, '_blank');
   
+  // Hide form container
+  document.getElementById('pricing-form').parentElement.parentElement.classList.add('hidden');
+  
   // Show success message
-  form.parentElement.classList.add('hidden');
   document.getElementById('pricing-success').classList.remove('hidden');
   
   // Scroll to success message
   document.getElementById('pricing-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
-// Initialize price on page load
+// Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
-  updatePrice();
+  // Start with Step 1 only visible, no default selection
+  // Other steps are hidden by default
 });
 </script>
 
